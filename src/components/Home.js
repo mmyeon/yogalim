@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { COLORS } from "../styles/constant";
+import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../styles/constant";
+import LongRoundButton from "./LongRoundButton";
 
 const MainContainer = styled.div`
   width: 100vw;
@@ -15,15 +16,15 @@ const MainContainer = styled.div`
     padding-top: 5em;
 
     > .desc {
-      font-family: "KOMACON";
+      font-family: ${FONT_FAMILY.korean};
       font-size: 0.9em;
       letter-spacing: 0.1em;
       margin-bottom: 0.2em;
     }
 
     > h1 {
-      font-family: "Staatliches";
-      font-weight: 300;
+      font-family: ${FONT_FAMILY.english};
+      font-weight: ${FONT_WEIGHT.thin};
       font-size: 3.1em;
       letter-spacing: 1px;
     }
@@ -31,7 +32,7 @@ const MainContainer = styled.div`
 
   > svg {
     position: relative;
-    bottom: -4em;
+    bottom: -2em;
     left: -1.37em;
   }
 `;
@@ -245,6 +246,7 @@ const Main = () => {
           fill="#67CCA7"
         />
       </svg>
+      <LongRoundButton title="수련하기" />
     </MainContainer>
   );
 };
