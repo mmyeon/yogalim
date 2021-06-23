@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../styles/constant";
 import LongRoundButton from "../components/LongRoundButton";
 
@@ -246,7 +247,9 @@ const Main = () => {
           fill="#67CCA7"
         />
       </svg>
-      <LongRoundButton title="수련하기" />
+      <Link to="/bodypartchoice">
+        <LongRoundButton title="수련하기" />
+      </Link>
     </MainContainer>
   );
 };
