@@ -1,5 +1,6 @@
 export const COLORS = {
   green: "#39AE76",
+  lightYellow: "#FFF5DB",
 };
 
 export const FONT_WEIGHT = {
