@@ -1,22 +1,26 @@
 import React from "react";
 import styled from "styled-components";
 import { COLORS } from "../styles/constant";
+import Header from "../components/Header";
 
 const Container = styled.div`
   background: ${COLORS.lightYellow};
   overflow: hidden;
   position: relative;
+  width: 100vw;
+  height: 100vh;
 
   > svg {
     position: relative;
-    right: 100%;
-    top: 2em;
+    right: 104%;
+    top: 1em;
   }
 `;
 
 const VideoList = () => {
   return (
     <Container>
+      <Header />
       <svg
         width="822"
         height="645"
