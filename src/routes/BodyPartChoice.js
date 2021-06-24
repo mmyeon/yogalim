@@ -9,11 +9,28 @@ const StyledBodyPartChoice = styled.div`
   background: ${COLORS.lightYellow};
   overflow: hidden;
 
+  > .container {
+    /* 반응형을 위한 부분 */
+    max-width: 700px;
+    margin: 0 auto;
+
+    > .content {
+      padding-top: 4em;
+      padding-left: 10%;
+
+      > h2 {
+        > .thiner {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
   > svg {
+    position: relative;
+    bottom: 2.5em;
     width: 100%;
     height: 100%;
-    position: relative;
-    bottom: -5.3em;
   }
 `;
 
@@ -21,6 +38,14 @@ const BodyPartChoice = () => {
   return (
     <StyledBodyPartChoice>
       <Header />
+      <div className="container">
+        <div className="content">
+          <h2>
+            평소 신체 어느 부분이
+            <br /> <span className="thiner">불편하신가요?</span>
+          </h2>
+        </div>
+      </div>
       <svg
         width="320"
         height="377"
