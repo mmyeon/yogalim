@@ -11,6 +11,7 @@ const Container = styled.div`
   height: 100vh;
 
   > svg {
+    /* TODO: 이미지 개선하기  */
     position: relative;
     right: 104%;
     top: 1em;
