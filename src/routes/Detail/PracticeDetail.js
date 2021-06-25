@@ -1,7 +1,7 @@
 import React from "react";
 
-const VideoDetail = () => {
+const PracticeDetail = () => {
   return <div>비디오 디테일입니다</div>;
 };
 
-export default VideoDetail;
+export default PracticeDetail;

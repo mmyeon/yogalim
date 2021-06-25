@@ -247,7 +247,7 @@ const Main = () => {
           fill="#67CCA7"
         />
       </svg>
-      <Link to="/bodypartchoice">
+      <Link to="/practice">
         <LongRoundButton title="수련하기" />
       </Link>
     </MainContainer>

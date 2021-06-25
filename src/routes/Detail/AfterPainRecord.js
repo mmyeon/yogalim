@@ -1,7 +1,7 @@
 import React from "react";
 
-const AfterEstimation = () => {
+const AfterPainRecord = () => {
   return <div>수련 후 평가</div>;
 };
 
-export default AfterEstimation;
+export default AfterPainRecord;

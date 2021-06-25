@@ -1,7 +1,7 @@
 import React from "react";
 
-const BeforeEstimation = () => {
+const BeforePainRecord = () => {
   return <div>수련 전 평가</div>;
 };
 
-export default BeforeEstimation;
+export default BeforePainRecord;
