@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Header from "../components/Header";
 import { COLORS } from "../styles/constant";
 import Button from "../components/Button";
+import data from "../data";
 
 const StyledPractice = styled.div`
   width: 100vw;
@@ -37,7 +39,7 @@ const StyledPractice = styled.div`
         justify-content: space-evenly;
         align-items: center;
 
-        > button {
+        > a > button {
           margin-top: 0.5em;
           margin-right: 0.5em;
         }
@@ -63,8 +65,6 @@ const StyledPractice = styled.div`
   }
 `;
 
-const bodyPartList = ["목", "어깨", "허리", "손목", "골반", "무릎"];
-
 const Practice = () => {
   return (
     <StyledPractice>
@@ -76,12 +76,14 @@ const Practice = () => {
             <br /> <span className="thiner">불편하신가요?</span>
           </h2>
           <div className="button-container">
-            {bodyPartList.map((bodyPart) => (
-              <Button
-                key={bodyPart}
-                text={bodyPart}
-                backgroundColor="#E25A3D"
-              />
+            {data.map((bodyPart) => (
+              <Link to={`/practice/${bodyPart.title.eng}`}>
+                <Button
+                  key={bodyPart}
+                  text={bodyPart.title.kor}
+                  backgroundColor="#E25A3D"
+                />
+              </Link>
             ))}
           </div>
         </div>
