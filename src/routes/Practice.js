@@ -31,17 +31,20 @@ const StyledPractice = styled.div`
         margin-top: 1em;
         padding: 0 1em;
 
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+
         > button {
           margin-top: 0.5em;
-        }
-
-        > * + * {
-          margin-left: 0.5em;
+          margin-right: 0.5em;
         }
       }
     }
   }
-
+  /* TODO: 배경이미지 위치 수정 */
   /* 컨텐츠 넣으면 자꾸 수정해야한다. 그냥 고정으로 배경에 못넣으려나? */
   /* 컨텐츠가 늘어나도 그대로있었으면 좋겠다. 밀리지 않고 */
   > .svg-container {
@@ -74,7 +77,11 @@ const Practice = () => {
           </h2>
           <div className="button-container">
             {bodyPartList.map((bodyPart) => (
-              <Button text={bodyPart} />
+              <Button
+                key={bodyPart}
+                text={bodyPart}
+                backgroundColor="#E25A3D"
+              />
             ))}
           </div>
         </div>
