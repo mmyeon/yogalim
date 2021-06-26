@@ -34,7 +34,6 @@ const MainContainer = styled.div`
   > svg {
     position: relative;
     bottom: -2em;
-    left: -1.37em;
   }
 `;
 
