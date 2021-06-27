@@ -19,10 +19,12 @@ const Practice = () => {
             <div className="button-container">
               {data.map((bodyPart) => (
                 <Link to={`/practice/${bodyPart.title.eng}`}>
+                  {/* TODO: 디자인처럼 배경 색 바꾸기 */}
                   <Button
                     key={bodyPart}
                     text={bodyPart.title.kor}
-                    backgroundColor="#E25A3D"
+                    // backgroundColor="#E25A3D"
+                    backgroundColor={bodyPart.buttonColor}
                   />
                 </Link>
               ))}
