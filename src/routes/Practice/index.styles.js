@@ -56,22 +56,5 @@ export const Practice = styled.div`
         }
       }
     }
-    /* TODO: 배경이미지 위치 수정 */
-    /* 컨텐츠 넣으면 자꾸 수정해야한다. 그냥 고정으로 배경에 못넣으려나? */
-    /* 컨텐츠가 늘어나도 그대로있었으면 좋겠다. 밀리지 않고 */
-    > .svg-container {
-      position: relative;
-      height: 100%;
-      /* width: 100vw;
-    height: 100%; */
-
-      > svg {
-        /* 이미지 하단 고정 */
-        bottom: 7em;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-      }
-    }
   }
 `;
