@@ -33,6 +33,8 @@ export const Practice = styled.div`
         padding-left: 10%;
 
         > h2 {
+          font-size: 1.5em;
+
           > .thiner {
             font-weight: 400;
           }
@@ -41,16 +43,15 @@ export const Practice = styled.div`
         > .button-container {
           margin-top: 1em;
           padding: 0 1em;
-
           display: flex;
           flex-direction: row;
           flex-flow: wrap;
           justify-content: space-evenly;
           align-items: center;
+          max-width: 90%;
 
           > a > button {
             margin-top: 0.5em;
-            margin-right: 0.5em;
           }
         }
       }
