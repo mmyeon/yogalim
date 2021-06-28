@@ -8,9 +8,9 @@ import * as Styled from "./index.styles";
 const Practice = () => {
   return (
     <Styled.Practice>
-      <Header />
       <div className="background">
         <div className="container">
+          <Header />
           <div className="content">
             <h2>
               평소 신체 어느 부분이

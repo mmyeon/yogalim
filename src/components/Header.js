@@ -14,7 +14,8 @@ const StyledHeader = styled.header`
   > span {
     text-align: center;
     padding-top: 1.4em;
-    font-size: 1.25em;
+    font-size: 1.3em;
+    letter-spacing: 1px;
     color: ${COLORS.darkGreen};
   }
 `;
@@ -27,7 +28,7 @@ const Header = () => {
         <span>YOGA</span>
         <svg
           width="20"
-          height="16"
+          height="17"
           viewBox="0 0 14 15"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
