@@ -22,7 +22,6 @@ export const Practice = styled.div`
     }
 
     > .container {
-      /* 반응형을 위한 부분 */
       max-width: 700px;
       margin: 0 auto;
       position: relative;
@@ -30,11 +29,13 @@ export const Practice = styled.div`
 
       > .content {
         padding-top: 5em;
-        padding-left: 10%;
+        max-width: 80%;
+        margin: 0 auto;
 
         > h2 {
           font-size: 1.6em;
           letter-spacing: 1px;
+          margin-bottom: 0.5em;
 
           > .thiner {
             font-weight: 400;
@@ -47,9 +48,10 @@ export const Practice = styled.div`
           display: flex;
           flex-direction: row;
           flex-flow: wrap;
-          justify-content: space-evenly;
+          justify-content: space-between;
           align-items: center;
           max-width: 90%;
+          margin: 0 auto;
 
           > a > button {
             margin-top: 0.5em;
