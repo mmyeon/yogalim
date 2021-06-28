@@ -50,7 +50,7 @@ export const Practice = styled.div`
           flex-flow: wrap;
           justify-content: space-between;
           align-items: center;
-          max-width: 90%;
+          max-width: 99%;
           margin: 0 auto;
 
           > a > button {
