@@ -5,7 +5,7 @@ import { FONT_FAMILY, FONT_WEIGHT } from "../styles/constant";
 const StyledButton = styled.button`
   color: white;
   font-family: ${FONT_FAMILY.korean};
-  padding: 0.8em 1em;
+  padding: 0.8em 0.9em;
   border-radius: 8px;
   border: none;
   background: ${(props) => props.backgroundColor};

@@ -29,11 +29,12 @@ export const Practice = styled.div`
       z-index: 10;
 
       > .content {
-        padding-top: 4em;
+        padding-top: 5em;
         padding-left: 10%;
 
         > h2 {
-          font-size: 1.5em;
+          font-size: 1.6em;
+          letter-spacing: 1px;
 
           > .thiner {
             font-weight: 400;
@@ -41,7 +42,7 @@ export const Practice = styled.div`
         }
 
         > .button-container {
-          margin-top: 1em;
+          margin-top: 0.7em;
           padding: 0 1em;
           display: flex;
           flex-direction: row;
