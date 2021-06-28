@@ -1,26 +1,10 @@
 import React from "react";
-import styled from "styled-components";
-import { COLORS } from "../styles/constant";
-import Header from "../components/Header";
-
-const Container = styled.div`
-  background: ${COLORS.lightYellow};
-  overflow: hidden;
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-
-  > svg {
-    /* TODO: 이미지 개선하기  */
-    position: relative;
-    right: 104%;
-    top: 1em;
-  }
-`;
+import Header from "../../components/Header";
+import * as Styled from "./index.styles";
 
 const VideoList = () => {
   return (
-    <Container>
+    <Styled.Container>
       <Header />
       <svg
         width="822"
@@ -202,7 +186,7 @@ const VideoList = () => {
           stroke-linecap="round"
         />
       </svg>
-    </Container>
+    </Styled.Container>
   );
 };
 
