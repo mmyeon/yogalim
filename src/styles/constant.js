@@ -14,6 +14,7 @@ export const FONT_WEIGHT = {
 };
 
 export const FONT_FAMILY = {
-  english: "Staatliches",
-  korean: "KOMACON",
+  english: "'Staatliches', cursive",
+  korean: "'Noto Sans KR', sans-serif",
+  point: "'KOMACON',sans-serif",
 };

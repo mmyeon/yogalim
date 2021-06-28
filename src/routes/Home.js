@@ -17,7 +17,7 @@ const MainContainer = styled.div`
     padding-top: 5em;
 
     > .desc {
-      font-family: ${FONT_FAMILY.korean};
+      font-family: ${FONT_FAMILY.point};
       font-size: 0.9em;
       letter-spacing: 0.1em;
       margin-bottom: 0.2em;
@@ -34,6 +34,8 @@ const MainContainer = styled.div`
   > svg {
     position: relative;
     bottom: -2em;
+    right: 2em;
+    transform: translateY(10px);
   }
 `;
 
