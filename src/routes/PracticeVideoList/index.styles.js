@@ -22,19 +22,40 @@ export const Container = styled.div`
     }
 
     > .content {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: space-evenly;
+      text-align: center;
       height: 100vh;
       width: 100vw;
+      position: relative;
+      top: 15%;
 
       > .title {
         font-family: ${FONT_FAMILY.korean};
-        font-weight: 100;
+        font-weight: 300;
+        margin-bottom: 6.5em;
 
         > b {
           font-weight: 600;
+        }
+      }
+
+      > .video-list {
+        .video-container {
+          width: auto;
+          height: auto;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          /* left: -240px; */
+          position: absolute;
+          background: red;
+          padding: 0 1.3em;
+
+          > .video {
+            background: green;
+            min-width: 213px;
+            height: 250px;
+            margin-right: 0.6em;
+          }
         }
       }
     }

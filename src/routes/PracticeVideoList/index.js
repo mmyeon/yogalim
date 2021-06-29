@@ -20,14 +20,25 @@ const VideoList = () => {
             bodyPartChoice === "전신" ||
             bodyPartChoice === "골반" ? (
               <>
-                <b>{bodyPartChoice}</b>이 편안한 요가
+                <b>{bodyPartChoice}</b>이 편안해지는 요가
               </>
             ) : (
               <>
-                <b>{bodyPartChoice}</b>가 편안한 요가
+                <b>{bodyPartChoice}</b>가 편안해지는 요가
               </>
             )}
           </h2>
+          <div
+            className="video-list"
+            onTouchStart={() => console.log("터치했음")}
+          >
+            <div className="video-container">
+              <div className="video"></div>
+              <div className="video"></div>
+              <div className="video"></div>
+              <div className="video"></div>
+            </div>
+          </div>
         </div>
       </div>
     </Styled.Container>
