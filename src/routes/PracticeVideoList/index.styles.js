@@ -24,7 +24,7 @@ export const Container = styled.div`
     > .content {
       text-align: center;
       height: 100vh;
-      width: 100vw;
+      /* width: 100vw; */
       position: relative;
       top: 15%;
 
@@ -40,21 +40,25 @@ export const Container = styled.div`
 
       > .video-list {
         .video-container {
-          width: auto;
+          overflow: scroll;
           height: auto;
           display: flex;
           justify-content: flex-start;
           align-items: center;
-          /* left: -240px; */
-          position: absolute;
-          background: red;
-          padding: 0 1.3em;
 
           > .video {
             background: green;
             min-width: 213px;
             height: 250px;
             margin-right: 0.6em;
+
+            &:first-child {
+              margin-left: 1.3em;
+            }
+
+            &:last-child {
+              margin-right: 1.3em;
+            }
           }
         }
       }

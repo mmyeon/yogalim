@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useParams } from "react-router";
 import Header from "../../components/Header";
 import * as Styled from "./index.styles";
@@ -9,6 +9,8 @@ const VideoList = () => {
   const bodyPartChoice = data.find(
     (bodyPart) => bodyPart.title.eng === params.body
   ).title.kor;
+
+  const videoListEl = useRef(null);
 
   return (
     <Styled.Container>
@@ -28,11 +30,12 @@ const VideoList = () => {
               </>
             )}
           </h2>
-          <div
-            className="video-list"
-            onTouchStart={() => console.log("터치했음")}
-          >
-            <div className="video-container">
+          <div className="video-list">
+            <div
+              className="video-container"
+              ref={videoListEl}
+              onScroll={() => console.log("미연쓰")}
+            >
               <div className="video"></div>
               <div className="video"></div>
               <div className="video"></div>
