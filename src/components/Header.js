@@ -16,7 +16,7 @@ const StyledHeader = styled.header`
     padding-top: 1.4em;
     font-size: 1.3em;
     letter-spacing: 1px;
-    color: ${COLORS.darkGreen};
+    color: ${COLORS.darkGreen2};
   }
 `;
 

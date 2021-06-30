@@ -1,7 +1,14 @@
 export const COLORS = {
-  green: "#39AE76",
-  darkGreen: "#44785F",
+  primaryTeal: "#39AE76",
+  darkGreen1: "#5E9036",
+  darkGreen2: "#44785F",
   lightYellow: "#FFF5DB",
+  brightTurquoise: "#67CCA7",
+  amber: "#EEA81F",
+  white: "#FFFFFF",
+  black: "#2C2C2C",
+  red: "#E25A3D",
+  brown: "#9F7535",
 };
 
 export const FONT_WEIGHT = {

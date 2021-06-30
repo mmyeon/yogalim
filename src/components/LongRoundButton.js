@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { FONT_FAMILY, FONT_WEIGHT } from "../styles/constant";
+import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../styles/constant";
 
 const StyledLongRoundButton = styled.button`
-  background: white;
+  color: ${COLORS.black};
+  background: ${COLORS.white};
   border: none;
   padding: 0.8em 6em;
   border-radius: 4em;

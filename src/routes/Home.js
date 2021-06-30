@@ -7,8 +7,8 @@ import LongRoundButton from "../components/LongRoundButton";
 const MainContainer = styled.div`
   width: 100vw;
   height: 100vh;
-  background: ${COLORS.green};
-  color: white;
+  background: ${COLORS.primaryTeal};
+  color: ${COLORS.white};
   overflow: hidden;
   text-align: center;
   position: relative;
