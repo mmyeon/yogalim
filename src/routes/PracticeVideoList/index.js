@@ -1,21 +1,16 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Header from "../../components/Header";
 import * as Styled from "./index.styles";
 import data from "../../data";
 
 const VideoList = () => {
   const params = useParams();
+  const currentUBodyPart = params.body;
   const selectedBodyPartObj = data.find(
-    (bodyPart) => bodyPart.title.eng === params.body
+    (bodyPart) => bodyPart.title.eng === currentUBodyPart
   );
-
   const titleInKorean = selectedBodyPartObj.title.kor;
-  // const bodyPartChoice = data.find(
-  //   (bodyPart) => bodyPart.title.eng === params.body
-  // ).title.kor;
-
-  // console.log("bodyPartChoice", bodyPartChoice);
 
   return (
     <Styled.Container>
@@ -38,12 +33,14 @@ const VideoList = () => {
           <div className="video-list">
             <div className="video-container">
               {selectedBodyPartObj.playList.map((item) => (
-                <img
-                  key={item.videoId}
-                  className="video"
-                  src={item.thumbnail}
-                  alt="yoga video thumbnail"
-                />
+                <Link to={`/practice/${currentUBodyPart}/${item.videoId}`}>
+                  <img
+                    key={item.videoId}
+                    className="video"
+                    src={item.thumbnail}
+                    alt="yoga video thumbnail"
+                  />
+                </Link>
               ))}
             </div>
           </div>
