@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { device } from "../../device";
-import { COLORS, FONT_FAMILY } from "../../styles/constant";
+import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../../styles/constant";
 
 export const Container = styled.div`
   background: ${COLORS.lightYellow};
@@ -45,11 +45,8 @@ export const Container = styled.div`
           justify-content: flex-start;
           align-items: center;
 
-          .video {
-            background: green;
-            min-width: 213px;
-            height: 250px;
-            margin-right: 0.6em;
+          > .container {
+            position: relative;
 
             &:first-child {
               margin-left: 1.3em;
@@ -57,6 +54,34 @@ export const Container = styled.div`
 
             &:last-child {
               margin-right: 1.3em;
+            }
+
+            .video {
+              background: green;
+              min-width: 213px;
+              height: 250px;
+              margin-right: 0.6em;
+            }
+
+            .title-container {
+              position: absolute;
+              bottom: 1.5em;
+              color: ${COLORS.white};
+              text-align: left;
+              padding: 0 1.4em;
+
+              > h3 {
+                font-size: 1.2em;
+                font-weight: ${FONT_WEIGHT.bold};
+                margin-bottom: 0.1em;
+                word-break: keep-all;
+                letter-spacing: 1.5px;
+              }
+
+              > span {
+                font-size: 0.8em;
+                font-weight: ${FONT_WEIGHT.thin};
+              }
             }
           }
         }

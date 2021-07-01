@@ -33,14 +33,20 @@ const VideoList = () => {
           <div className="video-list">
             <div className="video-container">
               {selectedBodyPartObj.playList.map((item) => (
-                <Link to={`/practice/${currentUBodyPart}/${item.videoId}`}>
-                  <img
-                    key={item.videoId}
-                    className="video"
-                    src={item.thumbnail}
-                    alt="yoga video thumbnail"
-                  />
-                </Link>
+                <div className="container">
+                  <Link to={`/practice/${currentUBodyPart}/${item.videoId}`}>
+                    <img
+                      key={item.videoId}
+                      className="video"
+                      src={item.thumbnail}
+                      alt="yoga video thumbnail"
+                    />
+                    <div className="title-container">
+                      <h3>{item.title}</h3>
+                      <span>{item.time}</span>
+                    </div>
+                  </Link>
+                </div>
               ))}
             </div>
           </div>
