@@ -11,7 +11,7 @@ const data = [
         desc: "목을 좌우로 움직여 어깨의 긴장을 풀어주는 수련입니다.",
         time: "20분",
         thumbnail: "/assets/images/practice/test.png",
-        videoId: "bqmlyel0kPg?t=150",
+        videoId: "NWKtNDqBDmo?t=2800",
         url: "https://www.youtube.com/watch?v=bqmlyel0kPg&t=1s",
       },
       {
