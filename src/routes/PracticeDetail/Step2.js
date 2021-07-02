@@ -7,12 +7,23 @@ const StyledStep2 = styled.div`
   width: 100vw;
   height: 100vh;
   background: ${COLORS.lightYellow};
+
+  > .background {
+    width: 101%;
+    height: 102%;
+    background-image: url("/assets/images/step/pain-record-bg.png");
+    background-position: bottom;
+    background-size: cover;
+}
+  }
 `;
 
 const Step2 = () => {
   return (
     <StyledStep2>
-      <Header />
+      <div className="background">
+        <Header />
+      </div>
     </StyledStep2>
   );
 };
