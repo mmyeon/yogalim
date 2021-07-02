@@ -1,7 +1,20 @@
 import React from "react";
+import styled from "styled-components";
+import { COLORS } from "../../styles/constant";
+import Header from "../../components/Header";
 
-const BeforePainRecord = () => {
-  return <div>수련 전 평가</div>;
+const StyledStep2 = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background: ${COLORS.lightYellow};
+`;
+
+const Step2 = () => {
+  return (
+    <StyledStep2>
+      <Header />
+    </StyledStep2>
+  );
 };
 
-export default BeforePainRecord;
+export default Step2;
