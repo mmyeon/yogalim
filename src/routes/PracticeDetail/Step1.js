@@ -80,7 +80,7 @@ const StyledPracticeDetail = styled.div`
   }
 `;
 
-const PracticeDetail = () => {
+const Step1 = () => {
   const { pathname, search } = useLocation();
   const currentBody = pathname.split("/")[2];
   const practicePlayList = data.find(
@@ -129,4 +129,4 @@ const PracticeDetail = () => {
   );
 };
 
-export default PracticeDetail;
+export default Step1;

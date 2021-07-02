@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./routes/Home";
 import Practice from "./routes/Practice/index";
-import PracticeDetail from "./routes/Detail/PracticeDetail";
+import PracticeDetail from "./routes/PracticeDetail";
 import PracticeVideoList from "./routes/PracticeVideoList";
 import Review from "./routes/Review";
 
