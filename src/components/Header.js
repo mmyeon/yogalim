@@ -6,10 +6,12 @@ import { COLORS, FONT_FAMILY } from "../styles/constant";
 const StyledHeader = styled.header`
   position: absolute;
   top: 1.5em;
-  width: 100%;
+  left: 50%;
+    transform: translateX(-50%);
   text-align: center;
   font-family: ${FONT_FAMILY.english};
   z-index: 10;
+}
 
   > span {
     text-align: center;
