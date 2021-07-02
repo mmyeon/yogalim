@@ -33,10 +33,10 @@ const VideoList = () => {
           <div className="video-list">
             <div className="video-container">
               {selectedBodyPartObj.playList.map((item) => (
-                <div className="container">
+                <div className="container" key={item.videoId}>
                   <Link to={`/practice/${currentUBodyPart}/${item.videoId}`}>
                     <img
-                      key={item.videoId}
+                      // key={item.videoId}
                       className="video"
                       src={item.thumbnail}
                       alt="yoga video thumbnail"
