@@ -1,7 +1,10 @@
 import React from "react";
-import { useLocation } from "react-router";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import ReactPlayer from "react-player";
+// import LongRoundButton from "../../components/LongRoundButton";
+import data from "../../data";
+import { COLORS, FONT_FAMILY } from "../../styles/constant";
 
 const StyledPracticeDetail = styled.div`
   width: 100vw;
@@ -22,18 +25,75 @@ const StyledPracticeDetail = styled.div`
     height: 100%;
     z-index: -1;
   }
+
+  > .contents {
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* height: auto; */
+
+    > h1 {
+      font-size: 1.3em;
+      color: ${COLORS.white};
+    }
+
+    > .practice-desc {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: ${FONT_FAMILY.point};
+      margin: 1em 0;
+
+      > img {
+        width: 86px;
+        height: 86px;
+      }
+
+      > .bubble {
+        position: relative;
+
+        > img {
+          position: absolute;
+          z-index: -1;
+          width: 23px;
+          top: 50%;
+          left: 0.4em;
+          transform: translateY(-50%);
+        }
+        > p {
+          margin-left: 1.3em;
+          background: ${COLORS.lightYellow};
+          padding: 1.2em 0.9em;
+          border-radius: 16px;
+          font-size: 0.87em;
+          word-break: keep-all;
+          color: ${COLORS.black};
+        }
+      }
+    }
+  }
 `;
 
 const PracticeDetail = () => {
-  const location = useLocation();
-  const videoId = location.pathname.split("/").pop() + location.search;
+  const { pathname, search } = useLocation();
+  const currentBody = pathname.split("/")[2];
+  const practicePlayList = data.find(
+    (item) => item.title.eng === currentBody
+  ).playList;
+  const currentVideoId = pathname.split("/").pop() + search;
+  const videoInfo = practicePlayList.find(
+    (item) => item.videoId === currentVideoId
+  );
 
   return (
     <StyledPracticeDetail>
       <ReactPlayer
         className="background-video"
         playing
-        url={`https://youtu.be/${videoId}`}
+        url={`https://youtu.be/${currentVideoId}`}
         muted
       />
       <svg
@@ -48,6 +108,19 @@ const PracticeDetail = () => {
           fill="#39AE76"
         />
       </svg>
+      <div className="contents">
+        <h1>{videoInfo.title}</h1>
+        <div className="practice-desc">
+          <img src="/assets/images/step/yoga-teacher.png" alt="yoga-teacher" />
+          <div className="bubble">
+            <img
+              src="/assets/images/step/bubble-point.png"
+              alt="bubble-point"
+            />
+            <p>{videoInfo.desc}</p>
+          </div>
+        </div>
+      </div>
     </StyledPracticeDetail>
   );
 };
