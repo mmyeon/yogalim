@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import ReactPlayer from "react-player";
 import LongRoundButton from "../../components/LongRoundButton";
@@ -12,7 +12,7 @@ const StyledPracticeDetail = styled.div`
   overflow: hidden;
   position: relative;
 
-  > .chevron-left {
+  .chevron-left {
     width: 1.5em;
     height: 1.5em;
     position: relative;
@@ -90,6 +90,7 @@ const StyledPracticeDetail = styled.div`
 
 const Step1 = ({ goNextStep }) => {
   const { pathname, search } = useLocation();
+  const { goBack } = useHistory();
   const currentBody = pathname.split("/")[2];
   const practicePlayList = data.find(
     (item) => item.title.eng === currentBody
@@ -102,16 +103,19 @@ const Step1 = ({ goNextStep }) => {
   return (
     <StyledPracticeDetail>
       <img
+        onClick={goBack}
         src="/assets/images/step/chevron-left.png"
         className="chevron-left"
         alt="chevron-left"
       />
+
       <ReactPlayer
         className="background-video"
         playing
         url={`https://youtu.be/${currentVideoId}`}
         muted
       />
+
       <svg
         width="320"
         height="321"
@@ -124,8 +128,10 @@ const Step1 = ({ goNextStep }) => {
           fill="#39AE76"
         />
       </svg>
+
       <div className="contents">
         <h1>{videoInfo.title}</h1>
+
         <div className="practice-desc">
           <img src="/assets/images/step/yoga-teacher.png" alt="yoga-teacher" />
           <div className="bubble">
@@ -136,6 +142,7 @@ const Step1 = ({ goNextStep }) => {
             <p>{videoInfo.desc}</p>
           </div>
         </div>
+
         <LongRoundButton onClick={goNextStep} title="수련 시작" />
       </div>
     </StyledPracticeDetail>
