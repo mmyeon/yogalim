@@ -5,8 +5,8 @@ import * as Styled from "./index.styles";
 import data from "../../data";
 
 const VideoList = () => {
-  const params = useParams();
-  const currentUBodyPart = params.body;
+  const { body } = useParams();
+  const currentUBodyPart = body;
   const selectedBodyPartObj = data.find(
     (bodyPart) => bodyPart.title.eng === currentUBodyPart
   );
