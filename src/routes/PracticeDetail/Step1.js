@@ -80,7 +80,7 @@ const StyledPracticeDetail = styled.div`
   }
 `;
 
-const Step1 = ({ addStepCount }) => {
+const Step1 = ({ goNextStep }) => {
   const { pathname, search } = useLocation();
   const currentBody = pathname.split("/")[2];
   const practicePlayList = data.find(
@@ -123,7 +123,7 @@ const Step1 = ({ addStepCount }) => {
             <p>{videoInfo.desc}</p>
           </div>
         </div>
-        <LongRoundButton onClick={addStepCount} title="수련 시작" />
+        <LongRoundButton onClick={goNextStep} title="수련 시작" />
       </div>
     </StyledPracticeDetail>
   );
