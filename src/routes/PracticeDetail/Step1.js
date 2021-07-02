@@ -12,6 +12,14 @@ const StyledPracticeDetail = styled.div`
   overflow: hidden;
   position: relative;
 
+  > .chevron-left {
+    width: 1.5em;
+    height: 1.5em;
+    position: relative;
+    top: 0.5em;
+    left: 0.5em;
+  }
+
   > .background-video {
     position: relative;
     margin-left: -10em;
@@ -93,6 +101,11 @@ const Step1 = ({ goNextStep }) => {
 
   return (
     <StyledPracticeDetail>
+      <img
+        src="/assets/images/step/chevron-left.png"
+        className="chevron-left"
+        alt="chevron-left"
+      />
       <ReactPlayer
         className="background-video"
         playing
