@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import ReactPlayer from "react-player";
-// import LongRoundButton from "../../components/LongRoundButton";
+import LongRoundButton from "../../components/LongRoundButton";
 import data from "../../data";
 import { COLORS, FONT_FAMILY } from "../../styles/constant";
 
@@ -16,11 +16,12 @@ const StyledPracticeDetail = styled.div`
     position: relative;
     margin-left: -10em;
     z-index: -2;
+    top: -3em;
   }
 
   > svg {
     position: absolute;
-    bottom: -8em;
+    bottom: -5.5em;
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -33,7 +34,8 @@ const StyledPracticeDetail = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* height: auto; */
+    top: -2.5em;
+    position: relative;
 
     > h1 {
       font-size: 1.3em;
@@ -45,7 +47,8 @@ const StyledPracticeDetail = styled.div`
       align-items: center;
       justify-content: center;
       font-family: ${FONT_FAMILY.point};
-      margin: 1em 0;
+      margin-top: 1em;
+      margin-bottom: 1.2em;
 
       > img {
         width: 86px;
@@ -120,6 +123,7 @@ const PracticeDetail = () => {
             <p>{videoInfo.desc}</p>
           </div>
         </div>
+        <LongRoundButton title="수련 시작" />
       </div>
     </StyledPracticeDetail>
   );

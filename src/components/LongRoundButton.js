@@ -6,20 +6,20 @@ const StyledLongRoundButton = styled.button`
   color: ${COLORS.black};
   background: ${COLORS.white};
   border: none;
-  padding: 0.8em 6em;
+  padding: 0.6em 5em;
   border-radius: 4em;
-  position: absolute;
-  bottom: 3.5em;
-  left: 50%;
-  transform: translateX(-50%);
   font-size: 1.1em;
   font-weight: ${FONT_WEIGHT.semiBold};
   font-family: ${FONT_FAMILY.korean};
   letter-spacing: 2px;
 `;
 
-const LongRoundButton = ({ title }) => {
-  return <StyledLongRoundButton>{title}</StyledLongRoundButton>;
+const LongRoundButton = ({ title, onClick }) => {
+  return (
+    <StyledLongRoundButton className="long-round-btn" onClick={onClick}>
+      {title}
+    </StyledLongRoundButton>
+  );
 };
 
 export default LongRoundButton;
