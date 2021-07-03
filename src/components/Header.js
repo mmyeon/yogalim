@@ -7,11 +7,10 @@ const StyledHeader = styled.header`
   position: absolute;
   top: 1.5em;
   left: 50%;
-    transform: translateX(-50%);
+  transform: translateX(-50%);
   text-align: center;
   font-family: ${FONT_FAMILY.english};
   z-index: 10;
-}
 
   > span {
     text-align: center;
