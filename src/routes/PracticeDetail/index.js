@@ -10,12 +10,16 @@ const Index = () => {
   // 현재 url 주소 알아내기
   const { pathname, search } = useLocation();
   // 신체부위 알려줌
-  const currentBody = pathname.split("/")[2];
-  // 현재 신체부위의 플레이리스트 알려줌
-  const practicePlayList = data.find(
-    (item) => item.title.eng === currentBody
-  ).playList;
+  const currentBodyInEng = pathname.split("/")[2];
 
+  const currentBodyPartInfo = data.find(
+    (bodyPart) => bodyPart.title.eng === currentBodyInEng
+  );
+
+  const currentBodyInKorean = currentBodyPartInfo.title.kor;
+  // 현재 신체부위의 플레이리스트 알려줌
+
+  const practicePlayList = currentBodyPartInfo.playList;
   const currentVideoId = pathname.split("/").pop() + search;
   const videoInfo = practicePlayList.find(
     (item) => item.videoId === currentVideoId
@@ -30,7 +34,12 @@ const Index = () => {
           videoInfo={videoInfo}
         />
       )}
-      {step === 2 && <Step2 goNextStep={goNextStep} />}
+      {step === 2 && (
+        <Step2
+          goNextStep={goNextStep}
+          currentBodyInKorean={currentBodyInKorean}
+        />
+      )}
       {step === 3 && <Step2 goNextStep={goNextStep} />}
       {step === 4 && <Step2 goNextStep={goNextStep} />}
     </div>
