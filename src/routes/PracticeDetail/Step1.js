@@ -1,9 +1,8 @@
 import React from "react";
-import { useLocation, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import ReactPlayer from "react-player";
 import LongRoundButton from "../../components/LongRoundButton";
-import data from "../../data";
 import { COLORS, FONT_FAMILY } from "../../styles/constant";
 
 const StyledPracticeDetail = styled.div`
@@ -88,17 +87,8 @@ const StyledPracticeDetail = styled.div`
   }
 `;
 
-const Step1 = ({ goNextStep }) => {
-  const { pathname, search } = useLocation();
+const Step1 = ({ goNextStep, currentVideoId, videoInfo }) => {
   const { goBack } = useHistory();
-  const currentBody = pathname.split("/")[2];
-  const practicePlayList = data.find(
-    (item) => item.title.eng === currentBody
-  ).playList;
-  const currentVideoId = pathname.split("/").pop() + search;
-  const videoInfo = practicePlayList.find(
-    (item) => item.videoId === currentVideoId
-  );
 
   return (
     <StyledPracticeDetail>
