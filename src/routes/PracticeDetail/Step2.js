@@ -14,7 +14,13 @@ const StyledStep2 = styled.div`
     background-image: url("/assets/images/step/pain-record-bg.png");
     background-position: bottom;
     background-size: cover;
-}
+
+    > .title-container {
+      > .meditation-img {
+        width: 5.5em;
+        height: 5.5em;
+      }
+    }
   }
 `;
 
@@ -23,6 +29,14 @@ const Step2 = () => {
     <StyledStep2>
       <div className="background">
         <Header />
+        <div className="title-container">
+          <img
+            className="meditation-img"
+            src="/assets/images/step/meditation-pose.png"
+            alt="meditation pose"
+          />
+          <h1>ddd</h1>
+        </div>
       </div>
     </StyledStep2>
   );
