@@ -9,6 +9,7 @@ const StyledStep2 = styled.div`
   width: 100vw;
   height: 100vh;
   background: ${COLORS.lightYellow};
+  overflow: hidden;
 
   > .background {
     width: 101%;
