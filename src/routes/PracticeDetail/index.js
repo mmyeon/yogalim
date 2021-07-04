@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useLocation } from "react-router";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
+import Step3 from "./Step3";
+import Step4 from "./Step4";
 import data from "../../data";
 
 const Index = () => {
@@ -40,8 +42,8 @@ const Index = () => {
           currentBodyInKorean={currentBodyInKorean}
         />
       )}
-      {step === 3 && <Step2 goNextStep={goNextStep} />}
-      {step === 4 && <Step2 goNextStep={goNextStep} />}
+      {step === 3 && <Step3 goNextStep={goNextStep} />}
+      {step === 4 && <Step4 goNextStep={goNextStep} />}
     </div>
   );
 
