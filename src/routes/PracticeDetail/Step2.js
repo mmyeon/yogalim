@@ -42,6 +42,16 @@ const StyledStep2 = styled.div`
         }
       }
     }
+
+    > .pain-record-container {
+      margin: 4.5em 0;
+
+      > .desc {
+        color: ${COLORS.white};
+        text-align: center;
+        font-size: 1.2em;
+      }
+    }
   }
 `;
 
@@ -60,6 +70,11 @@ const Step2 = ({ currentBodyInKorean }) => {
             <span className="thinner">수련 하기 전</span> {currentBodyInKorean}
             의 통증을 기록해보세요
           </h1>
+        </div>
+        <div className="pain-record-container">
+          <p className="desc">
+            불편한 정도에 따라서 <br />0 ~ 10 까지 표시해보세요.
+          </p>
         </div>
       </div>
     </StyledStep2>
