@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../../styles/constant";
 import Header from "../../components/Header";
 import LongRoundButton from "../../components/LongRoundButton";
-import PainRating from "../../components/PainRating";
+import PainScale from "../../components/PainScale";
 
 const StyledStep2 = styled.div`
   width: 100vw;
@@ -89,7 +89,7 @@ const Step2 = ({ currentBodyInKorean, goNextStep }) => {
               불편한 정도에 따라서 <br />0 ~ 10 까지 표시해보세요.
             </p>
           </div>
-          <PainRating />
+          <PainScale />
           <LongRoundButton onClick={goNextStep} title="수련 시작" />
         </div>
       </div>
