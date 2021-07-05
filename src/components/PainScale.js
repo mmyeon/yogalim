@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const StyledPainScale = styled.div`
@@ -21,24 +21,29 @@ const PainScale = () => {
   const ratingScale = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const [painScoreBeforePractice, setPainScoreBeforePractice] = useState("0");
 
+  useEffect(() => {
+    console.log(typeof painScoreBeforePractice);
+  }, [painScoreBeforePractice]);
+
   return (
     <StyledPainScale>
-      {painScoreBeforePractice === "0" && (
+      {painScoreBeforePractice === 0 && (
         <img src="/assets/images/step/no-pain.png" alt="no pain" />
       )}
-      {"1" <= painScoreBeforePractice && painScoreBeforePractice <= "3" && (
+
+      {0 < painScoreBeforePractice && painScoreBeforePractice <= 3 && (
         <img src="/assets/images/step/mild.png" alt="mild pain" />
       )}
-      {"4" <= painScoreBeforePractice && painScoreBeforePractice <= "5" && (
+      {3 < painScoreBeforePractice && painScoreBeforePractice <= 5 && (
         <img src="/assets/images/step/moderate.png" alt="moderate pain" />
       )}
-      {"6" <= painScoreBeforePractice && painScoreBeforePractice <= "7" && (
+      {5 < painScoreBeforePractice && painScoreBeforePractice <= 7 && (
         <img src="/assets/images/step/severe.png" alt="severe pain" />
       )}
-      {"8" <= painScoreBeforePractice && painScoreBeforePractice <= "9" && (
+      {7 < painScoreBeforePractice && painScoreBeforePractice <= 9 && (
         <img src="/assets/images/step/very-severe.png" alt="very severe pain" />
       )}
-      {painScoreBeforePractice === "10" && (
+      {painScoreBeforePractice === 10 && (
         <img src="/assets/images/step/worst.png" alt="worst pain" />
       )}
 
@@ -72,8 +77,8 @@ const PainScale = () => {
   );
 
   function updatePainScore(e) {
-    const seletedScore = e.target.value;
-    setPainScoreBeforePractice(seletedScore);
+    const painScore = parseInt(e.target.value);
+    setPainScoreBeforePractice(painScore);
   }
 };
 
