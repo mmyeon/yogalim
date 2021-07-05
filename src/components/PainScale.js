@@ -19,11 +19,7 @@ const StyledPainScale = styled.div`
 
 const PainScale = () => {
   const ratingScale = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  const [painScoreBeforePractice, setPainScoreBeforePractice] = useState("0");
-
-  useEffect(() => {
-    console.log(typeof painScoreBeforePractice);
-  }, [painScoreBeforePractice]);
+  const [painScoreBeforePractice, setPainScoreBeforePractice] = useState(0);
 
   return (
     <StyledPainScale>
