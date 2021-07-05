@@ -14,6 +14,11 @@ const StyledSquareButton = styled.button`
   align-items: center;
   justify-content: center;
   border: none;
+  transition: background 0.6s;
+
+  &:focus {
+    background: ${COLORS.red};
+  }
 `;
 
 const SquareButton = ({ number, onClick, value }) => {
