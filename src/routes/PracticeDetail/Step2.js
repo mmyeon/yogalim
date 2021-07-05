@@ -15,8 +15,9 @@ const StyledStep2 = styled.div`
     width: 101%;
     height: 102%;
     background-image: url("/assets/images/step/pain-record-bg.png");
-    background-position: bottom;
+    background-position: 64% 1em;
     background-size: cover;
+    background-repeat: no-repeat;
 
     > .contents {
       display: flex;
@@ -29,9 +30,9 @@ const StyledStep2 = styled.div`
         max-width: 70%;
         margin: 0 auto;
         justify-content: center;
-        align-items: center;
+        align-items: end;
         line-height: 27px;
-        padding-top: 4.5em;
+        padding-top: 6em;
         word-break: keep-all;
 
         > .meditation-img {
@@ -53,7 +54,7 @@ const StyledStep2 = styled.div`
       }
 
       > .pain-record-container {
-        margin: 4.5em 0;
+        margin: 4em 0;
 
         > .desc {
           color: ${COLORS.white};
