@@ -50,13 +50,18 @@ export const Container = styled.div`
       }
 
       > .pain-record-container {
-        margin-top: 3em;
+        margin-top: 1em;
         margin-bottom: 1.5em;
+        background: ${COLORS.white};
+        border-radius: 10px;
+        color: ${COLORS.black};
+        padding: 1em 0;
+        font-family: ${FONT_FAMILY.point};
 
         > .desc {
           color: ${COLORS.white};
           text-align: center;
-          font-size: 1.2em;
+          font-size: 1.18em;
         }
       }
 

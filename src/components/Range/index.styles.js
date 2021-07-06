@@ -4,8 +4,6 @@ import { COLORS, FONT_WEIGHT } from "../../styles/constant";
 export const Range = styled.div`
   width: 18.75rem;
   height: 4em;
-  background: white;
-  border-radius: 10px;
   padding: 0 2.8em;
 
   .slider-value {
