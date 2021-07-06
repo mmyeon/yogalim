@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../styles/constant";
+import { COLORS, FONT_WEIGHT } from "../styles/constant";
 
 const StyledButton = styled.button`
   color: ${COLORS.white};
-  font-family: ${FONT_FAMILY.korean};
   padding: 0.8em 0.9em;
   border-radius: 8px;
   border: none;

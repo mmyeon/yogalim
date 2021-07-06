@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { device } from "../../device";
-import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../../styles/constant";
+import { COLORS, FONT_WEIGHT } from "../../styles/constant";
 
 export const Container = styled.div`
   background: ${COLORS.lightYellow};
@@ -28,7 +28,6 @@ export const Container = styled.div`
       top: 15%;
 
       > .title {
-        font-family: ${FONT_FAMILY.korean};
         font-weight: 300;
         margin-bottom: 6.5em;
 

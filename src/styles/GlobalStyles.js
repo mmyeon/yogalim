@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { FONT_FAMILY } from "./constant";
 
 const GlobalStyles = createGlobalStyle`
 
@@ -6,6 +7,11 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
+}
+
+body {
+   font-family :${FONT_FAMILY.korean} ;
 }
 
 

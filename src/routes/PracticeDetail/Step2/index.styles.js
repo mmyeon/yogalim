@@ -38,7 +38,6 @@ export const Container = styled.div`
 
         > h1 {
           font-size: 1.5em;
-          font-family: ${FONT_FAMILY.korean};
           padding-left: 0.3em;
           font-weight: ${FONT_WEIGHT.semiBold};
           letter-spacing: 1px;
@@ -54,12 +53,11 @@ export const Container = styled.div`
         margin-bottom: 1.5em;
         background: ${COLORS.white};
         border-radius: 10px;
-        color: ${COLORS.black};
         padding: 1em 0;
-        font-family: ${FONT_FAMILY.point};
 
         > .desc {
-          color: ${COLORS.white};
+          font-family: ${FONT_FAMILY.point};
+          color: ${COLORS.black};
           text-align: center;
           font-size: 1.18em;
         }
