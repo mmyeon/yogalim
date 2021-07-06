@@ -42,7 +42,9 @@ const Index = () => {
           currentBodyInKorean={currentBodyInKorean}
         />
       )}
-      {step === 3 && <Step3 goNextStep={goNextStep} />}
+      {step === 3 && (
+        <Step3 goNextStep={goNextStep} currentVideoId={currentVideoId} />
+      )}
       {step === 4 && <Step4 goNextStep={goNextStep} />}
     </div>
   );
