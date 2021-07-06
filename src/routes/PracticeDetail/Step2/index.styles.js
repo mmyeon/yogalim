@@ -1,11 +1,7 @@
-import React from "react";
 import styled from "styled-components";
-import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../../styles/constant";
-import Header from "../../components/Header";
-import LongRoundButton from "../../components/LongRoundButton";
-import PainScale from "../../components/PainScale";
+import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../../../styles/constant";
 
-const StyledStep2 = styled.div`
+export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   background: ${COLORS.lightYellow};
@@ -70,36 +66,3 @@ const StyledStep2 = styled.div`
     }
   }
 `;
-
-const Step2 = ({ currentBodyInKorean, goNextStep }) => {
-  return (
-    <StyledStep2>
-      <div className="background">
-        <Header />
-
-        <div className="contents">
-          <div className="title-container">
-            <img
-              className="meditation-img"
-              src="/assets/images/step/meditation-pose.png"
-              alt="meditation pose"
-            />
-            <h1>
-              <span className="thinner">수련 하기 전</span>{" "}
-              {currentBodyInKorean}의 통증을 기록해보세요
-            </h1>
-          </div>
-          <div className="pain-record-container">
-            <p className="desc">
-              불편한 정도에 따라서 <br />0 ~ 10 까지 표시해보세요.
-            </p>
-            <PainScale />
-          </div>
-          <LongRoundButton onClick={goNextStep} title="수련 시작" />
-        </div>
-      </div>
-    </StyledStep2>
-  );
-};
-
-export default Step2;
