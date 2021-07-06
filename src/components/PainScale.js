@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { COLORS, FONT_WEIGHT } from "../styles/constant";
 
 const StyledPainScale = styled.div`
   display: flex;
@@ -10,15 +11,103 @@ const StyledPainScale = styled.div`
   > img {
     width: 4em;
     height: 4em;
+    margin-top: 1.4em;
+    margin-bottom: 2.4em;
   }
 
-  > * + * {
-    margin-left: 0.4em;
+  .range {
+    width: 18.75rem;
+    height: 4em;
+    background: white;
+    border-radius: 10px;
+    padding: 0 2.8em;
+
+    .slider-value {
+      position: relative;
+      width: 100%;
+
+      span {
+        position: absolute;
+        width: 2em;
+        height: 2em;
+        color: ${COLORS.white};
+        transform: rotate(45deg);
+        font-weight: ${FONT_WEIGHT.bold};
+        font-size: 1.125em;
+        top: -27px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        right: 1px;
+      }
+
+      span:after {
+        position: absolute;
+        content: "";
+        width: 2em;
+        height: 2em;
+        background: ${COLORS.primaryTeal};
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        border: 3px solid ${COLORS.white};
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        text-align: center;
+        line-height: 55px;
+        z-index: -1;
+      }
+    }
+
+    .field {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      .value {
+        position: absolute;
+        font-size: 1.125em;
+        font-weight: ${FONT_WEIGHT.bold};
+        color: ${COLORS.primaryTeal};
+      }
+
+      .value.left {
+        left: -1.375em;
+      }
+      .value.right {
+        right: -1.75em;
+      }
+
+      input {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 3px;
+        border: none;
+        outline: none;
+        background: #ddd;
+        border-radius: 5px;
+      }
+
+      input::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: ${COLORS.primaryTeal};
+        cursor: pointer;
+      }
+    }
   }
 `;
 
 const PainScale = () => {
-  const ratingScale = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const scaleMin = 0;
+  const scaleMax = 10;
   const [painScoreBeforePractice, setPainScoreBeforePractice] = useState(0);
 
   return (
@@ -43,31 +132,25 @@ const PainScale = () => {
         <img src="/assets/images/step/worst.png" alt="worst pain" />
       )}
 
-      {painScoreBeforePractice}
-
-      <div className="container">
-        <datalist id="custom-list">
-          <option value="0"></option>
-          <option value="1"></option>
-          <option value="2"></option>
-          <option value="3"></option>
-          <option value="4"></option>
-          <option value="5"></option>
-          <option value="6"></option>
-          <option value="7"></option>
-          <option value="8"></option>
-          <option value="9"></option>
-          <option value="10"></option>
-        </datalist>
-        <input
-          type="range"
-          value={painScoreBeforePractice}
-          min="0"
-          max="10"
-          step="1"
-          list="custom-list"
-          onChange={updatePainScore}
-        />
+      <div className="range">
+        <div className="slider-value">
+          <span style={{ left: painScoreBeforePractice * 10 + "%" }}>
+            {painScoreBeforePractice}
+          </span>
+        </div>
+        <div className="field">
+          <span className="value left">{scaleMin}</span>
+          <input
+            type="range"
+            value={painScoreBeforePractice}
+            min={scaleMin}
+            max={scaleMax}
+            step="1"
+            list="custom-list"
+            onChange={updatePainScore}
+          />
+          <span className="value right">{scaleMax}</span>
+        </div>
       </div>
     </StyledPainScale>
   );

@@ -54,13 +54,18 @@ const StyledStep2 = styled.div`
       }
 
       > .pain-record-container {
-        margin: 4em 0;
+        margin-top: 3em;
+        margin-bottom: 1.5em;
 
         > .desc {
           color: ${COLORS.white};
           text-align: center;
           font-size: 1.2em;
         }
+      }
+
+      > button {
+        margin-bottom: 2em;
       }
     }
   }
@@ -88,8 +93,8 @@ const Step2 = ({ currentBodyInKorean, goNextStep }) => {
             <p className="desc">
               불편한 정도에 따라서 <br />0 ~ 10 까지 표시해보세요.
             </p>
+            <PainScale />
           </div>
-          <PainScale />
           <LongRoundButton onClick={goNextStep} title="수련 시작" />
         </div>
       </div>
