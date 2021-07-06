@@ -7,13 +7,6 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  > img {
-    width: 4em;
-    height: 4em;
-    margin-top: 1.4em;
-    margin-bottom: 2.4em;
-  }
-
   .range {
     width: 18.75rem;
     height: 4em;

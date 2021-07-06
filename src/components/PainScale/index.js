@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import * as Styled from "./index.styles";
+import Smile from "../Smile";
 
 const PainScale = () => {
   const scaleMin = 0;
@@ -8,25 +9,7 @@ const PainScale = () => {
 
   return (
     <Styled.Container>
-      {painScoreBeforePractice === 0 && (
-        <img src="/assets/images/step/no-pain.png" alt="no pain" />
-      )}
-
-      {0 < painScoreBeforePractice && painScoreBeforePractice <= 3 && (
-        <img src="/assets/images/step/mild.png" alt="mild pain" />
-      )}
-      {3 < painScoreBeforePractice && painScoreBeforePractice <= 5 && (
-        <img src="/assets/images/step/moderate.png" alt="moderate pain" />
-      )}
-      {5 < painScoreBeforePractice && painScoreBeforePractice <= 7 && (
-        <img src="/assets/images/step/severe.png" alt="severe pain" />
-      )}
-      {7 < painScoreBeforePractice && painScoreBeforePractice <= 9 && (
-        <img src="/assets/images/step/very-severe.png" alt="very severe pain" />
-      )}
-      {painScoreBeforePractice === 10 && (
-        <img src="/assets/images/step/worst.png" alt="worst pain" />
-      )}
+      <Smile painScoreBeforePractice={painScoreBeforePractice} />
 
       <div className="range">
         <div className="slider-value">
