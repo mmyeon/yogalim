@@ -37,7 +37,7 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    top: -2.5em;
+    top: -4.5em;
     position: relative;
 
     > h1 {
