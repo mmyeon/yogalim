@@ -5,8 +5,6 @@ import styled from "styled-components";
 const StyledStep3 = styled.div``;
 
 const Step3 = ({ goNextStep, currentVideoId }) => {
-  console.log("currentVideoId", currentVideoId);
-
   return (
     <StyledStep3>
       <ReactPlayer
@@ -14,6 +12,8 @@ const Step3 = ({ goNextStep, currentVideoId }) => {
         width="100vw"
         height="100vh"
         url={`https://youtu.be/${currentVideoId}`}
+        onEnded={goNextStep}
+        controls
       />
     </StyledStep3>
   );
