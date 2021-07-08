@@ -24,13 +24,14 @@ const Step2 = ({ currentBodyInKorean, goNextStep }) => {
             </h1>
           </div>
 
-          {/* card 컴포넌트로 분리하기 */}
-          <Card>
-            <p className="desc">
-              불편한 정도에 따라서 <br />0 ~ 10 까지 표시해보세요.
-            </p>
-            <PainScale />
-          </Card>
+          <Card
+            title={
+              <>
+                불편한 정도에 따라서 <br />0 ~ 10 까지 표시해보세요.
+              </>
+            }
+            body={<PainScale />}
+          />
 
           <LongRoundButton onClick={goNextStep} title="수련 시작" />
         </div>

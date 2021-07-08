@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { COLORS } from "../styles/constant";
+import { COLORS, FONT_FAMILY } from "../styles/constant";
 
 const StyledCard = styled.section`
   margin-top: 1em;
@@ -8,11 +8,22 @@ const StyledCard = styled.section`
   background: ${COLORS.white};
   border-radius: 10px;
   padding: 1em 0;
+
+  > .desc {
+    font-family: ${FONT_FAMILY.point};
+    color: ${COLORS.black};
+    text-align: center;
+    font-size: 1.18em;
+  }
 `;
 
-const Card = ({ children }) => {
-  // TODO: card 타이틀 추가
-  return <StyledCard className="card">{children}</StyledCard>;
+const Card = ({ title, body }) => {
+  return (
+    <StyledCard className="card">
+      <p className="desc">{title}</p>
+      {body}
+    </StyledCard>
+  );
 };
 
 export default Card;

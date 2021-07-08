@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../../../styles/constant";
+import { COLORS, FONT_WEIGHT } from "../../../styles/constant";
 
 export const Container = styled.div`
   width: 100vw;
@@ -46,19 +46,6 @@ export const Container = styled.div`
             font-weight: ${FONT_WEIGHT.thin};
           }
         }
-      }
-
-      > .card {
-        > .desc {
-          font-family: ${FONT_FAMILY.point};
-          color: ${COLORS.black};
-          text-align: center;
-          font-size: 1.18em;
-        }
-      }
-
-      > button {
-        margin-bottom: 2em;
       }
     }
   }
