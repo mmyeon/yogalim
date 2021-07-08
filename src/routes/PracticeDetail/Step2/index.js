@@ -3,6 +3,7 @@ import Header from "../../../components/Header";
 import LongRoundButton from "../../../components/LongRoundButton";
 import PainScale from "../../../components/PainScale";
 import * as Styled from "./index.styles";
+import Card from "../../../components/Card";
 
 const Step2 = ({ currentBodyInKorean, goNextStep }) => {
   return (
@@ -22,12 +23,15 @@ const Step2 = ({ currentBodyInKorean, goNextStep }) => {
               {currentBodyInKorean}의 통증을 기록해보세요
             </h1>
           </div>
-          <div className="pain-record-container">
+
+          {/* card 컴포넌트로 분리하기 */}
+          <Card>
             <p className="desc">
               불편한 정도에 따라서 <br />0 ~ 10 까지 표시해보세요.
             </p>
             <PainScale />
-          </div>
+          </Card>
+
           <LongRoundButton onClick={goNextStep} title="수련 시작" />
         </div>
       </div>

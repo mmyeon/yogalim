@@ -48,13 +48,7 @@ export const Container = styled.div`
         }
       }
 
-      > .pain-record-container {
-        margin-top: 1em;
-        margin-bottom: 1.5em;
-        background: ${COLORS.white};
-        border-radius: 10px;
-        padding: 1em 0;
-
+      > .card {
         > .desc {
           font-family: ${FONT_FAMILY.point};
           color: ${COLORS.black};
