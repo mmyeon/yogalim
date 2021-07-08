@@ -10,9 +10,13 @@ const Step3 = ({ goNextStep, currentVideoId }) => {
 
   useEffect(() => {
     if (played && duration) {
-      const remain = Math.round(duration * (1 - played));
-
-      if (remain <= 20) {
+      if (
+        checkPlayedEnough({
+          duration,
+          played,
+          adTime: 20,
+        })
+      ) {
         goNextStep();
       }
     }
@@ -26,9 +30,7 @@ const Step3 = ({ goNextStep, currentVideoId }) => {
         height="100vh"
         controls
         url={`https://youtu.be/${currentVideoId}`}
-        // 동영상 played시간
         onProgress={handleProgress}
-        // 동영상 재생 시간
         onDuration={handleDuration}
       />
     </StyledStep3>
@@ -40,6 +42,17 @@ const Step3 = ({ goNextStep, currentVideoId }) => {
 
   function handleProgress(state) {
     setPlayed(state.played);
+  }
+
+  /**
+   * adTime: 동영상 재생 남은 시간
+   */
+  function checkPlayedEnough({ duration, played, adTime }) {
+    const remain = Math.round(duration * (1 - played));
+
+    const result = remain <= adTime;
+
+    return result;
   }
 };
 
