@@ -5,7 +5,11 @@ import PainScale from "../../components/PainScale";
 import LongRoundButton from "../../components/buttons/LongRoundButton";
 import { Link } from "react-router-dom";
 
-const AfterPainRecord = ({ currentBodyInKorean }) => {
+const AfterPainRecord = ({
+  currentBodyInKorean,
+  currentVideoId,
+  currentBodyInEng,
+}) => {
   return (
     <Template
       title={
@@ -27,7 +31,7 @@ const AfterPainRecord = ({ currentBodyInKorean }) => {
         />
       }
       button={
-        <Link to="/practice/:body/:id/review">
+        <Link to={`/practice/${currentBodyInEng}/${currentVideoId}/review`}>
           <LongRoundButton title="수련 결과 보기" />
         </Link>
       }

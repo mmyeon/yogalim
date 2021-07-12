@@ -49,6 +49,8 @@ const Index = () => {
         <Step4
           goNextStep={goNextStep}
           currentBodyInKorean={currentBodyInKorean}
+          currentBodyInEng={currentBodyInEng}
+          currentVideoId={currentVideoId}
         />
       )}
     </div>
