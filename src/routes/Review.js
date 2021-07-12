@@ -1,9 +1,12 @@
 import React from "react";
+import { Link, useParams } from "react-router-dom";
 import Card from "../components/Card";
 import Button from "../components/buttons/Button";
 import Template from "../components/Template";
 
 const Review = () => {
+  const { body } = useParams();
+
   return (
     <Template
       title={
@@ -25,8 +28,12 @@ const Review = () => {
       }
       button={
         <div className="button-container">
-          <Button text="홈" />
-          <Button text="다음 수련 이어가기" />
+          <Link to="/">
+            <Button text="홈" />
+          </Link>
+          <Link to={`/practice/${body}`}>
+            <Button text="다음 수련 이어가기" />
+          </Link>
         </div>
       }
     />
