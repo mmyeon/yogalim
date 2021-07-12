@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { COLORS, FONT_WEIGHT } from "../../../styles/constant";
+import { COLORS, FONT_WEIGHT } from "../../styles/constant";
 
 export const Container = styled.div`
   width: 100vw;
