@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../styles/constant";
+import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../../styles/constant";
 
 const StyledLongRoundButton = styled.button`
   color: ${COLORS.black};

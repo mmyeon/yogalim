@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../../components/Header";
-import Button from "../../components/Button";
+import SquareButton from "../../components/buttons/SquareButton";
 import data from "../../data";
 import * as Styled from "./index.styles";
 
@@ -19,7 +19,7 @@ const Practice = () => {
             <div className="button-container">
               {data.map((bodyPart) => (
                 <Link to={`/practice/${bodyPart.title.eng}`}>
-                  <Button
+                  <SquareButton
                     key={bodyPart}
                     text={bodyPart.title.kor}
                     backgroundColor={bodyPart.buttonColor}

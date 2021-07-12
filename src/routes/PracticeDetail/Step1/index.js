@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import ReactPlayer from "react-player";
-import LongRoundButton from "../../../components/LongRoundButton";
+import LongRoundButton from "../../../components/buttons/LongRoundButton";
 import * as Styled from "./index.styles";
 
 const Step1 = ({ goNextStep, currentVideoId, videoInfo }) => {

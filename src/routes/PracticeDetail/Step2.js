@@ -1,5 +1,5 @@
 import React from "react";
-import LongRoundButton from "../../components/LongRoundButton";
+import LongRoundButton from "../../components/buttons/LongRoundButton";
 import PainScale from "../../components/PainScale";
 import Card from "../../components/Card";
 import Template from "../../components/Template";

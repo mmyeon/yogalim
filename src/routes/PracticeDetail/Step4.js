@@ -2,7 +2,7 @@ import React from "react";
 import Template from "../../components/Template";
 import Card from "../../components/Card";
 import PainScale from "../../components/PainScale";
-import LongRoundButton from "../../components/LongRoundButton";
+import LongRoundButton from "../../components/buttons/LongRoundButton";
 import { Link } from "react-router-dom";
 
 const AfterPainRecord = ({ currentBodyInKorean }) => {

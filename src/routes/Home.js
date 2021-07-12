@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../styles/constant";
-import LongRoundButton from "../components/LongRoundButton";
+import LongRoundButton from "../components/buttons/LongRoundButton";
 
 const MainContainer = styled.div`
   width: 100vw;
