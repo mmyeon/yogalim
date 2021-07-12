@@ -9,8 +9,9 @@ const Step2 = ({ currentBodyInKorean, goNextStep }) => {
     <Template
       title={
         <>
-          <span className="thinner">수련 하기 전</span> {currentBodyInKorean}의
-          통증을 기록해보세요
+          <span className="thinner">수련 하기 전</span>
+          <br />
+          {currentBodyInKorean}의 통증을 기록해보세요
         </>
       }
       body={

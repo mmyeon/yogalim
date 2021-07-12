@@ -45,7 +45,12 @@ const Index = () => {
       {step === 3 && (
         <Step3 goNextStep={goNextStep} currentVideoId={currentVideoId} />
       )}
-      {step === 4 && <Step4 goNextStep={goNextStep} />}
+      {step === 4 && (
+        <Step4
+          goNextStep={goNextStep}
+          currentBodyInKorean={currentBodyInKorean}
+        />
+      )}
     </div>
   );
 
