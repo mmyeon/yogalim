@@ -9,6 +9,7 @@ export const COLORS = {
   black: "#2C2C2C",
   red: "#E25A3D",
   brown: "#9F7535",
+  iris: "#4B4DED",
 };
 
 export const FONT_WEIGHT = {
