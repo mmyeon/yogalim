@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import Card from "../components/Card";
 import Button from "../components/buttons/Button";
 import Template from "../components/Template";
+import { COLORS } from "../styles/constant";
 
 const Review = () => {
   const { body } = useParams();
@@ -29,10 +30,18 @@ const Review = () => {
       button={
         <div className="button-container">
           <Link to="/">
-            <Button text="홈" />
+            <Button
+              color={`${COLORS.iris}`}
+              backgroundColor={`${COLORS.white}`}
+              text="홈"
+            />
           </Link>
           <Link to={`/practice/${body}`}>
-            <Button text="다음 수련 이어가기" />
+            <Button
+              backgroundColor={`${COLORS.iris}`}
+              color={`${COLORS.white}`}
+              text="다음 수련 이어가기"
+            />
           </Link>
         </div>
       }

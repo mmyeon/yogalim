@@ -47,6 +47,12 @@ export const Container = styled.div`
           }
         }
       }
+
+      > .button-container {
+        > a:first-child {
+          margin-right: 0.7em;
+        }
+      }
     }
   }
 `;
