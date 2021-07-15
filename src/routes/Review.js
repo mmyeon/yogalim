@@ -4,9 +4,12 @@ import Card from "../components/Card";
 import Button from "../components/buttons/Button";
 import Template from "../components/Template";
 import { COLORS } from "../styles/constant";
+import { usePainScoreAfter, usePainScoreBefore } from "../record";
 
 const Review = () => {
   const { body } = useParams();
+  const painScoreBefore = usePainScoreBefore();
+  const painScoreAfter = usePainScoreAfter();
 
   return (
     <Template
@@ -23,6 +26,12 @@ const Review = () => {
             <>
               수련 전 / 후 <br />
               변화를 살펴볼까요?
+            </>
+          }
+          body={
+            <>
+              <h1>Before : {painScoreBefore}</h1>
+              <h1>After : {painScoreAfter}</h1>
             </>
           }
         />
