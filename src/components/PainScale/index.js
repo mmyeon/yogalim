@@ -1,33 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import * as Styled from "./index.styles";
 import Smile from "../Smile";
 import Range from "../Range";
-import { useBeforeScore } from "../../record";
+import { useSetPainScoreBefore } from "../../record";
 
 const PainScale = () => {
-  const [painScoreBeforePractice, setPainScoreBeforePractice] = useState(0);
-  const beforeScore = useBeforeScore();
-
-  // TODO: context API로 state 가져오기
-  useEffect(() => {
-    console.log("beforeScore", beforeScore);
-  }, []);
+  const setPainScoreBefore = useSetPainScoreBefore();
 
   return (
     <Styled.Container>
-      <Smile painScoreBeforePractice={painScoreBeforePractice} />
+      <Smile />
 
-      <Range
-        painScoreBeforePractice={painScoreBeforePractice}
-        updatePainScore={updatePainScore}
-      />
+      <Range updatePainScore={updatePainScore} />
     </Styled.Container>
   );
 
   function updatePainScore(e) {
-    const painScore = parseInt(e.target.value);
-
-    setPainScoreBeforePractice(painScore);
+    const currentPainScore = parseInt(e.target.value);
+    setPainScoreBefore(currentPainScore);
   }
 };
 

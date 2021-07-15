@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { usePainScoreBefore } from "../record";
 
 const StyledSmile = styled.div`
   > img {
@@ -9,26 +10,28 @@ const StyledSmile = styled.div`
     margin-bottom: 2.4em;
   }
 `;
-const Smile = ({ painScoreBeforePractice }) => {
+const Smile = () => {
+  const painScoreBefore = usePainScoreBefore();
+
   return (
     <StyledSmile>
-      {painScoreBeforePractice === 0 && (
+      {painScoreBefore === 0 && (
         <img src="/assets/images/step/no-pain.png" alt="no pain" />
       )}
 
-      {0 < painScoreBeforePractice && painScoreBeforePractice <= 3 && (
+      {0 < painScoreBefore && painScoreBefore <= 3 && (
         <img src="/assets/images/step/mild.png" alt="mild pain" />
       )}
-      {3 < painScoreBeforePractice && painScoreBeforePractice <= 5 && (
+      {3 < painScoreBefore && painScoreBefore <= 5 && (
         <img src="/assets/images/step/moderate.png" alt="moderate pain" />
       )}
-      {5 < painScoreBeforePractice && painScoreBeforePractice <= 7 && (
+      {5 < painScoreBefore && painScoreBefore <= 7 && (
         <img src="/assets/images/step/severe.png" alt="severe pain" />
       )}
-      {7 < painScoreBeforePractice && painScoreBeforePractice <= 9 && (
+      {7 < painScoreBefore && painScoreBefore <= 9 && (
         <img src="/assets/images/step/very-severe.png" alt="very severe pain" />
       )}
-      {painScoreBeforePractice === 10 && (
+      {painScoreBefore === 10 && (
         <img src="/assets/images/step/worst.png" alt="worst pain" />
       )}
     </StyledSmile>

@@ -1,24 +1,28 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 const RecordContext = React.createContext();
 
 export const RecordProvider = ({ data, children }) => {
-  const [beforeScore, setBeforeScore] = useState(0);
+  const [painScoreBefore, setPainScoreBefore] = useState(0);
+
+  useEffect(() => {
+    console.log("painScoreBefore", painScoreBefore);
+  }, [painScoreBefore]);
 
   return (
-    <RecordContext.Provider value={{ beforeScore, setBeforeScore }}>
+    <RecordContext.Provider value={{ painScoreBefore, setPainScoreBefore }}>
       {children}
     </RecordContext.Provider>
   );
 };
 
-export const useBeforeScore = () => {
-  const { beforeScore } = useContext(RecordContext);
-  return beforeScore;
+export const usePainScoreBefore = () => {
+  const { painScoreBefore } = useContext(RecordContext);
+  return painScoreBefore;
 };
 
-export const useSetBeforeScore = () => {
-  const { setBeforeScore } = useContext(RecordContext);
-  return setBeforeScore;
+export const useSetPainScoreBefore = () => {
+  const { setPainScoreBefore } = useContext(RecordContext);
+  return setPainScoreBefore;
 };
 
 export default RecordProvider;

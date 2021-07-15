@@ -1,15 +1,18 @@
 import React from "react";
+import { usePainScoreBefore } from "../../record";
 import * as Styled from "./index.styles";
 
-const index = ({ painScoreBeforePractice, updatePainScore }) => {
+const Range = ({ updatePainScore }) => {
   const scaleMin = 0;
   const scaleMax = 10;
+
+  const painScoreBefore = usePainScoreBefore();
 
   return (
     <Styled.Range>
       <div className="slider-value">
-        <span style={{ left: painScoreBeforePractice * 10 + "%" }}>
-          {painScoreBeforePractice}
+        <span style={{ left: painScoreBefore * 10 + "%" }}>
+          {painScoreBefore}
         </span>
       </div>
 
@@ -17,7 +20,7 @@ const index = ({ painScoreBeforePractice, updatePainScore }) => {
         <span className="value left">{scaleMin}</span>
         <input
           type="range"
-          value={painScoreBeforePractice}
+          value={painScoreBefore}
           min={scaleMin}
           max={scaleMax}
           step="1"
@@ -30,4 +33,4 @@ const index = ({ painScoreBeforePractice, updatePainScore }) => {
   );
 };
 
-export default index;
+export default Range;
