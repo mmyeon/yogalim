@@ -3,9 +3,10 @@ import LongRoundButton from "../../components/buttons/LongRoundButton";
 import PainScale from "../../components/PainScale";
 import Card from "../../components/Card";
 import Template from "../../components/Template";
-import { useSetPainScoreBefore } from "../../record";
+import { usePainScoreBefore, useSetPainScoreBefore } from "../../record";
 
 const Step2 = ({ currentBodyInKorean, goNextStep }) => {
+  const painScoreBefore = usePainScoreBefore();
   const setPainScoreBefore = useSetPainScoreBefore();
 
   return (
@@ -24,7 +25,12 @@ const Step2 = ({ currentBodyInKorean, goNextStep }) => {
               불편한 정도에 따라서 <br />0 ~ 10 까지 표시해보세요.
             </>
           }
-          body={<PainScale updatePainScore={updatePainScoreBefore} />}
+          body={
+            <PainScale
+              updatePainScore={updatePainScoreBefore}
+              painScore={painScoreBefore}
+            />
+          }
         />
       }
       button={<LongRoundButton onClick={goNextStep} title="수련 시작" />}

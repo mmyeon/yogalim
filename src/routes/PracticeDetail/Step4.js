@@ -4,12 +4,16 @@ import Card from "../../components/Card";
 import PainScale from "../../components/PainScale";
 import LongRoundButton from "../../components/buttons/LongRoundButton";
 import { Link } from "react-router-dom";
+import { usePainScoreAfter, useSetPainScoreAfter } from "../../record";
 
 const AfterPainRecord = ({
   currentBodyInKorean,
   currentVideoId,
   currentBodyInEng,
 }) => {
+  const painScoreAfter = usePainScoreAfter();
+  const setPainScoreAfter = useSetPainScoreAfter();
+
   return (
     <Template
       title={
@@ -27,7 +31,12 @@ const AfterPainRecord = ({
               아니면 그대로인가요?
             </>
           }
-          body={<PainScale />}
+          body={
+            <PainScale
+              updatePainScore={updatePainScoreAfter}
+              painScore={painScoreAfter}
+            />
+          }
         />
       }
       button={
@@ -37,6 +46,11 @@ const AfterPainRecord = ({
       }
     />
   );
+
+  function updatePainScoreAfter(e) {
+    const currentPainScore = parseInt(e.target.value);
+    setPainScoreAfter(currentPainScore);
+  }
 };
 
 export default AfterPainRecord;
