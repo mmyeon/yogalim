@@ -18,12 +18,15 @@ const Practice = () => {
             </h2>
             <div className="button-container">
               {data.map((bodyPart) => (
-                <Link to={`/practice/${bodyPart.title.eng}`}>
+                <Link
+                  key={bodyPart.title.kor}
+                  to={`/practice/${bodyPart.title.eng}`}
+                >
                   <SquareButton
-                    key={bodyPart}
                     text={bodyPart.title.kor}
                     backgroundColor={bodyPart.buttonColor}
                   />
+                  {console.log("bodyPart", bodyPart)}
                 </Link>
               ))}
             </div>
