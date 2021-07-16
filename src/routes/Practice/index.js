@@ -26,7 +26,6 @@ const Practice = () => {
                     text={bodyPart.title.kor}
                     backgroundColor={bodyPart.buttonColor}
                   />
-                  {console.log("bodyPart", bodyPart)}
                 </Link>
               ))}
             </div>
