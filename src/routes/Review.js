@@ -4,12 +4,19 @@ import Card from "../components/Card";
 import Button from "../components/buttons/Button";
 import Template from "../components/Template";
 import { COLORS } from "../styles/constant";
-import { usePainScoreAfter, usePainScoreBefore } from "../record";
+import {
+  usePainScoreAfter,
+  usePainScoreBefore,
+  useSetPainScoreAfter,
+  useSetPainScoreBefore,
+} from "../record";
 
 const Review = () => {
   const { body } = useParams();
   const painScoreBefore = usePainScoreBefore();
   const painScoreAfter = usePainScoreAfter();
+  const setPainScoreBefore = useSetPainScoreBefore();
+  const setPainScoreAfter = useSetPainScoreAfter();
 
   return (
     <Template
@@ -42,6 +49,7 @@ const Review = () => {
             <Button
               color={`${COLORS.iris}`}
               backgroundColor={`${COLORS.white}`}
+              onClick={resetPainScore}
               text="홈"
             />
           </Link>
@@ -49,6 +57,7 @@ const Review = () => {
             <Button
               backgroundColor={`${COLORS.iris}`}
               color={`${COLORS.white}`}
+              onClick={resetPainScore}
               text="다음 수련 이어가기"
             />
           </Link>
@@ -56,6 +65,11 @@ const Review = () => {
       }
     />
   );
+
+  function resetPainScore() {
+    setPainScoreAfter(0);
+    setPainScoreBefore(0);
+  }
 };
 
 export default Review;
