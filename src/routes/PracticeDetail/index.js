@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
 import Step4 from "./Step4";
 import data from "../../data";
+import { useStep, useSetStep } from "../../record";
 
 const Index = () => {
-  const [step, setStep] = useState(1);
+  const step = useStep();
+  const setStep = useSetStep();
 
   // 현재 url 주소 알아내기
   const { pathname, search } = useLocation();
@@ -47,6 +49,7 @@ const Index = () => {
       )}
       {step === 4 && (
         <Step4
+          // TODO: step test
           goNextStep={goNextStep}
           currentBodyInKorean={currentBodyInKorean}
           currentBodyInEng={currentBodyInEng}
