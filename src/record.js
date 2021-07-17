@@ -1,13 +1,10 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 const RecordContext = React.createContext();
 
 export const RecordProvider = ({ data, children }) => {
   const [painScoreBefore, setPainScoreBefore] = useState(0);
   const [painScoreAfter, setPainScoreAfter] = useState(0);
-
-  useEffect(() => {
-    console.log("painScoreAfter", painScoreAfter);
-  }, [painScoreAfter]);
+  const [step, setStep] = useState(1);
 
   return (
     <RecordContext.Provider
@@ -16,6 +13,8 @@ export const RecordProvider = ({ data, children }) => {
         setPainScoreBefore,
         painScoreAfter,
         setPainScoreAfter,
+        step,
+        setStep,
       }}
     >
       {children}
@@ -39,6 +38,16 @@ export const useSetPainScoreBefore = () => {
 export const useSetPainScoreAfter = () => {
   const { setPainScoreAfter } = useContext(RecordContext);
   return setPainScoreAfter;
+};
+
+export const useStep = () => {
+  const { step } = useContext(RecordContext);
+  return step;
+};
+
+export const useSetStep = () => {
+  const { setStep } = useContext(RecordContext);
+  return setStep;
 };
 
 export default RecordProvider;
