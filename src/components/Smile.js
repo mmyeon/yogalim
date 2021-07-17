@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { usePainScoreBefore } from "../record";
 
 const StyledSmile = styled.div`
   > img {
@@ -10,28 +9,26 @@ const StyledSmile = styled.div`
     margin-bottom: 2.4em;
   }
 `;
-const Smile = () => {
-  const painScoreBefore = usePainScoreBefore();
-
+const Smile = ({ painScore }) => {
   return (
     <StyledSmile>
-      {painScoreBefore === 0 && (
+      {painScore === 0 && (
         <img src="/assets/images/step/no-pain.png" alt="no pain" />
       )}
 
-      {0 < painScoreBefore && painScoreBefore <= 3 && (
+      {0 < painScore && painScore <= 3 && (
         <img src="/assets/images/step/mild.png" alt="mild pain" />
       )}
-      {3 < painScoreBefore && painScoreBefore <= 5 && (
+      {3 < painScore && painScore <= 5 && (
         <img src="/assets/images/step/moderate.png" alt="moderate pain" />
       )}
-      {5 < painScoreBefore && painScoreBefore <= 7 && (
+      {5 < painScore && painScore <= 7 && (
         <img src="/assets/images/step/severe.png" alt="severe pain" />
       )}
-      {7 < painScoreBefore && painScoreBefore <= 9 && (
+      {7 < painScore && painScore <= 9 && (
         <img src="/assets/images/step/very-severe.png" alt="very severe pain" />
       )}
-      {painScoreBefore === 10 && (
+      {painScore === 10 && (
         <img src="/assets/images/step/worst.png" alt="worst pain" />
       )}
     </StyledSmile>

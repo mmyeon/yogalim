@@ -6,7 +6,7 @@ import Range from "../Range";
 const PainScale = ({ updatePainScore, painScore }) => {
   return (
     <Styled.Container>
-      <Smile />
+      <Smile painScore={painScore} />
 
       <Range updatePainScore={updatePainScore} painScore={painScore} />
     </Styled.Container>
