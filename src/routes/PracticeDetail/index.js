@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useLocation } from "react-router";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
