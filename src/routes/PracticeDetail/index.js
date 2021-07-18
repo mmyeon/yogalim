@@ -31,13 +31,7 @@ const Index = () => {
 
   return (
     <div>
-      {step === 1 && (
-        <Step1
-          goNextStep={goNextStep}
-          currentVideoId={currentVideoId}
-          videoInfo={videoInfo}
-        />
-      )}
+      {step === 1 && <Step1 goNextStep={goNextStep} videoInfo={videoInfo} />}
       {step === 2 && (
         <Step2
           goNextStep={goNextStep}
@@ -49,7 +43,6 @@ const Index = () => {
       )}
       {step === 4 && (
         <Step4
-          // TODO: step test
           goNextStep={goNextStep}
           currentBodyInKorean={currentBodyInKorean}
           currentBodyInEng={currentBodyInEng}

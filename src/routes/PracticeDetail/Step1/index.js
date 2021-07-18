@@ -6,6 +6,7 @@ import * as Styled from "./index.styles";
 
 const Step1 = ({ goNextStep, currentVideoId, videoInfo }) => {
   const { goBack } = useHistory();
+  const { videoClip } = videoInfo;
 
   return (
     <Styled.Container>
@@ -19,7 +20,7 @@ const Step1 = ({ goNextStep, currentVideoId, videoInfo }) => {
       <ReactPlayer
         className="background-video"
         playing
-        url={`https://youtu.be/${currentVideoId}`}
+        url={`https://youtu.be/${videoClip}`}
         muted
       />
 
