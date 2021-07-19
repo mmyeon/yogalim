@@ -36,7 +36,52 @@ const data = [
   {
     title: { eng: "shoulder", kor: "어깨" },
     buttonColor: `${COLORS.primaryTeal}`,
-    playList: [],
+    playList: [
+      {
+        videoId: "LlLQpxo5pmQ?t=54",
+        videoClip: "LlLQpxo5pmQ?t=669",
+        title: "Realign your shoulder girdle yoga practice",
+        desc: "This yoga practice will make you aware of your shoulder girdle, relieve upper back tension and stretch the muscles that bind the shoulder blades to the ribcage and spine.",
+        // time: "",
+        thumbnail:
+          "/assets/images/practiceVideoList/thumbnails/shoulder/shoulder1.png",
+        url: "https://youtu.be/LlLQpxo5pmQ?t=54",
+        // 19초 전에 종료
+      },
+      {
+        videoId: "Nvq0uEC3VDM?t=54",
+        videoClip: "Nvq0uEC3VDM?t=746",
+        title: "Liberate your shoulders",
+        desc: "The shoulder often ends up on the receiving end of what’s happening elsewhere in the body. This yoga practice addresses shoulder discomfort by working with the chest and upper back, neck and middle back instead of the shoulder joint itself. It will help you liberate your shoulders from the incessant pulling of the surrounding structures.",
+        // time: "",
+        thumbnail:
+          "/assets/images/practiceVideoList/thumbnails/shoulder/shoulder2.png",
+        url: "https://youtu.be/Nvq0uEC3VDM?t=54",
+        // 15초 전에 종료
+      },
+      {
+        videoId: "E-E76UQ3fos?t=158",
+        videoClip: "E-E76UQ3fos?t=2662",
+        title: "Body appreciation yoga practice",
+        desc: "Our bodies try to communicate with us, but we rarely listen. We are so focused on the external environment, that we tend to ignore our inner state until it complains loud enough through pain, physiological distress or mental anguish. Instead of letting things fester and get out of hand, let’s learn to listen to our body’s signals. In this full-length yoga practice, we will focus on developing our interoception (conscious awareness of what’s going on inside) and balancing our physiology, while expressing appreciation to our bodies for all the work they do for us every day.",
+        // time: "",
+        thumbnail:
+          "/assets/images/practiceVideoList/thumbnails/shoulder/shoulder3.png",
+        url: "https://youtu.be/E-E76UQ3fos?t=158",
+        // 8초 전에 종료
+      },
+      {
+        videoId: "OpYljvPPGcw?t=59",
+        videoClip: "OpYljvPPGcw?t=405",
+        title: "Short yoga practice for energetic boost",
+        desc: "This 20-minute yoga practice is designed to give you an energetic boost if you feel tired, depleted or frazzled. You can do it in the morning or at any point during the day; however, please do not do it too close to bedtime. The entire practice is focused on expanding and deepening your inhalation, which creates the sense of spaciousness and helps build your energy up.",
+        // time: "",
+        thumbnail:
+          "/assets/images/practiceVideoList/thumbnails/shoulder/shoulder4.png",
+        // 8초 전에 종료
+        url: "https://youtu.be/OpYljvPPGcw?t=59",
+      },
+    ],
   },
   {
     title: { eng: "back", kor: "허리" },
