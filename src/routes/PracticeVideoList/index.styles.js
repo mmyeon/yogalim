@@ -56,7 +56,7 @@ export const Container = styled.div`
             }
 
             .video {
-              background: green;
+              background: ${COLORS.primaryTeal};
               min-width: 213px;
               height: 250px;
               margin-right: 0.6em;
