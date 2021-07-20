@@ -2,6 +2,7 @@ import { COLORS } from "./styles/constant";
 
 const data = [
   {
+    id: "neck",
     title: { eng: "neck", kor: "목" },
     buttonColor: `${COLORS.darkGreen1}`,
     playList: [
@@ -52,10 +53,12 @@ const data = [
     ],
   },
   {
+    id: "shoulder",
     title: { eng: "shoulder", kor: "어깨" },
     buttonColor: `${COLORS.primaryTeal}`,
     playList: [
       {
+        id: "shoulder1",
         videoId: "LlLQpxo5pmQ?t=54",
         videoClip: "LlLQpxo5pmQ?t=669",
         title: "Realign your shoulder girdle yoga practice",
@@ -67,6 +70,7 @@ const data = [
         // 19초 전에 종료
       },
       {
+        id: "shoulder2",
         videoId: "Nvq0uEC3VDM?t=54",
         videoClip: "Nvq0uEC3VDM?t=746",
         title: "Liberate your shoulders",
@@ -78,6 +82,7 @@ const data = [
         // 15초 전에 종료
       },
       {
+        id: "shoulder3",
         videoId: "E-E76UQ3fos?t=158",
         videoClip: "E-E76UQ3fos?t=2662",
         title: "Body appreciation yoga practice",
@@ -89,6 +94,7 @@ const data = [
         // 8초 전에 종료
       },
       {
+        id: "shoulder4",
         videoId: "OpYljvPPGcw?t=59",
         videoClip: "OpYljvPPGcw?t=405",
         title: "Short yoga practice for energetic boost",
