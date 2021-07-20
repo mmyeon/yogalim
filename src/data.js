@@ -82,14 +82,14 @@ const data = [
         // 15초 전에 종료
       },
       {
-        id: "shoulder3",
+        id: "spine3",
         videoId: "E-E76UQ3fos?t=158",
         videoClip: "E-E76UQ3fos?t=2662",
         title: "Body appreciation yoga practice",
         desc: "Our bodies try to communicate with us, but we rarely listen. We are so focused on the external environment, that we tend to ignore our inner state until it complains loud enough through pain, physiological distress or mental anguish. Instead of letting things fester and get out of hand, let’s learn to listen to our body’s signals. In this full-length yoga practice, we will focus on developing our interoception (conscious awareness of what’s going on inside) and balancing our physiology, while expressing appreciation to our bodies for all the work they do for us every day.",
         // time: "",
         thumbnail:
-          "/assets/images/practiceVideoList/thumbnails/shoulder/shoulder3.png",
+          "/assets/images/practiceVideoList/thumbnails/shoulder/spine3.png",
         url: "https://youtu.be/E-E76UQ3fos?t=158",
         // 8초 전에 종료
       },
@@ -102,15 +102,65 @@ const data = [
         // time: "",
         thumbnail:
           "/assets/images/practiceVideoList/thumbnails/shoulder/shoulder4.png",
-        // 8초 전에 종료
         url: "https://youtu.be/OpYljvPPGcw?t=59",
+        // 8초 전에 종료
       },
     ],
   },
   {
-    title: { eng: "back", kor: "허리" },
+    id: "spine",
+    title: { eng: "spine", kor: "허리" },
     buttonColor: `${COLORS.brightTurquoise}`,
-    playList: [],
+    playList: [
+      {
+        id: "spine1",
+        videoId: "h7ejzxyosMo?t=138",
+        videoClip: "h7ejzxyosMo?t=1262",
+        title: "Exercise your diaphragm",
+        desc: "This yoga practice helps you increase awareness of the movement of your diaphragm, explore the role of the diaphragm in spinal stabilization and relieve ribcage stiffness.",
+        // time: "",
+        thumbnail:
+          "/assets/images/practiceVideoList/thumbnails/spine/spine1.png",
+        url: "https://youtu.be/h7ejzxyosMo?t=138",
+        // 10초 전에 종료
+      },
+      {
+        id: "spine2",
+        videoId: "xd9gl_rkzE0?t=68",
+        videoClip: "xd9gl_rkzE0?t=1435",
+        title: "Improve your posture yoga practice",
+        desc: "Counteract the stooped posture by strengthening the muscles that support the body in the upright position, relieve neck tension and realign the spinal curves to improve the posture.",
+        // time: "",
+        thumbnail:
+          "/assets/images/practiceVideoList/thumbnails/spine/spine2.png",
+        url: "https://youtu.be/xd9gl_rkzE0?t=68",
+        // 14초 전에 종료
+      },
+      {
+        id: "spine3",
+        videoId: "dGUyhuUrA4o?t=48",
+        videoClip: "dGUyhuUrA4o?t=286",
+        title: "Chair yoga practice for supple spine",
+        desc: "This yoga practice takes the spine through the full range of motion and is useful for neck and upper back tension. The entire practice is done sitting in a chair, and you can easily add to it by including standing yoga poses.",
+        // time: "",
+        thumbnail:
+          "/assets/images/practiceVideoList/thumbnails/spine/spine3.png",
+        url: "https://youtu.be/dGUyhuUrA4o?t=48",
+        // 11초 전에 종료
+      },
+      {
+        id: "spine4",
+        videoId: "OOqNIh5R3Z0?t=78",
+        videoClip: "OOqNIh5R3Z0?t=958",
+        title: "Train your static and dynamic balance yoga practice",
+        desc: "This yoga practice contains a number of simple standing poses that will help you train both static and dynamic balance. Feel free to modify the poses in a way that is appropriate for you (for example, it is completely up to you how deep you go into Warrior 3). Please pay attention to the breath and see if you can use your breath to create more length in your spine and more support via progressive abdominal contraction on exhale.",
+        // time: "",
+        thumbnail:
+          "/assets/images/practiceVideoList/thumbnails/spine/spine4.png",
+        url: "https://youtu.be/OOqNIh5R3Z0?t=78",
+        // 17초 전에 종료
+      },
+    ],
   },
   {
     title: { eng: "hip", kor: "골반" },
