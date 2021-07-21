@@ -163,9 +163,59 @@ const data = [
     ],
   },
   {
-    title: { eng: "hip", kor: "골반" },
+    id: "pelvis",
+    title: { eng: "pelvis", kor: "골반" },
     buttonColor: `${COLORS.amber}`,
-    playList: [],
+    playList: [
+      {
+        id: "pelvis1",
+        videoId: "E2ynCj6_6DM?t=278",
+        videoClip: "E2ynCj6_6DM?t=1402",
+        title: "Retain nourishment and tone your diaphragm and pelvic floor",
+        desc: "In this yoga practice we focus on increasing tonicity both in your diaphragm and your pelvic floor to provide visceral massage to your digestive organs and to help them retain nourishment. This practice will also help you tone your diaphragm and pelvic floor muscles, strengthen your core, stabilize your lumbar spine and reestablish the link between Prana and Apana Vayus to enhance vitality in your system.",
+        // time: "",
+        thumbnail:
+          "/assets/images/practiceVideoList/thumbnails/pelvis/pelvis1.png",
+        url: "https://youtu.be/E2ynCj6_6DM?t=278",
+        // 6초 전에 종료
+      },
+      {
+        id: "pelvis2",
+        videoId: "PRTSdgueVzU?t=45",
+        videoClip: "PRTSdgueVzU?t=208",
+        title: "Short yoga practice for hip flexors",
+        desc: "This short yoga practice for hip flexors is meant to loosen up your hips by contracting and stretching your hip flexors. This can have a positive effect on your lower back as well, since hip flexor tightness is often connected to lower back pain.",
+        // time: "",
+        thumbnail:
+          "/assets/images/practiceVideoList/thumbnails/pelvis/pelvis2.png",
+        url: "https://youtu.be/PRTSdgueVzU?t=45",
+        // 7초 전에 종료
+      },
+      {
+        id: "pelvis3",
+        videoId: "0W32GqNyny4?t=60",
+        videoClip: "0W32GqNyny4?t=1236",
+        title: "Yoga for hamstring pain and tightness",
+        desc: "TDon't stretch your hamstrings if you have a hamstring injury! Use this 3-stage yoga practice to heal the hamstring injury gradually and release chronic tension.",
+        // time: "",
+        thumbnail:
+          "/assets/images/practiceVideoList/thumbnails/pelvis/pelvis3.png",
+        url: "https://youtu.be/0W32GqNyny4?t=60",
+        // 1초 전에 종료
+      },
+      {
+        id: "pelvis4",
+        videoId: "39TuBoRmqWo?t=62",
+        videoClip: "39TuBoRmqWo?t=1828",
+        title: "Strong yoga practice for hips and hamstrings",
+        desc: "The yoga practice includes a wide range of hip movements and invites you to go deeper in stages. The practice gradually builds toward Upavista Konasana and ensures that both your hips and your hamstrings are ready for it. It is a pretty strong practice that includes fairly long holds in some challenging poses.",
+        // time: "",
+        thumbnail:
+          "/assets/images/practiceVideoList/thumbnails/pelvis/pelvis4.png",
+        url: "https://youtu.be/39TuBoRmqWo?t=62",
+        // 7초 전에 종료
+      },
+    ],
   },
 
   {
