@@ -165,7 +165,7 @@ const data = [
   {
     id: "pelvis",
     title: { eng: "pelvis", kor: "골반" },
-    buttonColor: `${COLORS.amber}`,
+    buttonColor: `${COLORS.red}`,
     playList: [
       {
         id: "pelvis1",
@@ -217,15 +217,10 @@ const data = [
       },
     ],
   },
-
-  {
-    title: { eng: "leg", kor: "다리" },
-    buttonColor: `${COLORS.brown}`,
-    playList: [],
-  },
   {
     title: { eng: "whole-body", kor: "전신" },
-    buttonColor: `${COLORS.red}`,
+
+    buttonColor: `${COLORS.amber}`,
     playList: [
       {
         videoId: "rzdtYf1Zwes?t=34",
@@ -269,6 +264,11 @@ const data = [
         // 14초 전에 종료
       },
     ],
+  },
+  {
+    title: { eng: "joint", kor: "관절" },
+    buttonColor: `${COLORS.brown}`,
+    playList: [],
   },
 ];
 
