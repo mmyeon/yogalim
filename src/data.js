@@ -82,14 +82,14 @@ const data = [
         // 15초 전에 종료
       },
       {
-        id: "spine3",
+        id: "shoulder3",
         videoId: "E-E76UQ3fos?t=158",
         videoClip: "E-E76UQ3fos?t=2662",
         title: "Body appreciation yoga practice",
         desc: "Our bodies try to communicate with us, but we rarely listen. We are so focused on the external environment, that we tend to ignore our inner state until it complains loud enough through pain, physiological distress or mental anguish. Instead of letting things fester and get out of hand, let’s learn to listen to our body’s signals. In this full-length yoga practice, we will focus on developing our interoception (conscious awareness of what’s going on inside) and balancing our physiology, while expressing appreciation to our bodies for all the work they do for us every day.",
         // time: "",
         thumbnail:
-          "/assets/images/practiceVideoList/thumbnails/shoulder/spine3.png",
+          "/assets/images/practiceVideoList/thumbnails/shoulder/shoulder3.png",
         url: "https://youtu.be/E-E76UQ3fos?t=158",
         // 8초 전에 종료
       },
