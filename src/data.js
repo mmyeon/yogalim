@@ -165,7 +165,7 @@ const data = [
   {
     id: "pelvis",
     title: { eng: "pelvis", kor: "골반" },
-    buttonColor: `${COLORS.red}`,
+    buttonColor: `${COLORS.amber}`,
     playList: [
       {
         id: "pelvis1",
@@ -193,15 +193,15 @@ const data = [
       },
       {
         id: "pelvis3",
-        videoId: "0W32GqNyny4?t=60",
-        videoClip: "0W32GqNyny4?t=1236",
-        title: "Yoga for hamstring pain and tightness",
-        desc: "TDon't stretch your hamstrings if you have a hamstring injury! Use this 3-stage yoga practice to heal the hamstring injury gradually and release chronic tension.",
+        videoId: "nAat1hyTT8A?t=60",
+        videoClip: "nAat1hyTT8A?t=1742",
+        title: "Yoga practice for abductors and adductors",
+        desc: "We take our ability to walk for granted, until it becomes problematic. Every step we take is a delicate dance between multiple muscle groups.",
         // time: "",
         thumbnail:
           "/assets/images/practiceVideoList/thumbnails/pelvis/pelvis3.png",
-        url: "https://youtu.be/0W32GqNyny4?t=60",
-        // 1초 전에 종료
+        url: "https://youtu.be/nAat1hyTT8A?t=60",
+        // 18초 전에 종료
       },
       {
         id: "pelvis4",
@@ -218,11 +218,63 @@ const data = [
     ],
   },
   {
-    title: { eng: "whole-body", kor: "전신" },
-
-    buttonColor: `${COLORS.amber}`,
+    id: "legs",
+    title: { eng: "legs", kor: "다리" },
+    buttonColor: `${COLORS.brown}`,
     playList: [
       {
+        id: "legs1",
+        videoId: "0W32GqNyny4?t=60",
+        videoClip: "0W32GqNyny4?t=1236",
+        title: "Yoga for hamstring pain and tightness",
+        desc: "TDon't stretch your hamstrings if you have a hamstring injury! Use this 3-stage yoga practice to heal the hamstring injury gradually and release chronic tension.",
+        // time: "",
+        thumbnail: "/assets/images/practiceVideoList/thumbnails/legs/legs1.png",
+        url: "https://youtu.be/0W32GqNyny4?t=60",
+        // 1초 전에 종료
+      },
+      {
+        id: "legs2",
+        videoId: "kaoZMagv9hs?t=62",
+        videoClip: "kaoZMagv9hs?t=1611",
+        title: "Yoga practice for knee stability",
+        desc: "This yoga practices facilitates a balanced relationship between the quads, hamstrings, adductors and abductors to support and stabilize the knees.",
+        // time: "",
+        thumbnail: "/assets/images/practiceVideoList/thumbnails/legs/legs2.png",
+        url: "https://youtu.be/kaoZMagv9hs?t=62",
+        // 16초 전에 종료
+      },
+      {
+        id: "legs3",
+        videoId: "eIsWFiFfR1Q?t=293",
+        videoClip: "eIsWFiFfR1Q?t=729",
+        title: "Move your lymph and strengthen your ankles",
+        desc: "In this practice we use different adaptations of Chair pose with ankle movement to facilitate a steady lymph flow throughout the system to support our immune function. The practice includes other yoga poses that serve the same purpose, as well as breath awareness and guided relaxation at the end. This practice also helps to warm up and strengthen your ankles, knees, thighs and hips, while awakening your upper back and neck, so it is very useful if you sit a lot during the day.",
+        // time: "",
+        thumbnail: "/assets/images/practiceVideoList/thumbnails/legs/legs3.png",
+        url: "https://youtu.be/eIsWFiFfR1Q?t=293",
+        // 7초 전에 종료
+      },
+      {
+        id: "legs4",
+        videoId: "pEb2lokZ2UI?t=48",
+        videoClip: "pEb2lokZ2UI?t=228",
+        title: "Feel the earth: Happy ankles yoga practice",
+        desc: "In this practice you will focus your attention on stretching and strengthening your ankles, but at the end of the practice, please take note whether or not it affects your entire structural organization. Notice how your neck, upper and lower back feel as a result.",
+        // time: "",
+        thumbnail: "/assets/images/practiceVideoList/thumbnails/legs/legs4.png",
+        url: "https://youtu.be/pEb2lokZ2UI?t=48",
+        // 5초 전에 종료
+      },
+    ],
+  },
+  {
+    id: "whole-body",
+    title: { eng: "whole-body", kor: "전신" },
+    buttonColor: `${COLORS.red}`,
+    playList: [
+      {
+        id: "whole-body1",
         videoId: "rzdtYf1Zwes?t=34",
         videoClip: "rzdtYf1Zwes?t=1807",
         title: "Resilience: whole body yoga practice",
@@ -234,6 +286,7 @@ const data = [
         // 11초 전에 종료
       },
       {
+        id: "whole-body2",
         videoId: "HNn63Jbm1PY?t=43",
         videoClip: "HNn63Jbm1PY?t=1193",
         title: "Empower yoga practice",
@@ -244,6 +297,7 @@ const data = [
         // 11초 전에 종료
       },
       {
+        id: "whole-body3",
         videoId: "m7NRc0A-2hU?t=57",
         videoClip: "m7NRc0A-2hU?t=360",
         title: "Yoga practice for core awareness and strength",
@@ -254,6 +308,7 @@ const data = [
         // 13초 전에 종료
       },
       {
+        id: "whole-body4",
         videoId: "_waBrv-FpcU?t=60",
         videoClip: "_waBrv-FpcU?t=1790",
         title: "Explore the asymmetries practice",
@@ -264,11 +319,6 @@ const data = [
         // 14초 전에 종료
       },
     ],
-  },
-  {
-    title: { eng: "joint", kor: "관절" },
-    buttonColor: `${COLORS.brown}`,
-    playList: [],
   },
 ];
 
