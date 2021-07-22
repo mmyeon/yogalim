@@ -36,14 +36,13 @@ const VideoList = () => {
                 <div className="container" key={item.videoId}>
                   <Link to={`/practice/${currentUBodyPart}/${item.videoId}`}>
                     <img
-                      // key={item.videoId}
                       className="video"
                       src={item.thumbnail}
                       alt="yoga video thumbnail"
                     />
                     <div className="title-container">
                       <h3>{item.title}</h3>
-                      <span>{item.time}</span>
+                      <span>{item.duration}</span>
                     </div>
                   </Link>
                 </div>
