@@ -1,21 +1,15 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import ReactPlayer from "react-player";
 import LongRoundButton from "../../../components/buttons/LongRoundButton";
 import * as Styled from "./index.styles";
+import GoBackButton from "../../../components/buttons/GoBackButton";
 
-const Step1 = ({ goNextStep, currentVideoId, videoInfo }) => {
-  const { goBack } = useHistory();
+const Step1 = ({ goNextStep, videoInfo }) => {
   const { videoClip } = videoInfo;
 
   return (
     <Styled.Container>
-      <img
-        onClick={goBack}
-        src="/assets/images/step/chevron-left.png"
-        className="chevron-left"
-        alt="chevron-left"
-      />
+      <GoBackButton />
 
       <ReactPlayer
         className="background-video"

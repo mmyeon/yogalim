@@ -7,14 +7,6 @@ export const Container = styled.div`
   overflow: hidden;
   position: relative;
 
-  .chevron-left {
-    width: 1.5em;
-    height: 1.5em;
-    position: relative;
-    top: 0.5em;
-    left: 0.5em;
-  }
-
   > .background-video {
     position: relative;
     margin-left: -10em;
