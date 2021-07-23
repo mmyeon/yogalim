@@ -10,7 +10,6 @@ const Container = styled.div`
     text-decoration: none;
 
     span {
-      padding-top: 1.4em;
       font-size: 1.3em;
       letter-spacing: 1px;
       color: ${COLORS.darkGreen2};
@@ -20,7 +19,7 @@ const Container = styled.div`
 
 const Logo = () => {
   return (
-    <Container>
+    <Container className="logo">
       <Link to="/">
         <span>YOGA</span>
         <svg
