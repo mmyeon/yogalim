@@ -23,10 +23,11 @@ const StyledHeader = styled.header`
   }
 `;
 
-const Header = () => {
+const Header = ({ isVisibleBackBtn }) => {
   return (
     <StyledHeader>
-      <BackButton />
+      {isVisibleBackBtn && <BackButton />}
+
       <Logo />
     </StyledHeader>
   );
