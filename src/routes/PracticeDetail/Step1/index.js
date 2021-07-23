@@ -2,14 +2,14 @@ import React from "react";
 import ReactPlayer from "react-player";
 import LongRoundButton from "../../../components/buttons/LongRoundButton";
 import * as Styled from "./index.styles";
-import GoBackButton from "../../../components/buttons/GoBackButton";
+import BackButton from "../../../components/buttons/BackButton";
 
 const Step1 = ({ goNextStep, videoInfo }) => {
   const { videoClip } = videoInfo;
 
   return (
     <Styled.Container>
-      <GoBackButton />
+      <BackButton />
 
       <ReactPlayer
         className="background-video"
