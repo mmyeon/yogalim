@@ -6,6 +6,7 @@ import data from "../../data";
 
 const VideoList = () => {
   const { body } = useParams();
+  // TODO: 오타 수정
   const currentUBodyPart = body;
   const selectedBodyPartObj = data.find(
     (bodyPart) => bodyPart.title.eng === currentUBodyPart
@@ -34,7 +35,11 @@ const VideoList = () => {
             <div className="video-container">
               {selectedBodyPartObj.playList.map((item) => (
                 <div className="container" key={item.videoId}>
-                  <Link to={`/practice/${currentUBodyPart}/${item.videoId}`}>
+                  <Link
+                    to={(location) =>
+                      `${location.pathname}/${item.videoId}?step=1`
+                    }
+                  >
                     <img
                       className="video"
                       src={item.thumbnail}
