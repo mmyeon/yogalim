@@ -6,10 +6,9 @@ import data from "../../data";
 
 const VideoList = () => {
   const { body } = useParams();
-  // TODO: 오타 수정
-  const currentUBodyPart = body;
+  const currentBodyPart = body;
   const selectedBodyPartObj = data.find(
-    (bodyPart) => bodyPart.title.eng === currentUBodyPart
+    (bodyPart) => bodyPart.title.eng === currentBodyPart
   );
   const titleInKorean = selectedBodyPartObj.title.kor;
 
