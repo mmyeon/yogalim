@@ -5,7 +5,10 @@ import * as Styled from "./index.styles";
 import BackButton from "../../../components/buttons/BackButton";
 
 const Step1 = ({ goNextStep, videoInfo }) => {
-  const { videoClip } = videoInfo;
+  const {
+    videoId,
+    videoTime: { highlight },
+  } = videoInfo;
 
   return (
     <Styled.Container>
@@ -14,7 +17,7 @@ const Step1 = ({ goNextStep, videoInfo }) => {
       <ReactPlayer
         className="background-video"
         playing
-        url={`https://youtu.be/${videoClip}`}
+        url={`https://youtu.be/${videoId}?t=${highlight}`}
         muted
       />
 
