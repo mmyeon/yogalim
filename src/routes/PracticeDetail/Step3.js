@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import styled from "styled-components";
+import { useSetStep, useStep } from "../../record";
 
 const StyledStep3 = styled.div``;
 
-const Step3 = ({ goNextStep, currentVideoId }) => {
+const Step3 = ({ currentVideoId }) => {
   const [duration, setDuration] = useState(0);
   const [played, setPlayed] = useState(0);
+  const step = useStep();
+  const setStep = useSetStep();
 
   useEffect(() => {
     if (played && duration) {
@@ -53,6 +56,10 @@ const Step3 = ({ goNextStep, currentVideoId }) => {
     const result = remain <= adTime;
 
     return result;
+  }
+
+  function goNextStep() {
+    setStep(step + 1);
   }
 };
 

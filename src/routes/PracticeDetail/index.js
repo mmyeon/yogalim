@@ -9,7 +9,6 @@ import { useStep, useSetStep } from "../../record";
 
 const Index = () => {
   let step = useStep();
-  // TODO: step state를 컴포넌트가 관리할지, context에서 관리할지 리팩토링하기
   const setStep = useSetStep();
 
   const { pathname, search } = useLocation();
@@ -37,9 +36,7 @@ const Index = () => {
     <div>
       {step === 1 && <Step1 videoInfo={videoInfo} />}
       {step === 2 && <Step2 currentBodyInKorean={currentBodyInKorean} />}
-      {step === 3 && (
-        <Step3 goNextStep={goNextStep} currentVideoId={currentVideoId} />
-      )}
+      {step === 3 && <Step3 currentVideoId={currentVideoId} />}
       {step === 4 && (
         <Step4
           currentBodyInKorean={currentBodyInKorean}
@@ -49,10 +46,6 @@ const Index = () => {
       )}
     </div>
   );
-
-  function goNextStep() {
-    setStep(step + 1);
-  }
 };
 
 export default Index;
