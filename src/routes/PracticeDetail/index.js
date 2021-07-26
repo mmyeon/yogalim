@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
@@ -8,9 +8,16 @@ import data from "../../data";
 import { useStep, useSetStep } from "../../record";
 
 const Index = () => {
-  const step = useStep();
+  let step = useStep();
+  // TODO: step state를 컴포넌트가 관리할지, context에서 관리할지 리팩토링하기
   const setStep = useSetStep();
-  const { pathname } = useLocation();
+
+  const { pathname, search } = useLocation();
+  let currentStep = parseInt(search.slice(-1));
+
+  useEffect(() => {
+    setStep(currentStep);
+  }, [currentStep]);
 
   const currentBodyInEng = pathname.split("/")[2];
 
@@ -28,19 +35,13 @@ const Index = () => {
 
   return (
     <div>
-      {step === 1 && <Step1 goNextStep={goNextStep} videoInfo={videoInfo} />}
-      {step === 2 && (
-        <Step2
-          goNextStep={goNextStep}
-          currentBodyInKorean={currentBodyInKorean}
-        />
-      )}
+      {step === 1 && <Step1 videoInfo={videoInfo} />}
+      {step === 2 && <Step2 currentBodyInKorean={currentBodyInKorean} />}
       {step === 3 && (
         <Step3 goNextStep={goNextStep} currentVideoId={currentVideoId} />
       )}
       {step === 4 && (
         <Step4
-          goNextStep={goNextStep}
           currentBodyInKorean={currentBodyInKorean}
           currentBodyInEng={currentBodyInEng}
           currentVideoId={currentVideoId}

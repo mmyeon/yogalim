@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import LongRoundButton from "../../components/buttons/LongRoundButton";
 import PainScale from "../../components/PainScale";
 import Card from "../../components/Card";
 import Template from "../../components/Template";
 import { usePainScoreBefore, useSetPainScoreBefore } from "../../record";
 
-const Step2 = ({ currentBodyInKorean, goNextStep }) => {
+const Step2 = ({ currentBodyInKorean }) => {
   const painScoreBefore = usePainScoreBefore();
   const setPainScoreBefore = useSetPainScoreBefore();
 
@@ -33,7 +34,11 @@ const Step2 = ({ currentBodyInKorean, goNextStep }) => {
           }
         />
       }
-      button={<LongRoundButton onClick={goNextStep} title="수련 시작" />}
+      button={
+        <Link to={(location) => `${location.pathname}?step=3`}>
+          <LongRoundButton title="수련 시작" />
+        </Link>
+      }
     />
   );
 

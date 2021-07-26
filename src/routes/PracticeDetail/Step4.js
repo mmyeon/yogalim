@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import { usePainScoreAfter, useSetPainScoreAfter } from "../../record";
 
 const AfterPainRecord = ({
-  goNextStep,
   currentBodyInKorean,
   currentVideoId,
   currentBodyInEng,
@@ -45,7 +44,7 @@ const AfterPainRecord = ({
         <Link
           to={`/practice/${currentBodyInEng}/${VideoIdWithoutQuery}/review`}
         >
-          <LongRoundButton title="수련 결과 보기" onClick={goNextStep} />
+          <LongRoundButton title="수련 결과 보기" />
         </Link>
       }
     />

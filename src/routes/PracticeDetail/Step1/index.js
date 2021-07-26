@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ReactPlayer from "react-player";
 import LongRoundButton from "../../../components/buttons/LongRoundButton";
 import * as Styled from "./index.styles";
 import BackButton from "../../../components/buttons/BackButton";
 
-const Step1 = ({ goNextStep, videoInfo }) => {
+const Step1 = ({ videoInfo }) => {
   const {
     videoId,
     videoTime: { highlight },
@@ -48,7 +49,9 @@ const Step1 = ({ goNextStep, videoInfo }) => {
           </div>
         </div>
 
-        <LongRoundButton onClick={goNextStep} title="수련 시작" />
+        <Link to={(location) => `${location.pathname}?step=2`}>
+          <LongRoundButton title="수련 시작" />
+        </Link>
       </div>
     </Styled.Container>
   );
