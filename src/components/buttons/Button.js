@@ -14,9 +14,13 @@ const StyledButton = styled.button`
   font-family: ${FONT_FAMILY.korean};
 `;
 
-const Button = ({ text, backgroundColor, color }) => {
+const Button = ({ text, backgroundColor, color, onClick }) => {
   return (
-    <StyledButton color={color} backgroundColor={backgroundColor}>
+    <StyledButton
+      color={color}
+      backgroundColor={backgroundColor}
+      onClick={onClick}
+    >
       {text}
     </StyledButton>
   );
