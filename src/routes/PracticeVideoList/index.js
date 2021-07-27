@@ -36,7 +36,7 @@ const VideoList = () => {
                 <div className="container" key={item.videoId}>
                   <Link
                     to={(location) =>
-                      `${location.pathname}/${item.videoId}?t=${item.videoTime.start}?step=1`
+                      `${location.pathname}/${item.videoId}?step=1`
                     }
                   >
                     <img
