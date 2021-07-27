@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useLocation, useHistory } from "react-router";
 import ReactPlayer from "react-player";
 import styled from "styled-components";
 import { useSetStep, useStep } from "../../record";
@@ -13,6 +14,8 @@ const Step3 = ({ currentVideoId, videoInfo }) => {
   const {
     videoTime: { start, end },
   } = videoInfo;
+  const location = useLocation();
+  const history = useHistory();
 
   useEffect(() => {
     if (played && duration) {
@@ -63,6 +66,11 @@ const Step3 = ({ currentVideoId, videoInfo }) => {
 
   function goNextStep() {
     setStep(step + 1);
+    changeUrl();
+  }
+
+  function changeUrl() {
+    history.push(`${location.pathname}?step=4`);
   }
 };
 
