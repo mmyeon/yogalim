@@ -36,7 +36,9 @@ const Index = () => {
     <div>
       {step === 1 && <Step1 videoInfo={videoInfo} />}
       {step === 2 && <Step2 currentBodyInKorean={currentBodyInKorean} />}
-      {step === 3 && <Step3 currentVideoId={currentVideoId} />}
+      {step === 3 && (
+        <Step3 videoInfo={videoInfo} currentVideoId={currentVideoId} />
+      )}
       {step === 4 && (
         <Step4
           currentBodyInKorean={currentBodyInKorean}

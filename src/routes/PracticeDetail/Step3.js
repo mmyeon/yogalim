@@ -5,11 +5,14 @@ import { useSetStep, useStep } from "../../record";
 
 const StyledStep3 = styled.div``;
 
-const Step3 = ({ currentVideoId }) => {
+const Step3 = ({ currentVideoId, videoInfo }) => {
   const [duration, setDuration] = useState(0);
   const [played, setPlayed] = useState(0);
   const step = useStep();
   const setStep = useSetStep();
+  const {
+    videoTime: { start, end },
+  } = videoInfo;
 
   useEffect(() => {
     if (played && duration) {
@@ -17,7 +20,7 @@ const Step3 = ({ currentVideoId }) => {
         checkPlayedEnough({
           duration,
           played,
-          adTime: 20,
+          adTime: end,
         })
       ) {
         goNextStep();
@@ -32,7 +35,7 @@ const Step3 = ({ currentVideoId }) => {
         width="100vw"
         height="100vh"
         controls
-        url={`https://youtu.be/${currentVideoId}`}
+        url={`https://youtu.be/${currentVideoId}?t=${start}`}
         onProgress={handleProgress}
         onDuration={handleDuration}
       />
