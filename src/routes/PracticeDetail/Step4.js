@@ -13,7 +13,6 @@ const AfterPainRecord = ({
 }) => {
   const painScoreAfter = usePainScoreAfter();
   const setPainScoreAfter = useSetPainScoreAfter();
-  const VideoIdWithoutQuery = currentVideoId.split("?")[0];
 
   return (
     <Template
@@ -41,9 +40,7 @@ const AfterPainRecord = ({
         />
       }
       button={
-        <Link
-          to={`/practice/${currentBodyInEng}/${VideoIdWithoutQuery}/review`}
-        >
+        <Link to={`/practice/${currentBodyInEng}/${currentVideoId}/review`}>
           <LongRoundButton title="수련 결과 보기" />
         </Link>
       }
