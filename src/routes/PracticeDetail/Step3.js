@@ -1,16 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useHistory } from "react-router";
 import ReactPlayer from "react-player";
-import styled from "styled-components";
-import { useSetStep, useStep } from "../../record";
-
-const StyledStep3 = styled.div``;
 
 const Step3 = ({ currentVideoId, videoInfo }) => {
   const [duration, setDuration] = useState(0);
   const [played, setPlayed] = useState(0);
-  const step = useStep();
-  const setStep = useSetStep();
   const {
     videoTime: { start, end },
   } = videoInfo;
@@ -32,17 +26,15 @@ const Step3 = ({ currentVideoId, videoInfo }) => {
   }, [played, duration]);
 
   return (
-    <StyledStep3>
-      <ReactPlayer
-        playing
-        width="100vw"
-        height="100vh"
-        controls
-        url={`https://youtu.be/${currentVideoId}?t=${start}`}
-        onProgress={handleProgress}
-        onDuration={handleDuration}
-      />
-    </StyledStep3>
+    <ReactPlayer
+      playing
+      width="100vw"
+      height="100vh"
+      controls
+      url={`https://youtu.be/${currentVideoId}?t=${start}`}
+      onProgress={handleProgress}
+      onDuration={handleDuration}
+    />
   );
 
   function handleDuration(duration) {
@@ -65,11 +57,6 @@ const Step3 = ({ currentVideoId, videoInfo }) => {
   }
 
   function goNextStep() {
-    setStep(step + 1);
-    changeUrl();
-  }
-
-  function changeUrl() {
     history.push(`${location.pathname}?step=4`);
   }
 };
