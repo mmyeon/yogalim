@@ -1,24 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useLocation } from "react-router";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
 import Step4 from "./Step4";
 import data from "../../data";
-import { useStep, useSetStep } from "../../record";
 
 const Index = () => {
-  let step = useStep();
-  const setStep = useSetStep();
-
   const { pathname } = useLocation();
   let query = useQuery();
 
-  let currentStep = Number(query.get("step"));
-
-  useEffect(() => {
-    setStep(currentStep);
-  }, [currentStep]);
+  let step = Number(query.get("step"));
 
   // TODO: 코드스멜! 2는 매직넘버이니 개선하기
   const currentBodyInEng = pathname.split("/")[2];
