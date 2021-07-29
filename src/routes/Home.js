@@ -40,12 +40,11 @@ const MainContainer = styled.div`
   }
 
   > a {
-    > .long-round-btn {
-      position: absolute;
-      bottom: 2.5em;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+    width: 100%;
+    position: absolute;
+    bottom: 13%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 `;
 
