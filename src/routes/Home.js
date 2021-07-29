@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../styles/constant";
 import LongRoundButton from "../components/buttons/LongRoundButton";
+import { device } from "../device";
 
 const MainContainer = styled.div`
   width: 100vw;
@@ -45,6 +46,10 @@ const MainContainer = styled.div`
     bottom: 13%;
     left: 50%;
     transform: translateX(-50%);
+
+    @media ${device.tablet} {
+      bottom: 16%;
+    }
   }
 `;
 
