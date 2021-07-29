@@ -35,9 +35,8 @@ const MainContainer = styled.div`
     position: relative;
     width: 120%;
     height: 100%;
-    left: -2em;
-    transform: translateY(10px);
-    top: -0.5em;
+    transform: translate(-50%, -3px);
+    left: 50%;
   }
 
   > a {
