@@ -5,7 +5,7 @@ import Logo from "./Logo";
 
 const StyledHeader = styled.header`
   position: absolute;
-  top: 1.5em;
+  top: 1em;
   width: 100%;
   height: 2em;
   text-align: center;
@@ -23,12 +23,11 @@ const StyledHeader = styled.header`
   }
 `;
 
-const Header = ({ isVisibleBackBtn }) => {
+const Header = ({ isVisibleBackBtn, isVisibleLogo }) => {
   return (
     <StyledHeader>
       {isVisibleBackBtn && <BackButton />}
-
-      <Logo />
+      {isVisibleLogo && <Logo />}
     </StyledHeader>
   );
 };

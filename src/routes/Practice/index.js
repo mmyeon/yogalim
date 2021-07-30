@@ -10,7 +10,7 @@ const Practice = () => {
     <Styled.Practice>
       <div className="background">
         <div className="container">
-          <Header />
+          <Header isVisibleLogo="isVisibleLogo" />
           <div className="content">
             <h2>
               평소 신체 어느 부분이

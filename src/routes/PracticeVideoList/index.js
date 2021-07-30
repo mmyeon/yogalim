@@ -15,7 +15,10 @@ const VideoList = () => {
   return (
     <Styled.Container>
       <div className="background">
-        <Header isVisibleBackBtn="isVisibleBackBtn" />
+        <Header
+          isVisibleBackBtn="isVisibleBackBtn"
+          isVisibleLogo="isVisibleLogo"
+        />
         <div className="content">
           <h2 className="title">
             {titleInKorean === "목" ||

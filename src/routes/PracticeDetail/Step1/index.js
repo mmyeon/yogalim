@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ReactPlayer from "react-player";
 import LongRoundButton from "../../../components/buttons/LongRoundButton";
 import * as Styled from "./index.styles";
-import BackButton from "../../../components/buttons/BackButton";
+import Header from "../../../components/Header";
 
 const Step1 = ({ videoInfo }) => {
   const {
@@ -13,7 +13,7 @@ const Step1 = ({ videoInfo }) => {
 
   return (
     <Styled.Container>
-      <BackButton />
+      <Header isVisibleBackBtn="isVisibleBackBtn" />
 
       <ReactPlayer
         className="background-video"
