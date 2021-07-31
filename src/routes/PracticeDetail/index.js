@@ -36,7 +36,6 @@ const Index = () => {
       )}
       {step === 4 && (
         <Step4
-          currentBodyInKorean={currentBodyInKorean}
           currentBodyInEng={currentBodyInEng}
           currentVideoId={currentVideoId}
         />

@@ -6,11 +6,7 @@ import LongRoundButton from "../../components/buttons/LongRoundButton";
 import { Link } from "react-router-dom";
 import { usePainScoreAfter, useSetPainScoreAfter } from "../../record";
 
-const AfterPainRecord = ({
-  currentBodyInKorean,
-  currentVideoId,
-  currentBodyInEng,
-}) => {
+const AfterPainRecord = ({ currentVideoId, currentBodyInEng }) => {
   const painScoreAfter = usePainScoreAfter();
   const setPainScoreAfter = useSetPainScoreAfter();
 
@@ -19,14 +15,14 @@ const AfterPainRecord = ({
       title={
         <>
           <span className="thinner">수련 후</span>
-          <br /> 몸의 변화를 관찰해보세요.
+          <br /> 몸의 변화를 기록해보세요.
         </>
       }
       body={
         <Card
           title={
             <>
-              {currentBodyInKorean}의 통증에 조금 나아졌나요?
+              통증이 조금 나아졌나요?
               <br />
               아니면 그대로인가요?
             </>
