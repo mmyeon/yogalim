@@ -2,8 +2,8 @@ import React from "react";
 import * as Styled from "./index.styles";
 
 const Range = ({ updatePainScore, painScore }) => {
-  const scaleMin = 0;
-  const scaleMax = 10;
+  const SCALE_MIN = 0;
+  const SCALE_MAX = 10;
 
   return (
     <Styled.Range>
@@ -12,17 +12,17 @@ const Range = ({ updatePainScore, painScore }) => {
       </div>
 
       <div className="field">
-        <span className="value left">{scaleMin}</span>
+        <span className="value left">{SCALE_MIN}</span>
         <input
           type="range"
           value={painScore}
-          min={scaleMin}
-          max={scaleMax}
+          min={SCALE_MIN}
+          max={SCALE_MAX}
           step="1"
           onChange={updatePainScore}
         />
 
-        <span className="value right">{scaleMax}</span>
+        <span className="value right">{SCALE_MAX}</span>
       </div>
     </Styled.Range>
   );
