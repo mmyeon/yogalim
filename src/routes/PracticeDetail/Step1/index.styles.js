@@ -14,11 +14,12 @@ export const Container = styled.div`
     top: -3em;
   }
 
-  > svg {
+  > .green-wave {
     position: absolute;
     bottom: -5.5em;
-    width: 100%;
+    width: 120%;
     height: 100%;
+    left: -10%;
     z-index: -1;
   }
 
