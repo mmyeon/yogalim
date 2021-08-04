@@ -20,7 +20,7 @@ export const Container = styled.div`
     width: 120%;
     height: 100%;
     left: -10%;
-    z-index: -1;
+    z-index: 0;
   }
 
   > .contents {
