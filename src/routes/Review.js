@@ -10,6 +10,7 @@ import {
   useSetPainScoreAfter,
   useSetPainScoreBefore,
 } from "../record";
+import Layout from "../components/Layout";
 
 const Review = () => {
   const { body } = useParams();
@@ -19,51 +20,53 @@ const Review = () => {
   const setPainScoreAfter = useSetPainScoreAfter();
 
   return (
-    <Template
-      title={
-        <>
-          몸과 마음의 변화가
-          <br />
-          <span className="thinner">느껴지시나요?</span>
-        </>
-      }
-      body={
-        <Card
-          title={
-            <>
-              수련 전 / 후 <br />
-              변화를 살펴볼까요?
-            </>
-          }
-          body={
-            <>
-              <h1>Before : {painScoreBefore}</h1>
-              <h1>After : {painScoreAfter}</h1>
-            </>
-          }
-        />
-      }
-      button={
-        <div className="button-container">
-          <Link to="/">
-            <Button
-              color={`${COLORS.iris}`}
-              backgroundColor={`${COLORS.white}`}
-              onClick={resetPainScore}
-              text="홈"
-            />
-          </Link>
-          <Link to={`/practice/${body}`}>
-            <Button
-              backgroundColor={`${COLORS.iris}`}
-              color={`${COLORS.white}`}
-              onClick={resetPainScore}
-              text="다음 수련 이어가기"
-            />
-          </Link>
-        </div>
-      }
-    />
+    <Layout>
+      <Template
+        title={
+          <>
+            몸과 마음의 변화가
+            <br />
+            <span className="thinner">느껴지시나요?</span>
+          </>
+        }
+        body={
+          <Card
+            title={
+              <>
+                수련 전 / 후 <br />
+                변화를 살펴볼까요?
+              </>
+            }
+            body={
+              <>
+                <h1>Before : {painScoreBefore}</h1>
+                <h1>After : {painScoreAfter}</h1>
+              </>
+            }
+          />
+        }
+        button={
+          <div className="button-container">
+            <Link to="/">
+              <Button
+                color={`${COLORS.iris}`}
+                backgroundColor={`${COLORS.white}`}
+                onClick={resetPainScore}
+                text="홈"
+              />
+            </Link>
+            <Link to={`/practice/${body}`}>
+              <Button
+                backgroundColor={`${COLORS.iris}`}
+                color={`${COLORS.white}`}
+                onClick={resetPainScore}
+                text="다음 수련 이어가기"
+              />
+            </Link>
+          </div>
+        }
+      />
+    </Layout>
   );
 
   function resetPainScore() {

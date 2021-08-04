@@ -4,10 +4,11 @@ import { Link } from "react-router-dom";
 import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../styles/constant";
 import LongRoundButton from "../components/buttons/LongRoundButton";
 import { device } from "../device";
+import Layout from "../components/Layout";
 
 const MainContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: ${COLORS.primaryTeal};
   color: ${COLORS.white};
   overflow: hidden;
@@ -55,20 +56,22 @@ const MainContainer = styled.div`
 
 const Main = () => {
   return (
-    <MainContainer>
-      <div className="text-container">
-        <p className="desc">내 몸이 편안한 요가 수련소</p>
-        <h1>YOGA FORREST</h1>
-      </div>
-      <img
-        className="yoga-img"
-        src="/assets/images/home/yoga-in-green.svg"
-        alt="yoga meditation"
-      />
-      <Link to="/practice">
-        <LongRoundButton title="수련하기" />
-      </Link>
-    </MainContainer>
+    <Layout>
+      <MainContainer>
+        <div className="text-container">
+          <p className="desc">내 몸이 편안한 요가 수련소</p>
+          <h1>YOGA FORREST</h1>
+        </div>
+        <img
+          className="yoga-img"
+          src="/assets/images/home/yoga-in-green.svg"
+          alt="yoga meditation"
+        />
+        <Link to="/practice">
+          <LongRoundButton title="수련하기" />
+        </Link>
+      </MainContainer>
+    </Layout>
   );
 };
 

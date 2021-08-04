@@ -3,8 +3,8 @@ import { COLORS } from "../../styles/constant";
 import { device } from "../../device";
 
 export const Practice = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: ${COLORS.lightYellow};
   overflow: hidden;
 

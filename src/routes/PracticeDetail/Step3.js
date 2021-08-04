@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useHistory } from "react-router";
 import ReactPlayer from "react-player";
+import Layout from "../../components/Layout";
 
 const Step3 = ({ currentVideoId, videoInfo }) => {
   const [duration, setDuration] = useState(0);
@@ -26,15 +27,17 @@ const Step3 = ({ currentVideoId, videoInfo }) => {
   }, [played, duration]);
 
   return (
-    <ReactPlayer
-      playing
-      width="100vw"
-      height="100vh"
-      controls
-      url={`https://youtu.be/${currentVideoId}?t=${start}`}
-      onProgress={handleProgress}
-      onDuration={handleDuration}
-    />
+    <Layout>
+      <ReactPlayer
+        width="100%"
+        height="100%"
+        playing
+        controls
+        url={`https://youtu.be/${currentVideoId}?t=${start}`}
+        onProgress={handleProgress}
+        onDuration={handleDuration}
+      />
+    </Layout>
   );
 
   function handleDuration(duration) {
