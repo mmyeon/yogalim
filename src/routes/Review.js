@@ -38,10 +38,16 @@ const Review = () => {
               </>
             }
             body={
-              <>
-                <h1>Before : {painScoreBefore}</h1>
-                <h1>After : {painScoreAfter}</h1>
-              </>
+              <div className="score-container">
+                <div className="score before">
+                  <span>{painScoreBefore}</span>
+                  <h3>Before</h3>
+                </div>
+                <div className="score after">
+                  <span>{painScoreAfter}</span>
+                  <h3>After</h3>
+                </div>
+              </div>
             }
           />
         }

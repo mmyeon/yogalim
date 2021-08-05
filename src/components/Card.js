@@ -15,6 +15,20 @@ const StyledCard = styled.section`
     text-align: center;
     font-size: 1.18em;
   }
+
+  > .score-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > .score {
+      margin: 0.5em 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 `;
 
 const Card = ({ title, body }) => {
