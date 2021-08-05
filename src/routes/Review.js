@@ -39,13 +39,23 @@ const Review = () => {
             }
             body={
               <div className="score-container">
-                <div className="score before">
-                  <span>{painScoreBefore}</span>
-                  <h3>Before</h3>
+                <div className="score">
+                  <div
+                    className="bar before"
+                    style={{ height: `${painScoreBefore * 10}px` }}
+                  >
+                    {painScoreBefore}
+                  </div>
+                  <span className="bar-name">Before</span>
                 </div>
-                <div className="score after">
-                  <span>{painScoreAfter}</span>
-                  <h3>After</h3>
+                <div className="score">
+                  <div
+                    className="bar after"
+                    style={{ height: `${painScoreAfter * 10}px` }}
+                  >
+                    {painScoreAfter}
+                  </div>
+                  <span className="bar-name">After</span>
                 </div>
               </div>
             }

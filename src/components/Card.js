@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { COLORS, FONT_FAMILY } from "../styles/constant";
+import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../styles/constant";
 
 const StyledCard = styled.section`
   margin-top: 1em;
@@ -19,14 +19,41 @@ const StyledCard = styled.section`
   > .score-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 
     > .score {
-      margin: 0.5em 1em;
+      margin: 0 1em;
+      margin-top: 1.5em;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      > .bar {
+        border-radius: 5px;
+        width: 40px;
+        height: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        color: white;
+        font-size: 0.8em;
+        font-weight: ${FONT_WEIGHT.semiBold};
+
+        &.before {
+          width: 100%;
+          background: ${COLORS.amber};
+        }
+
+        &.after {
+          width: 100%;
+          background: ${COLORS.red};
+        }
+      }
+
+      > .bar-name {
+        font-weight: ${FONT_WEIGHT.semiBold};
+      }
     }
   }
 `;
