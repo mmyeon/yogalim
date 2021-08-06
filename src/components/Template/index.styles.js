@@ -20,6 +20,8 @@ export const Container = styled.div`
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      width: 100%;
+      height: 100%;
 
       > .title-container {
         display: flex;
@@ -28,7 +30,6 @@ export const Container = styled.div`
         justify-content: center;
         align-items: end;
         line-height: 27px;
-        padding-top: 6em;
         word-break: keep-all;
 
         > .meditation-img {
