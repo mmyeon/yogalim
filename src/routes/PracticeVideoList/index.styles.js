@@ -44,8 +44,10 @@ export const Container = styled.div`
           justify-content: flex-start;
           align-items: center;
 
+          /* TODO: 오른쪽 마진 짤리는 문제 해결하기 */
           > .container {
             position: relative;
+            margin-right: 0.6em;
 
             &:first-child {
               margin-left: 1.3em;
@@ -55,31 +57,51 @@ export const Container = styled.div`
               margin-right: 1.3em;
             }
 
-            .video {
-              background: ${COLORS.primaryTeal};
-              min-width: 213px;
-              height: 250px;
-              margin-right: 0.6em;
-            }
+            > a {
+              display: block;
+              width: 100%;
+              height: 100%;
 
-            .title-container {
-              position: absolute;
-              bottom: 1.5em;
-              color: ${COLORS.white};
-              text-align: left;
-              padding: 0 1.4em;
-
-              > h3 {
-                font-size: 1.2em;
-                font-weight: ${FONT_WEIGHT.bold};
-                margin-bottom: 0.1em;
-                word-break: keep-all;
-                letter-spacing: 1.5px;
+              picture {
+                display: block;
+                width: 100%;
+                height: 100%;
               }
 
-              > span {
-                font-size: 0.8em;
-                font-weight: ${FONT_WEIGHT.thin};
+              picture::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(0deg, ${COLORS.black}, transparent);
+                opacity: 0.8;
+              }
+
+              .video {
+                background: ${COLORS.primaryTeal};
+              }
+
+              .title-container {
+                position: absolute;
+                bottom: 1.5em;
+                color: ${COLORS.white};
+                text-align: left;
+                padding: 0 1.4em;
+
+                > h3 {
+                  font-size: 1.2em;
+                  font-weight: ${FONT_WEIGHT.bold};
+                  margin-bottom: 0.1em;
+                  word-break: keep-all;
+                  letter-spacing: 1.5px;
+                }
+
+                > span {
+                  font-size: 0.8em;
+                  font-weight: ${FONT_WEIGHT.thin};
+                }
               }
             }
           }
