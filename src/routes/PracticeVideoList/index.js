@@ -44,11 +44,17 @@ const VideoList = () => {
                         `${location.pathname}/${item.videoId}?step=1`
                       }
                     >
-                      <img
-                        className="video"
-                        src={item.thumbnail}
-                        alt="yoga video thumbnail"
-                      />
+                      <picture>
+                        <source srcSet={item.thumbnail} />
+                        <img
+                          className="video"
+                          src={item.thumbnail}
+                          alt="yoga video thumbnail"
+                          width="213px"
+                          height="250px"
+                        />
+                      </picture>
+
                       <div className="title-container">
                         <h3>{item.title}</h3>
                         <span>{item.duration}</span>
