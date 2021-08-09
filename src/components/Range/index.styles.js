@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { COLORS, FONT_WEIGHT } from "../../styles/constant";
 
 export const Range = styled.div`
-  width: 18.75rem;
+  width: 100%;
   height: 4em;
   padding: 0 2.8em;
 
