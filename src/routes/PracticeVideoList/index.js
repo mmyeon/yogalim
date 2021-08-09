@@ -47,7 +47,7 @@ const VideoList = () => {
                       <picture>
                         <source srcSet={item.thumbnail} />
                         <img
-                          className="video"
+                          className="thumbnail"
                           src={item.thumbnail}
                           alt="yoga video thumbnail"
                           width="213px"
