@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../device";
 import { COLORS, FONT_FAMILY } from "../../../styles/constant";
 
 export const Container = styled.div`
@@ -7,11 +8,23 @@ export const Container = styled.div`
   overflow: hidden;
   position: relative;
 
+  @media ${device.tablet} {
+    background: ${COLORS.primaryTeal};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   > .background-video {
     position: relative;
     margin-left: -10em;
     z-index: -2;
     top: -3em;
+
+    @media ${device.tablet} {
+      z-index: 0;
+      margin-left: 0;
+    }
   }
 
   > .green-wave {
@@ -21,6 +34,10 @@ export const Container = styled.div`
     height: 100%;
     left: -10%;
     z-index: 0;
+
+    @media ${device.tablet} {
+      bottom: -6em;
+    }
   }
 
   > .contents {
@@ -32,6 +49,10 @@ export const Container = styled.div`
     width: 100%;
     top: -4.5em;
     position: relative;
+
+    @media ${device.tablet} {
+      top: -2em;
+    }
 
     > h1 {
       font-size: 1.3em;
