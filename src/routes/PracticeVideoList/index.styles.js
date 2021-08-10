@@ -42,23 +42,19 @@ export const Container = styled.div`
       > .video-list {
         .video-container {
           overflow: scroll;
+          width: 100%;
           height: auto;
           display: flex;
           justify-content: flex-start;
           align-items: center;
+          padding-left: 1.3em;
 
-          /* TODO: 오른쪽 마진 짤리는 문제 해결하기 */
+          > .container + .container {
+            margin-left: 0.6em;
+          }
+
           > .container {
             position: relative;
-            margin-right: 0.6em;
-
-            &:first-child {
-              margin-left: 1.3em;
-            }
-
-            &:last-child {
-              margin-right: 1.3em;
-            }
 
             > a {
               display: block;
@@ -67,23 +63,32 @@ export const Container = styled.div`
 
               picture {
                 display: block;
-                width: 100%;
-                height: 100%;
               }
 
-              picture::after {
+              picture::before {
                 content: "";
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
-                height: 98%;
+                height: 100%;
                 background: linear-gradient(0deg, ${COLORS.black}, transparent);
                 opacity: 0.8;
               }
 
-              .video {
+              picture::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                right: -1.3rem;
+                width: 1.3rem;
+                height: 1px;
+              }
+
+              .thumbnail {
                 background: ${COLORS.primaryTeal};
+                display: block;
               }
 
               .title-container {
