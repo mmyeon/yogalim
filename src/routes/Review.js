@@ -11,6 +11,47 @@ import {
   useSetPainScoreBefore,
 } from "../record";
 import Layout from "../components/Layout";
+import styled from "styled-components";
+import { FONT_WEIGHT } from "../styles/constant";
+
+const ScoreContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  > .score {
+    margin: 0 1em;
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    > .bar {
+      border-radius: 5px;
+      width: 3em;
+      height: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      color: white;
+      font-size: 0.8em;
+      font-weight: ${FONT_WEIGHT.semiBold};
+
+      &.before {
+        background: ${COLORS.amber};
+      }
+
+      &.after {
+        background: ${COLORS.red};
+      }
+    }
+
+    > .bar-name {
+      font-weight: ${FONT_WEIGHT.semiBold};
+    }
+  }
+`;
 
 const Review = () => {
   const { body } = useParams();
@@ -38,7 +79,7 @@ const Review = () => {
               </>
             }
             body={
-              <div className="score-container">
+              <ScoreContainer>
                 <div className="score">
                   <div
                     className="bar before"
@@ -48,6 +89,7 @@ const Review = () => {
                   </div>
                   <span className="bar-name">Before</span>
                 </div>
+
                 <div className="score">
                   <div
                     className="bar after"
@@ -57,7 +99,7 @@ const Review = () => {
                   </div>
                   <span className="bar-name">After</span>
                 </div>
-              </div>
+              </ScoreContainer>
             }
           />
         }
