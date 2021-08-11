@@ -11,45 +11,63 @@ import {
   useSetPainScoreBefore,
 } from "../record";
 import Layout from "../components/Layout";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { FONT_WEIGHT } from "../styles/constant";
+
+const barMove = keyframes`
+\ 0% {
+  height:0%;
+}
+
+\ 100% {
+  height:100%;
+}
+`;
 
 const ScoreContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  position: absolute;
+  left: 50%;
+  bottom: 14%;
+  transform: translateX(-50%);
+  height: 130px;
 
   > .score {
     margin: 0 1em;
-    margin-top: 1.5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    > .bar {
-      border-radius: 5px;
-      width: 3em;
-      height: 0px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      color: white;
-      font-size: 0.8em;
-      font-weight: ${FONT_WEIGHT.semiBold};
-
-      &.before {
-        background: ${COLORS.amber};
-      }
-
-      &.after {
-        background: ${COLORS.red};
-      }
-    }
+    height: 0em;
 
     > .bar-name {
       font-weight: ${FONT_WEIGHT.semiBold};
     }
+  }
+`;
+
+const Bar = styled.div`
+  position: absolute;
+  bottom: 1.5em;
+  border-radius: 5px;
+  width: 3em;
+  max-height: ${(props) => props.height};
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+  font-size: 0.8em;
+  font-weight: ${FONT_WEIGHT.semiBold};
+  animation: ${barMove} 1.5s forwards linear;
+
+  &.before {
+    background: ${COLORS.amber};
+  }
+
+  &.after {
+    background: ${COLORS.red};
   }
 `;
 
@@ -81,22 +99,16 @@ const Review = () => {
             body={
               <ScoreContainer>
                 <div className="score">
-                  <div
-                    className="bar before"
-                    style={{ height: `${painScoreBefore * 10}px` }}
-                  >
+                  <Bar className="before" height={`${painScoreBefore * 14}px`}>
                     {painScoreBefore}
-                  </div>
+                  </Bar>
                   <span className="bar-name">Before</span>
                 </div>
 
                 <div className="score">
-                  <div
-                    className="bar after"
-                    style={{ height: `${painScoreAfter * 10}px` }}
-                  >
+                  <Bar className="after" height={`${painScoreAfter * 14}px`}>
                     {painScoreAfter}
-                  </div>
+                  </Bar>
                   <span className="bar-name">After</span>
                 </div>
               </ScoreContainer>
@@ -113,6 +125,7 @@ const Review = () => {
                 text="홈"
               />
             </Link>
+
             <Link to={`/practice/${body}`}>
               <Button
                 backgroundColor={`${COLORS.iris}`}
