@@ -9,7 +9,9 @@ const StyledCard = styled.section`
   border-radius: 10px;
   padding: 1em 0.5em;
   width: 17em;
+  height: 17em;
   max-width: 18em;
+  position: relative;
 
   > .desc {
     font-family: ${FONT_FAMILY.point};
