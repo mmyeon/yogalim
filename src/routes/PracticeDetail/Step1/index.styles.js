@@ -13,6 +13,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   > .background-video {
@@ -36,7 +37,7 @@ export const Container = styled.div`
     z-index: 0;
 
     @media ${device.tablet} {
-      bottom: -6em;
+      bottom: -27%;
     }
   }
 
