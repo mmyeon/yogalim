@@ -29,7 +29,7 @@ const AfterPainRecord = ({ currentVideoId, currentBodyInEng }) => {
           }
           body={
             <PainScale
-              updatePainScore={updatePainScoreAfter}
+              updatePainScore={(score) => setPainScoreAfter(score)}
               painScore={painScoreAfter}
             />
           }
@@ -42,11 +42,6 @@ const AfterPainRecord = ({ currentVideoId, currentBodyInEng }) => {
       }
     />
   );
-
-  function updatePainScoreAfter(e) {
-    const currentPainScore = parseInt(e.target.value);
-    setPainScoreAfter(currentPainScore);
-  }
 };
 
 export default AfterPainRecord;

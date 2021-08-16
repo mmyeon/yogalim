@@ -28,7 +28,7 @@ const Step2 = ({ currentBodyInKorean }) => {
           }
           body={
             <PainScale
-              updatePainScore={updatePainScoreBefore}
+              updatePainScore={(score) => setPainScoreBefore(score)}
               painScore={painScoreBefore}
             />
           }
@@ -41,11 +41,6 @@ const Step2 = ({ currentBodyInKorean }) => {
       }
     />
   );
-
-  function updatePainScoreBefore(e) {
-    const currentPainScore = parseInt(e.target.value);
-    setPainScoreBefore(currentPainScore);
-  }
 };
 
 export default Step2;
