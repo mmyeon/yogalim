@@ -29,8 +29,8 @@ const Range = ({ updatePainScore, painScore }) => {
           max={SCALE_MAX}
           step="1"
           onChange={handleChange}
-          onTouchMove={handleTouchStart}
-          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouch}
+          onTouchStart={handleTouch}
         />
 
         <span className="value right">{SCALE_MAX}</span>
@@ -43,17 +43,14 @@ const Range = ({ updatePainScore, painScore }) => {
     updatePainScore(score);
   }
 
-  function handleTouchStart(e) {
+  function handleTouch(e) {
     if (!e.touches || !e.touches.length) return;
 
     const clientX = e.touches[0].clientX;
-
-    // 터치 포인트가 왼쪽에서 떨어진 정도
     const clientXFromLeft = clientX - rect.left;
-
     const newScore = Math.ceil(clientXFromLeft / rect.gap);
 
-    if (0 <= newScore && newScore <= 10) {
+    if (SCALE_MIN <= newScore && newScore <= SCALE_MAX) {
       updatePainScore(newScore);
     }
   }
