@@ -23,7 +23,7 @@ const Index = () => {
     (bodyPart) => bodyPart.title.eng === currentBodyPartInEng
   );
 
-  const currentBodyInKorean = currentBodyPartInfo.title.kor;
+  const currentBodyPartInKorean = currentBodyPartInfo.title.kor;
   const practicePlayList = currentBodyPartInfo.playList;
   const currentVideoId = id;
   const videoInfo = practicePlayList.find((item) => item.videoId === id);
@@ -32,7 +32,9 @@ const Index = () => {
     <Layout>
       <Container>
         {step === 1 && <Step1 videoInfo={videoInfo} />}
-        {step === 2 && <Step2 currentBodyInKorean={currentBodyInKorean} />}
+        {step === 2 && (
+          <Step2 currentBodyPartInKorean={currentBodyPartInKorean} />
+        )}
         {step === 3 && (
           <Step3 videoInfo={videoInfo} currentVideoId={currentVideoId} />
         )}

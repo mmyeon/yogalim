@@ -6,7 +6,7 @@ import Card from "../../components/Card";
 import Template from "../../components/Template";
 import { usePainScoreBefore, useSetPainScoreBefore } from "../../record";
 
-const Step2 = ({ currentBodyInKorean }) => {
+const Step2 = ({ currentBodyPartInKorean }) => {
   const painScoreBefore = usePainScoreBefore();
   const setPainScoreBefore = useSetPainScoreBefore();
 
@@ -16,7 +16,7 @@ const Step2 = ({ currentBodyInKorean }) => {
         <>
           <span className="thinner">수련 하기 전</span>
           <br />
-          {currentBodyInKorean}의 통증을 기록해보세요
+          {currentBodyPartInKorean}의 통증을 기록해보세요
         </>
       }
       body={
