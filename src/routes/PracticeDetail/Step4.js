@@ -6,7 +6,7 @@ import LongRoundButton from "../../components/buttons/LongRoundButton";
 import { Link } from "react-router-dom";
 import { usePainScoreAfter, useSetPainScoreAfter } from "../../record";
 
-const AfterPainRecord = ({ currentVideoId, currentBodyInEng }) => {
+const AfterPainRecord = ({ currentVideoId, currentBodyPartInEng }) => {
   const painScoreAfter = usePainScoreAfter();
   const setPainScoreAfter = useSetPainScoreAfter();
 
@@ -36,7 +36,7 @@ const AfterPainRecord = ({ currentVideoId, currentBodyInEng }) => {
         />
       }
       button={
-        <Link to={`/practice/${currentBodyInEng}/${currentVideoId}/review`}>
+        <Link to={`/practice/${currentBodyPartInEng}/${currentVideoId}/review`}>
           <LongRoundButton title="수련 결과 보기" />
         </Link>
       }
