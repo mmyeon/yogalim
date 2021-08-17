@@ -16,11 +16,23 @@ import { FONT_WEIGHT } from "../styles/constant";
 
 const barMove = keyframes`
 \ 0% {
-  height:0%;
+  height:0px;
+  opacity:0;
 }
 
 \ 100% {
   height:100%;
+}
+`;
+
+const reveal = keyframes`
+\ 0% {
+  transform: translateX(-10px);
+}
+
+\ 100% {
+  opacity:1;
+  transform: translateX(0px);
 }
 `;
 
@@ -30,37 +42,56 @@ const ScoreContainer = styled.div`
   align-items: flex-end;
   position: absolute;
   left: 50%;
-  bottom: 14%;
+  bottom: 10%;
   transform: translateX(-50%);
-  height: 130px;
+  height: 140px;
 
   > .score {
-    margin: 0 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 0em;
 
     > .bar-name {
       font-weight: ${FONT_WEIGHT.semiBold};
+      z-index: 10;
+    }
+  }
+
+  > .wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > img {
+      width: 30px;
+      height: 30px;
+      opacity: 0;
+      margin-right: 0.5em;
+      margin-bottom: 2.7em;
+      animation: ${reveal} 0.5s forwards 0.5s linear;
     }
   }
 `;
 
 const Bar = styled.div`
   position: absolute;
-  bottom: 1.5em;
+  bottom: 1.3em;
   border-radius: 5px;
   width: 3em;
   max-height: ${(props) => props.height};
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  align-items: center;
   color: white;
   font-size: 0.8em;
   font-weight: ${FONT_WEIGHT.semiBold};
   animation: ${barMove} 1.5s forwards linear;
+  margin-bottom: 0.5em;
+  padding: 0;
 
   &.before {
     background: ${COLORS.amber};
@@ -68,6 +99,8 @@ const Bar = styled.div`
 
   &.after {
     background: ${COLORS.red};
+    height: 0;
+    animation-delay: 1s;
   }
 `;
 
@@ -105,6 +138,13 @@ const Review = () => {
                   <span className="bar-name">Before</span>
                 </div>
 
+                <div className="wrapper">
+                  <img
+                    src="/assets/images/review/arrow_right.svg"
+                    alt="arrow right"
+                  />
+                </div>
+
                 <div className="score">
                   <Bar className="after" height={`${painScoreAfter * 14}px`}>
                     {painScoreAfter}
@@ -125,7 +165,6 @@ const Review = () => {
                 text="홈"
               />
             </Link>
-
             <Link to={`/practice/${body}`}>
               <Button
                 backgroundColor={`${COLORS.iris}`}
