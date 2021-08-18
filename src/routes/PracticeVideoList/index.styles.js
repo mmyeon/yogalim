@@ -33,6 +33,10 @@ export const Container = styled.div`
         font-weight: 300;
         margin-bottom: 6.5em;
 
+        @media ${device.tablet} {
+          font-size: 2em;
+        }
+
         > b {
           font-weight: 600;
         }
@@ -47,6 +51,15 @@ export const Container = styled.div`
           justify-content: flex-start;
           align-items: center;
           padding-left: 1.3em;
+
+          @media ${device.tablet} {
+            position: relative;
+            bottom: -9em;
+          }
+
+          @media (orientation: landscape) {
+            bottom: -3em;
+          }
 
           > .container + .container {
             margin-left: 0.6em;
