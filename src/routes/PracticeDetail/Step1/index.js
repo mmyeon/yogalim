@@ -22,29 +22,28 @@ const Step1 = ({ videoInfo }) => {
         muted
       />
 
-      <img
-        src="/assets/images/practice/green-wave.svg"
-        className="green-wave"
-        alt="green wave"
-      />
+      <div className="background">
+        <div className="contents">
+          <h1>{videoInfo.title}</h1>
 
-      <div className="contents">
-        <h1>{videoInfo.title}</h1>
-
-        <div className="practice-desc">
-          <img src="/assets/images/step/yoga-teacher.png" alt="yoga-teacher" />
-          <div className="bubble">
+          <div className="practice-desc">
             <img
-              src="/assets/images/step/bubble-point.png"
-              alt="bubble-point"
+              src="/assets/images/step/yoga-teacher.png"
+              alt="yoga-teacher"
             />
-            <p>{videoInfo.desc}</p>
+            <div className="bubble">
+              <img
+                src="/assets/images/step/bubble-point.png"
+                alt="bubble-point"
+              />
+              <p>{videoInfo.desc}</p>
+            </div>
           </div>
-        </div>
 
-        <Link to={(location) => `${location.pathname}?step=2`}>
-          <LongRoundButton title="수련 시작" />
-        </Link>
+          <Link to={(location) => `${location.pathname}?step=2`}>
+            <LongRoundButton title="수련 시작" />
+          </Link>
+        </div>
       </div>
     </Styled.Container>
   );
