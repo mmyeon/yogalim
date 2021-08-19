@@ -16,7 +16,7 @@ const Step2 = ({ currentBodyPartInKorean }) => {
         <>
           <span className="thinner">수련 하기 전</span>
           <br />
-          {currentBodyPartInKorean}의 통증을 기록해보세요
+          {currentBodyPartInKorean} 통증을 기록해보세요
         </>
       }
       body={

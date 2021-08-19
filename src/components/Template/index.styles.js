@@ -42,6 +42,7 @@ export const Container = styled.div`
           padding-left: 0.3em;
           font-weight: ${FONT_WEIGHT.semiBold};
           letter-spacing: 1px;
+          width: min-content;
 
           .thinner {
             font-weight: ${FONT_WEIGHT.thin};
