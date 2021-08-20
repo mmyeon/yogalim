@@ -8,11 +8,10 @@ export const Container = styled.div`
   overflow: hidden;
   position: relative;
 
-  @media ${device.tablet} {
+  @media ${device.tabletM} {
     background: ${COLORS.primaryTeal};
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
   }
 
@@ -22,22 +21,14 @@ export const Container = styled.div`
     z-index: -2;
     top: -3em;
 
-    @media ${device.tablet} {
-      z-index: 0;
-      margin-left: 0;
+    @media ${device.mobileL} {
+      margin: 0 auto;
     }
-  }
 
-  > .green-wave {
-    position: absolute;
-    bottom: -5.5em;
-    width: 120%;
-    height: 100%;
-    left: -10%;
-    z-index: 0;
-
-    @media ${device.tablet} {
-      display: none;
+    @media ${device.tabletM} {
+      z-index: 0;
+      margin: 0;
+      top: 1em;
     }
   }
 
@@ -50,60 +41,63 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: -14em;
-    left: 0%;
+    top: -14.5em;
+    right: 0;
     position: relative;
 
-    > .contents {
-      padding: 0 1em;
-      width: 100%;
+    @media ${device.tabletL} {
+      width: 0;
+    }
+  }
+
+  > .contents {
+    position: absolute;
+    top: 55%;
+    left: 0;
+    padding: 0 1em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > h1 {
+      font-size: 1.3em;
+      color: ${COLORS.white};
+    }
+
+    > .practice-desc {
       display: flex;
-      flex-direction: column;
       align-items: center;
+      justify-content: center;
+      font-family: ${FONT_FAMILY.point};
+      margin-top: 1em;
+      margin-bottom: 1.2em;
+      text-align: center;
 
-      @media ${device.tablet} {
-        top: -2em;
+      > img {
+        width: 86px;
+        height: 86px;
       }
 
-      > h1 {
-        font-size: 1.3em;
-        color: ${COLORS.white};
-      }
-
-      > .practice-desc {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: ${FONT_FAMILY.point};
-        margin-top: 1em;
-        margin-bottom: 1.2em;
-        text-align: center;
+      > .bubble {
+        position: relative;
 
         > img {
-          width: 86px;
-          height: 86px;
+          position: absolute;
+          z-index: -1;
+          width: 23px;
+          top: 50%;
+          left: 0.4em;
+          transform: translateY(-50%);
         }
-
-        > .bubble {
-          position: relative;
-
-          > img {
-            position: absolute;
-            z-index: -1;
-            width: 23px;
-            top: 50%;
-            left: 0.4em;
-            transform: translateY(-50%);
-          }
-          > p {
-            margin-left: 1.3em;
-            background: ${COLORS.lightYellow};
-            padding: 1.2em 0.9em;
-            border-radius: 16px;
-            font-size: 0.87em;
-            word-break: keep-all;
-            color: ${COLORS.black};
-          }
+        > p {
+          margin-left: 1.3em;
+          background: ${COLORS.lightYellow};
+          padding: 1.2em 0.9em;
+          border-radius: 16px;
+          font-size: 0.87em;
+          word-break: keep-all;
+          color: ${COLORS.black};
         }
       }
     }

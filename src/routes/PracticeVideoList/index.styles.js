@@ -18,7 +18,7 @@ export const Container = styled.div`
     background-size: cover;
     position: relative;
 
-    @media ${device.tablet} {
+    @media ${device.tabletL} {
       background-image: url("/assets/images/practiceVideoList/bg-tablet.svg");
       background-position: center -19%;
     }
@@ -33,7 +33,7 @@ export const Container = styled.div`
         font-weight: 300;
         margin-bottom: 6.5em;
 
-        @media ${device.tablet} {
+        @media ${device.tabletL} {
           font-size: 2em;
         }
 
@@ -52,7 +52,7 @@ export const Container = styled.div`
           align-items: center;
           padding-left: 1.3em;
 
-          @media ${device.tablet} {
+          @media ${device.tabletL} {
             position: relative;
             bottom: -9em;
           }

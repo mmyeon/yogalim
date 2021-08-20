@@ -16,7 +16,7 @@ export const Practice = styled.div`
     background-position: 63.5%;
     background-size: cover;
 
-    @media ${device.tablet} {
+    @media ${device.tabletL} {
       background-position: bottom;
     }
 

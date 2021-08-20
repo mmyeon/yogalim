@@ -48,7 +48,7 @@ const MainContainer = styled.div`
     left: 50%;
     transform: translateX(-50%);
 
-    @media ${device.tablet} {
+    @media ${device.tabletL} {
       bottom: 16%;
     }
   }
