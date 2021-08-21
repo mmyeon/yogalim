@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import LongRoundButton from "../../components/buttons/LongRoundButton";
 import PainScale from "../../components/PainScale";
 import Card from "../../components/Card";
@@ -9,6 +9,10 @@ import { usePainScoreBefore, useSetPainScoreBefore } from "../../record";
 const Step2 = ({ currentBodyPartInKorean }) => {
   const painScoreBefore = usePainScoreBefore();
   const setPainScoreBefore = useSetPainScoreBefore();
+  const history = useHistory();
+  const {
+    location: { pathname, search },
+  } = history;
 
   return (
     <Template
@@ -16,7 +20,7 @@ const Step2 = ({ currentBodyPartInKorean }) => {
         <>
           <span className="thinner">수련 하기 전</span>
           <br />
-          {currentBodyPartInKorean} 통증을 기록해보세요
+          {currentBodyPartInKorean} 통증을 기록해보세요.
         </>
       }
       body={
@@ -34,13 +38,17 @@ const Step2 = ({ currentBodyPartInKorean }) => {
           }
         />
       }
-      button={
-        <Link to={(location) => `${location.pathname}?step=3`}>
-          <LongRoundButton title="수련 시작" />
-        </Link>
-      }
+      button={<LongRoundButton onClick={checkUserInput} title="수련 시작" />}
     />
   );
+
+  function checkUserInput() {
+    if (window.confirm("🙋‍♀️잠시만요. 정말 통증 없이 편안하신가요?") === true) {
+      history.push(`${pathname}?step=3`);
+    } else {
+      history.push(pathname + search);
+    }
+  }
 };
 
 export default Step2;
