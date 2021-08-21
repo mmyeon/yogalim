@@ -43,8 +43,20 @@ const Step2 = ({ currentBodyPartInKorean }) => {
   );
 
   function checkUserInput() {
+    if (painScoreBefore === 0) {
+      confirmPainScore();
+    } else {
+      goToNext();
+    }
+  }
+
+  function goToNext() {
+    history.push(`${pathname}?step=3`);
+  }
+
+  function confirmPainScore() {
     if (window.confirm("🙋‍♀️잠시만요. 정말 통증 없이 편안하신가요?") === true) {
-      history.push(`${pathname}?step=3`);
+      goToNext();
     } else {
       history.push(pathname + search);
     }
