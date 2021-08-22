@@ -1,10 +1,19 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../styles/constant";
 import LongRoundButton from "../components/buttons/LongRoundButton";
 import { device } from "../device";
 import Layout from "../components/Layout";
+
+const showUp = keyframes`
+\ 0% {
+  height:0;
+}
+\ 100% {
+  height:100%;   
+}
+`;
 
 const MainContainer = styled.div`
   width: 100%;
@@ -14,6 +23,26 @@ const MainContainer = styled.div`
   overflow: hidden;
   text-align: center;
   position: relative;
+
+  > .notice {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    max-height: 40px;
+    z-index: 20;
+    background: ${COLORS.white};
+    color: ${COLORS.black};
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+    animation: ${showUp} 2s linear 0.2s forwards;
+    visibility: hidden;
+
+    @media ${device.tabletM} {
+      visibility: visible;
+    }
+  }
 
   .text-container {
     padding-top: 4.5em;
@@ -58,15 +87,21 @@ const Main = () => {
   return (
     <Layout>
       <MainContainer>
+        <div className="notice">
+          🧘🏽 본 사이트는 <b>모바일</b>에 최적화되어 있습니다.
+        </div>
+
         <div className="text-container">
           <p className="desc">내 몸이 편안한 요가 수련소</p>
           <h1>YOGA FORREST</h1>
         </div>
+
         <img
           className="yoga-img"
           src="/assets/images/home/yoga-in-green.svg"
           alt="yoga meditation"
         />
+
         <Link to="/practice">
           <LongRoundButton title="수련하기" />
         </Link>
