@@ -10,6 +10,7 @@ const Image = styled.img`
   opacity: 0.9;
   border-radius: 50%;
   z-index: 10;
+  cursor: pointer;
 `;
 
 const BackButton = () => {

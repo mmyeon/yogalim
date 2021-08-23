@@ -27,6 +27,9 @@ body {
     font-style: normal;
 }
 
+button {
+    cursor: pointer;
+}
 
 `;
 
