@@ -8,10 +8,21 @@ import Layout from "../components/Layout";
 
 const showUp = keyframes`
 \ 0% {
-  height:0;
+  height:0%;
+  
 }
 \ 100% {
-  height:100%;   
+  height:100%;  
+}
+`;
+
+const goCenter = keyframes`
+\ 0% {
+  top: 100%;
+}
+\ 100% {
+  top: 50%;
+  transform: translateY(-50%);
 }
 `;
 
@@ -34,13 +45,21 @@ const MainContainer = styled.div`
     z-index: 20;
     background: ${COLORS.white};
     color: ${COLORS.black};
-    opacity: 0.9;
     letter-spacing: 0.5px;
-    animation: ${showUp} 2s linear 0.2s forwards;
+    animation: ${showUp} 2s linear forwards;
     visibility: hidden;
 
     @media ${device.tabletM} {
       visibility: visible;
+    }
+
+    > p {
+      position: relative;
+      animation: ${goCenter} 0.5s linear forwards;
+
+      > b {
+        border-bottom: 1px solid black;
+      }
     }
   }
 
@@ -88,7 +107,9 @@ const Main = () => {
     <Layout>
       <MainContainer>
         <div className="notice">
-          🧘🏽 본 사이트는 <b>모바일</b>에 최적화되어 있습니다.
+          <p>
+            🧘🏽 본 사이트는 <b>모바일</b>에 최적화되어 있습니다.
+          </p>
         </div>
 
         <div className="text-container">
