@@ -90,7 +90,6 @@ const MainContainer = styled.div`
   }
 
   > a {
-    width: 100%;
     position: absolute;
     bottom: 13%;
     left: 50%;
