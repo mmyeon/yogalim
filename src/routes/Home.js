@@ -43,9 +43,9 @@ const MainContainer = styled.div`
     height: 0px;
     max-height: 40px;
     z-index: 20;
-    background: ${COLORS.white};
-    color: ${COLORS.black};
-    letter-spacing: 0.5px;
+    background: ${COLORS.iris};
+    color: ${COLORS.white};
+    letter-spacing: 1px;
     animation: ${showUp} 2s linear forwards;
     visibility: hidden;
 
@@ -58,7 +58,8 @@ const MainContainer = styled.div`
       animation: ${goCenter} 0.5s linear forwards;
 
       > b {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid ${COLORS.white};
+        letter-spacing: 2px;
       }
     }
   }
@@ -107,7 +108,7 @@ const Main = () => {
       <MainContainer>
         <div className="notice">
           <p>
-            🧘🏽 본 사이트는 <b>모바일</b>에 최적화되어 있습니다.
+            🧘🏽 이 서비스는 <b>모바일</b>에 최적화되어 있습니다.
           </p>
         </div>
 
