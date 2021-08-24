@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ReactPlayer from "react-player";
 import LongRoundButton from "../../../components/buttons/LongRoundButton";
@@ -9,7 +9,10 @@ const Step1 = ({ videoInfo }) => {
   const {
     videoId,
     videoTime: { highlight },
+    thumbnail,
   } = videoInfo;
+
+  const [loading, setLoading] = useState(true);
 
   return (
     <Styled.Container>
@@ -20,9 +23,30 @@ const Step1 = ({ videoInfo }) => {
         playing
         url={`https://youtu.be/${videoId}?t=${highlight}`}
         muted
+        onStart={() => setLoading(false)}
+        width="0px"
+        height="0px"
       />
 
+      {loading ? (
+        <img
+          src={thumbnail}
+          alt="yoga thumbnail"
+          width="640px"
+          height="360px"
+          className="thumbnail"
+        />
+      ) : (
+        <ReactPlayer
+          className="background-video"
+          playing
+          url={`https://youtu.be/${videoId}?t=${highlight}`}
+          muted
+        />
+      )}
+
       <div className="background"></div>
+
       <div className="contents">
         <h1>{videoInfo.title}</h1>
 
