@@ -8,10 +8,10 @@ import Layout from "../../components/Layout";
 const VideoList = () => {
   const { body } = useParams();
   const currentBodyPart = body;
-  const selectedBodyPartObj = data.find(
+  const selectedBodyPartInfo = data.find(
     (bodyPart) => bodyPart.title.eng === currentBodyPart
   );
-  const titleInKorean = selectedBodyPartObj.title.kor;
+  const titleInKorean = selectedBodyPartInfo.title.kor;
 
   return (
     <Layout>
@@ -37,7 +37,7 @@ const VideoList = () => {
             </h2>
             <div className="video-list">
               <div className="video-container">
-                {selectedBodyPartObj.playList.map((item) => (
+                {selectedBodyPartInfo.playList.map((item) => (
                   <div className="container" key={item.videoId}>
                     <Link
                       to={(location) =>
