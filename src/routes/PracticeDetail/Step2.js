@@ -55,7 +55,7 @@ const Step2 = ({ currentBodyPartInKorean }) => {
   }
 
   function confirmPainScore() {
-    if (window.confirm("🙋‍♀️잠시만요. 정말 통증 없이 편안하신가요?") === true) {
+    if (window.confirm("🙋‍♀️잠시만요. 정말 통증 없이 편안하신가요?")) {
       goToNext();
     } else {
       history.push(pathname + search);
