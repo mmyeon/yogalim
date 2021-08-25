@@ -14,6 +14,8 @@ import Layout from "../components/Layout";
 import styled, { keyframes } from "styled-components";
 import { FONT_WEIGHT } from "../styles/constant";
 
+const MIN_HEIGHT = 13;
+
 const barMove = keyframes`
 \ 0% {
   height:0px;
@@ -44,7 +46,7 @@ const ScoreContainer = styled.div`
   left: 50%;
   bottom: 10%;
   transform: translateX(-50%);
-  height: 140px;
+  height: 143px;
 
   > .score {
     display: flex;
@@ -84,7 +86,6 @@ const Bar = styled.div`
   max-height: ${(props) => props.height};
   display: flex;
   justify-content: center;
-  align-items: flex-start;
   align-items: center;
   color: white;
   font-size: 0.8em;
@@ -132,7 +133,10 @@ const Review = () => {
             body={
               <ScoreContainer>
                 <div className="score">
-                  <Bar className="before" height={`${painScoreBefore * 14}px`}>
+                  <Bar
+                    className="before"
+                    height={`${MIN_HEIGHT + painScoreBefore * MIN_HEIGHT}px`}
+                  >
                     {painScoreBefore}
                   </Bar>
                   <span className="bar-name">Before</span>
@@ -146,7 +150,10 @@ const Review = () => {
                 </div>
 
                 <div className="score">
-                  <Bar className="after" height={`${painScoreAfter * 14}px`}>
+                  <Bar
+                    className="after"
+                    height={`${MIN_HEIGHT + painScoreAfter * MIN_HEIGHT}px`}
+                  >
                     {painScoreAfter}
                   </Bar>
                   <span className="bar-name">After</span>
