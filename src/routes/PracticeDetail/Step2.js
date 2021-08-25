@@ -46,17 +46,17 @@ const Step2 = ({ currentBodyPartInKorean }) => {
     if (painScoreBefore === 0) {
       confirmPainScore();
     } else {
-      goToNext();
+      goNextStep();
     }
   }
 
-  function goToNext() {
+  function goNextStep() {
     history.push(`${pathname}?step=3`);
   }
 
   function confirmPainScore() {
     if (window.confirm("🙋‍♀️잠시만요. 정말 통증 없이 편안하신가요?")) {
-      goToNext();
+      goNextStep();
     } else {
       history.push(pathname + search);
     }
