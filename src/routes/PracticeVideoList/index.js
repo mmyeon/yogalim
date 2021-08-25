@@ -5,7 +5,7 @@ import * as Styled from "./index.styles";
 import data from "../../data";
 import Layout from "../../components/Layout";
 
-const VideoList = () => {
+const PracticeVideoList = () => {
   const { body } = useParams();
   const currentBodyPart = body;
   const selectedBodyPartInfo = data.find(
@@ -71,4 +71,4 @@ const VideoList = () => {
   );
 };
 
-export default VideoList;
+export default PracticeVideoList;

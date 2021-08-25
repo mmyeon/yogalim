@@ -14,8 +14,8 @@ const StyledButton = styled.button`
   margin-right: 0.2em;
 `;
 
-const Button = ({ text, backgroundColor }) => {
+const SquareButton = ({ text, backgroundColor }) => {
   return <StyledButton backgroundColor={backgroundColor}>{text}</StyledButton>;
 };
 
-export default Button;
+export default SquareButton;

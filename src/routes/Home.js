@@ -102,7 +102,7 @@ const MainContainer = styled.div`
   }
 `;
 
-const Main = () => {
+const Home = () => {
   return (
     <Layout>
       <MainContainer>
@@ -131,4 +131,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Home;

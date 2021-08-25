@@ -28,5 +28,3 @@ const Layout = ({ children }) => {
 };
 
 export default Layout;
-
-// 비디오 컴포넌트에서는 화면전환 일어날 때 리사이즈 되지 않도록 하기 (렌더링 되지 않도록 하기)

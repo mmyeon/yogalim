@@ -6,7 +6,7 @@ import LongRoundButton from "../../components/buttons/LongRoundButton";
 import { Link } from "react-router-dom";
 import { usePainScoreAfter, useSetPainScoreAfter } from "../../record";
 
-const AfterPainRecord = ({ currentVideoId, currentBodyPartInEng }) => {
+const Step4 = ({ currentVideoId, currentBodyPartInEng }) => {
   const painScoreAfter = usePainScoreAfter();
   const setPainScoreAfter = useSetPainScoreAfter();
 
@@ -44,4 +44,4 @@ const AfterPainRecord = ({ currentVideoId, currentBodyPartInEng }) => {
   );
 };
 
-export default AfterPainRecord;
+export default Step4;
