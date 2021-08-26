@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import ReactPlayer from "react-player";
-import LongRoundButton from "../../../components/buttons/LongRoundButton";
 import * as Styled from "./index.styles";
 import Header from "../../../components/Header";
+import LongRoundLink from "../../../components/buttons/LongRoundLink";
 
 const Step1 = ({ videoInfo }) => {
   const {
@@ -61,9 +60,10 @@ const Step1 = ({ videoInfo }) => {
           </div>
         </div>
 
-        <Link to={(location) => `${location.pathname}?step=2`}>
-          <LongRoundButton title="수련 시작" />
-        </Link>
+        <LongRoundLink
+          to={(location) => `${location.pathname}?step=2`}
+          title="수련 시작"
+        />
       </div>
     </Styled.Container>
   );

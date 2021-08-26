@@ -1,10 +1,9 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import { Link } from "react-router-dom";
 import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../styles/constant";
-import LongRoundButton from "../components/buttons/LongRoundButton";
 import { device } from "../device";
 import Layout from "../components/Layout";
+import LongRoundLink from "../components/buttons/LongRoundLink";
 
 const showUp = keyframes`
 \ 0% {
@@ -123,9 +122,7 @@ const Home = () => {
           alt="yoga meditation"
         />
 
-        <Link to="/practice">
-          <LongRoundButton title="수련하기" />
-        </Link>
+        <LongRoundLink to="/practice" title="수련하기" />
       </MainContainer>
     </Layout>
   );

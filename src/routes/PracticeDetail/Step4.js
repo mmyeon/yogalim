@@ -2,9 +2,8 @@ import React from "react";
 import Template from "../../components/Template";
 import Card from "../../components/Card";
 import PainScale from "../../components/PainScale";
-import LongRoundButton from "../../components/buttons/LongRoundButton";
-import { Link } from "react-router-dom";
 import { usePainScoreAfter, useSetPainScoreAfter } from "../../record";
+import LongRoundLink from "../../components/buttons/LongRoundLink";
 
 const Step4 = ({ currentVideoId, currentBodyPartInEng }) => {
   const painScoreAfter = usePainScoreAfter();
@@ -36,9 +35,10 @@ const Step4 = ({ currentVideoId, currentBodyPartInEng }) => {
         />
       }
       button={
-        <Link to={`/practice/${currentBodyPartInEng}/${currentVideoId}/review`}>
-          <LongRoundButton title="수련 결과 보기" />
-        </Link>
+        <LongRoundLink
+          to={`/practice/${currentBodyPartInEng}/${currentVideoId}/review`}
+          title="수련 결과 보기"
+        />
       }
     />
   );
