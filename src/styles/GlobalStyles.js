@@ -31,6 +31,10 @@ button {
     cursor: pointer;
 }
 
+a {
+    text-decoration:none;
+}
+
 `;
 
 export default GlobalStyles;
