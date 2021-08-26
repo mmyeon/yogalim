@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Header from "../../components/Header";
 import SquareButton from "../../components/buttons/SquareButton";
 import data from "../../data";
@@ -20,15 +19,12 @@ const Practice = () => {
               </h2>
               <div className="button-container">
                 {data.map((bodyPart) => (
-                  <Link
+                  <SquareButton
                     key={bodyPart.title.kor}
                     to={`/practice/${bodyPart.title.eng}`}
-                  >
-                    <SquareButton
-                      text={bodyPart.title.kor}
-                      backgroundColor={bodyPart.buttonColor}
-                    />
-                  </Link>
+                    backgroundColor={bodyPart.buttonColor}
+                    text={bodyPart.title.kor}
+                  />
                 ))}
               </div>
             </div>

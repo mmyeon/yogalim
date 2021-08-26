@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Card from "../components/Card";
 import Button from "../components/buttons/Button";
 import Template from "../components/Template";
@@ -164,22 +164,21 @@ const Review = () => {
         }
         button={
           <div className="button-container">
-            <Link to="/">
-              <Button
-                color={`${COLORS.iris}`}
-                backgroundColor={`${COLORS.white}`}
-                onClick={resetPainScore}
-                text="홈"
-              />
-            </Link>
-            <Link to={`/practice/${body}`}>
-              <Button
-                backgroundColor={`${COLORS.iris}`}
-                color={`${COLORS.white}`}
-                onClick={resetPainScore}
-                text="다음 수련 이어가기"
-              />
-            </Link>
+            <Button
+              to="/"
+              color={`${COLORS.iris}`}
+              backgroundColor={`${COLORS.white}`}
+              onClick={resetPainScore}
+              text="홈"
+            />
+
+            <Button
+              to={`/practice/${body}`}
+              backgroundColor={`${COLORS.iris}`}
+              color={`${COLORS.white}`}
+              onClick={resetPainScore}
+              text="다음 수련 이어가기"
+            />
           </div>
         }
       />

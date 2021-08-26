@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { FONT_FAMILY, FONT_WEIGHT } from "../../styles/constant";
 
-const StyledButton = styled.button`
+const StyledButton = styled(Link)`
   background: ${(props) => props.backgroundColor};
   color: ${(props) => props.color};
   border: none;
@@ -14,9 +15,10 @@ const StyledButton = styled.button`
   font-family: ${FONT_FAMILY.korean};
 `;
 
-const Button = ({ text, backgroundColor, color, onClick }) => {
+const Button = ({ to, text, backgroundColor, color, onClick }) => {
   return (
     <StyledButton
+      to={to}
       color={color}
       backgroundColor={backgroundColor}
       onClick={onClick}
