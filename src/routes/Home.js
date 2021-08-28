@@ -113,7 +113,7 @@ const Home = () => {
 
         <div className="text-container">
           <p className="desc">내 몸이 편안한 요가 수련소</p>
-          <h1>YOGA FORREST</h1>
+          <h1>YOGA FOREST</h1>
         </div>
 
         <img

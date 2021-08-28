@@ -55,7 +55,7 @@ const Logo = () => {
             fill="black"
           />
         </svg>
-        <span>FORREST</span>
+        <span>FOREST</span>
       </Link>
     </Container>
   );
