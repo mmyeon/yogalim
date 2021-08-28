@@ -35,34 +35,33 @@ const PracticeVideoList = () => {
                 </>
               )}
             </h2>
-            <div className="video-list">
-              <div className="video-container">
-                {selectedBodyPartInfo.playList.map((item) => (
-                  <div className="container" key={item.videoId}>
-                    <Link
-                      to={(location) =>
-                        `${location.pathname}/${item.videoId}?step=1`
-                      }
-                    >
-                      <picture>
-                        <source srcSet={item.thumbnail} />
-                        <img
-                          className="thumbnail"
-                          src={item.thumbnail}
-                          alt="yoga video thumbnail"
-                          width="213px"
-                          height="250px"
-                        />
-                      </picture>
+            <div className="video-container">
+              {/* TODO:ul li 태그로 변경 */}
+              {selectedBodyPartInfo.playList.map((item) => (
+                <div className="container" key={item.videoId}>
+                  <Link
+                    to={(location) =>
+                      `${location.pathname}/${item.videoId}?step=1`
+                    }
+                  >
+                    <picture>
+                      <source srcSet={item.thumbnail} />
+                      <img
+                        className="thumbnail"
+                        src={item.thumbnail}
+                        alt="yoga video thumbnail"
+                        width="213px"
+                        height="250px"
+                      />
+                    </picture>
 
-                      <div className="title-container">
-                        <h3>{item.title}</h3>
-                        <span>{item.duration}</span>
-                      </div>
-                    </Link>
-                  </div>
-                ))}
-              </div>
+                    <div className="title-container">
+                      <h3>{item.title}</h3>
+                      <span>{item.duration}</span>
+                    </div>
+                  </Link>
+                </div>
+              ))}
             </div>
           </div>
         </div>
