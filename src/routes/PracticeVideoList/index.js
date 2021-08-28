@@ -35,10 +35,10 @@ const PracticeVideoList = () => {
                 </>
               )}
             </h2>
-            <div className="video-container">
-              {/* TODO:ul li 태그로 변경 */}
+
+            <ul className="video-list">
               {selectedBodyPartInfo.playList.map((item) => (
-                <div className="container" key={item.videoId}>
+                <li className="video-container" key={item.videoId}>
                   <Link
                     to={(location) =>
                       `${location.pathname}/${item.videoId}?step=1`
@@ -60,9 +60,9 @@ const PracticeVideoList = () => {
                       <span>{item.duration}</span>
                     </div>
                   </Link>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </Styled.Container>

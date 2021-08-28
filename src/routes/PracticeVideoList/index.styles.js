@@ -42,7 +42,7 @@ export const Container = styled.div`
         }
       }
 
-      .video-container {
+      .video-list {
         overflow: scroll;
         width: 100%;
         height: auto;
@@ -60,11 +60,11 @@ export const Container = styled.div`
           bottom: -3em;
         }
 
-        > .container + .container {
+        > .video-container + .video-container {
           margin-left: 0.6em;
         }
 
-        > .container {
+        > .video-container {
           position: relative;
 
           > a {
