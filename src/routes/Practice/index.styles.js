@@ -35,21 +35,20 @@ export const Practice = styled.div`
           font-size: 1.6em;
           letter-spacing: 1px;
           margin-bottom: 0.5em;
+          word-break: keep-all;
 
-          > .thiner {
+          > .thinner {
             font-weight: 400;
           }
         }
 
         > .button-container {
           margin-top: 0.7em;
-          padding: 0 1em;
           display: flex;
           flex-direction: row;
           flex-flow: wrap;
           justify-content: space-between;
           align-items: center;
-          max-width: 99%;
           margin: 0 auto;
 
           > a {

@@ -12,11 +12,13 @@ const Practice = () => {
         <div className="background">
           <div className="container">
             <Header isVisibleLogo="isVisibleLogo" />
+
             <div className="content">
               <h2>
                 평소 신체 어느 부분이
-                <br /> <span className="thiner">불편하신가요?</span>
+                <span className="thinner"> 불편하신가요?</span>
               </h2>
+
               <div className="button-container">
                 {data.map((bodyPart) => (
                   <SquareButton
