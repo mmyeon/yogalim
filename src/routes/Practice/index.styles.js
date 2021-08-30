@@ -52,8 +52,9 @@ export const Practice = styled.div`
           max-width: 99%;
           margin: 0 auto;
 
-          > a > button {
-            margin-top: 0.5em;
+          > a {
+            margin-bottom: 0.5em;
+            margin-right: 0.5em;
           }
         }
       }

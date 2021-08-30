@@ -11,7 +11,6 @@ const StyledLink = styled(Link)`
   font-size: 1.2em;
   cursor: pointer;
   font-weight: ${FONT_WEIGHT.bold};
-  margin-right: 0.2em;
 `;
 
 const SquareButton = ({ to, text, backgroundColor }) => {
