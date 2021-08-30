@@ -1,29 +1,10 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../styles/constant";
 import { device } from "../device";
 import Layout from "../components/Layout";
 import LongRoundLink from "../components/buttons/LongRoundLink";
-
-const showUp = keyframes`
-\ 0% {
-  height:0%;
-  
-}
-\ 100% {
-  height:100%;  
-}
-`;
-
-const goCenter = keyframes`
-\ 0% {
-  top: 100%;
-}
-\ 100% {
-  top: 50%;
-  transform: translateY(-50%);
-}
-`;
+import { slideUp, alignMiddle } from "../styles/animation";
 
 const MainContainer = styled.div`
   width: 100%;
@@ -45,7 +26,7 @@ const MainContainer = styled.div`
     background: ${COLORS.iris};
     color: ${COLORS.white};
     letter-spacing: 1px;
-    animation: ${showUp} 2s linear forwards;
+    animation: ${slideUp} 2s linear forwards;
     visibility: hidden;
 
     @media ${device.tabletM} {
@@ -54,7 +35,7 @@ const MainContainer = styled.div`
 
     > p {
       position: relative;
-      animation: ${goCenter} 0.5s linear forwards;
+      animation: ${alignMiddle} 0.5s linear forwards;
 
       > b {
         border-bottom: 1px solid ${COLORS.white};

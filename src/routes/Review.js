@@ -11,32 +11,11 @@ import {
   useSetPainScoreBefore,
 } from "../record";
 import Layout from "../components/Layout";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { FONT_WEIGHT } from "../styles/constant";
+import { slideUpAndFadeIn, moveToRight } from "../styles/animation";
 
 const MIN_HEIGHT = 13;
-
-const barMove = keyframes`
-\ 0% {
-  height:0px;
-  opacity:0;
-}
-
-\ 100% {
-  height:100%;
-}
-`;
-
-const reveal = keyframes`
-\ 0% {
-  transform: translateX(-10px);
-}
-
-\ 100% {
-  opacity:1;
-  transform: translateX(0px);
-}
-`;
 
 const ScoreContainer = styled.div`
   display: flex;
@@ -73,7 +52,7 @@ const ScoreContainer = styled.div`
       opacity: 0;
       margin-right: 0.5em;
       margin-bottom: 2.7em;
-      animation: ${reveal} 0.5s forwards 0.5s linear;
+      animation: ${moveToRight} 0.5s forwards 0.5s linear;
     }
   }
 `;
@@ -90,7 +69,7 @@ const Bar = styled.div`
   color: white;
   font-size: 0.8em;
   font-weight: ${FONT_WEIGHT.semiBold};
-  animation: ${barMove} 1.5s forwards linear;
+  animation: ${slideUpAndFadeIn} 1.5s forwards linear;
   margin-bottom: 0.5em;
   padding: 0;
 
