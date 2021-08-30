@@ -81,22 +81,23 @@ const MainContainer = styled.div`
     }
   }
 
-  > .yoga-img {
-    position: relative;
-    width: 120%;
+  > .background {
+    top: 1em;
+    width: 100%;
     height: 100%;
-    transform: translate(-50%, -3px);
-    left: 50%;
-  }
+    background-image: url("/assets/images/home/yoga-in-green.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
 
-  > a {
-    position: absolute;
-    bottom: 13%;
-    left: 50%;
-    transform: translateX(-50%);
+    @media ${device.mobileL} {
+      background-size: contain;
+    }
 
-    @media ${device.tabletL} {
-      bottom: 16%;
+    > a {
+      position: relative;
+      top: 55%;
     }
   }
 `;
@@ -116,13 +117,9 @@ const Home = () => {
           <h1>YOGA FOREST</h1>
         </div>
 
-        <img
-          className="yoga-img"
-          src="/assets/images/home/yoga-in-green.svg"
-          alt="yoga meditation"
-        />
-
-        <LongRoundLink to="/practice" title="수련하기" />
+        <div className="background">
+          <LongRoundLink to="/practice" title="수련하기" />
+        </div>
       </MainContainer>
     </Layout>
   );
