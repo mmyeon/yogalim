@@ -47,9 +47,10 @@ export const Practice = styled.div`
           display: flex;
           flex-direction: row;
           flex-flow: wrap;
-          justify-content: space-between;
+          justify-content: space-evenly;
           align-items: center;
           margin: 0 auto;
+          padding: 0 1em;
 
           > a {
             margin-bottom: 0.5em;
