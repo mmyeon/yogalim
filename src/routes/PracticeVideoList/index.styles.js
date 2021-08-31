@@ -23,15 +23,23 @@ export const Container = styled.div`
       background-position: center -19%;
     }
 
+    @media ${device.desktop} {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     > .content {
       text-align: center;
-      height: 100vh;
+      height: auto;
       position: relative;
-      top: 15%;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-evenly;
 
       > .title {
         font-weight: 300;
-        margin-bottom: 6.5em;
 
         @media ${device.tabletL} {
           font-size: 2em;
@@ -50,14 +58,11 @@ export const Container = styled.div`
         justify-content: flex-start;
         align-items: center;
         padding-left: 1.3em;
+        margin-top: 5em;
 
         @media ${device.tabletL} {
           position: relative;
-          bottom: -9em;
-        }
-
-        @media (orientation: landscape) {
-          bottom: -3em;
+          margin-top: 8em;
         }
 
         > .video-container + .video-container {
@@ -68,10 +73,6 @@ export const Container = styled.div`
           position: relative;
 
           > a {
-            display: block;
-            width: 100%;
-            height: 100%;
-
             picture {
               display: block;
             }
