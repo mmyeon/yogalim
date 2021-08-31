@@ -18,13 +18,11 @@ const Step1 = ({ videoInfo }) => {
       <Header isVisibleBackBtn="isVisibleBackBtn" />
 
       <ReactPlayer
-        className="background-video"
+        className="invisible"
         playing
         url={`https://youtu.be/${videoId}?t=${highlight}`}
         muted
         onStart={() => setLoading(false)}
-        width="0px"
-        height="0px"
       />
 
       {loading ? (

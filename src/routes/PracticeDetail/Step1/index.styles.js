@@ -15,6 +15,11 @@ export const Container = styled.div`
     justify-content: center;
   }
 
+  .invisible {
+    opacity: 0;
+    position: absolute;
+  }
+
   > .background-video {
     position: relative;
     margin-left: -10em;
