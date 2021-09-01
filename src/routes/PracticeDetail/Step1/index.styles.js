@@ -22,10 +22,12 @@ export const Container = styled.div`
   }
 
   > .video-wrapper {
-    border: 5px solid ${COLORS.white};
-    border-radius: 50px 0;
-    overflow: hidden;
-    z-index: 10;
+    @media ${device.tabletM} {
+      border: 5px solid ${COLORS.white};
+      border-radius: 50px 0;
+      overflow: hidden;
+      z-index: 10;
+    }
 
     > .background-video {
       position: relative;
