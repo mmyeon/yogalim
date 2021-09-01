@@ -21,20 +21,27 @@ export const Container = styled.div`
     position: absolute;
   }
 
-  > .background-video {
-    position: relative;
-    margin-left: -10em;
-    z-index: -2;
-    top: -3em;
+  > .video-wrapper {
+    border: 5px solid ${COLORS.white};
+    border-radius: 50px 0;
+    overflow: hidden;
+    z-index: 10;
 
-    @media ${device.mobileL} {
-      margin: 0 auto;
-    }
+    > .background-video {
+      position: relative;
+      margin-left: -10em;
+      z-index: -2;
+      top: -3em;
 
-    @media ${device.tabletM} {
-      z-index: 0;
-      margin: 0;
-      top: 0;
+      @media ${device.mobileL} {
+        margin: 0 auto;
+      }
+
+      @media ${device.tabletM} {
+        z-index: 0;
+        margin: 0;
+        top: 0;
+      }
     }
   }
 

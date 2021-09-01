@@ -25,22 +25,24 @@ const Step1 = ({ videoInfo }) => {
         onStart={() => setLoading(false)}
       />
 
-      {loading ? (
-        <img
-          src={thumbnail}
-          alt="yoga thumbnail"
-          width="640px"
-          height="360px"
-          className="thumbnail"
-        />
-      ) : (
-        <ReactPlayer
-          className="background-video"
-          playing
-          url={`https://youtu.be/${videoId}?t=${highlight}`}
-          muted
-        />
-      )}
+      <div className="video-wrapper">
+        {loading ? (
+          <img
+            src={thumbnail}
+            alt="yoga thumbnail"
+            width="640px"
+            height="360px"
+            className="thumbnail"
+          />
+        ) : (
+          <ReactPlayer
+            className="background-video"
+            playing
+            url={`https://youtu.be/${videoId}?t=${highlight}`}
+            muted
+          />
+        )}
+      </div>
 
       <div className="background">
         <div className="contents">
