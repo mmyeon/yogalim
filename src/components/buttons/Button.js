@@ -4,8 +4,6 @@ import styled from "styled-components";
 import { FONT_FAMILY, FONT_WEIGHT } from "../../styles/constant";
 
 const StyledButton = styled(Link)`
-  background: ${(props) => props.backgroundColor};
-  color: ${(props) => props.color};
   border: none;
   border-radius: 8px;
   font-size: 1em;
@@ -19,9 +17,11 @@ const Button = ({ to, text, backgroundColor, color, onClick }) => {
   return (
     <StyledButton
       to={to}
-      color={color}
-      backgroundColor={backgroundColor}
       onClick={onClick}
+      style={{
+        color,
+        backgroundColor,
+      }}
     >
       {text}
     </StyledButton>
