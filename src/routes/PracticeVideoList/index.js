@@ -46,6 +46,7 @@ const PracticeVideoList = () => {
                   >
                     <picture>
                       <source srcSet={item.thumbnail} />
+
                       <img
                         className="thumbnail"
                         src={item.thumbnail}

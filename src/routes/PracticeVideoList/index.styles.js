@@ -101,6 +101,7 @@ export const Container = styled.div`
             .thumbnail {
               background: ${COLORS.primaryTeal};
               display: block;
+              object-fit: cover;
             }
 
             .title-container {

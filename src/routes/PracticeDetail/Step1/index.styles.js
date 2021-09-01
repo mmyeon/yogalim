@@ -2,6 +2,20 @@ import styled from "styled-components";
 import { device } from "../../../device";
 import { COLORS, FONT_FAMILY } from "../../../styles/constant";
 
+export const Thumbnail = styled.div`
+  width: 640px;
+  height: 360px;
+  background-image: url(${(props) => props.backgroundImg});
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media ${device.tabletM} {
+    left: 0;
+    transform: none;
+  }
+`;
+
 export const Container = styled.div`
   width: 100%;
   height: 100%;

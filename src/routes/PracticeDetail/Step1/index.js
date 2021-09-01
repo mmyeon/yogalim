@@ -27,13 +27,7 @@ const Step1 = ({ videoInfo }) => {
 
       <div className="video-wrapper">
         {loading ? (
-          <img
-            src={thumbnail}
-            alt="yoga thumbnail"
-            width="640px"
-            height="360px"
-            className="thumbnail"
-          />
+          <Styled.Thumbnail backgroundImg={thumbnail} />
         ) : (
           <ReactPlayer
             className="background-video"
