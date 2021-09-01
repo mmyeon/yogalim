@@ -15,7 +15,7 @@ const StyledLink = styled(Link)`
 
 const SquareButton = ({ to, text, backgroundColor }) => {
   return (
-    <StyledLink to={to} style={{ backgroundColor: backgroundColor }}>
+    <StyledLink to={to} style={{ backgroundColor }}>
       {text}
     </StyledLink>
   );
