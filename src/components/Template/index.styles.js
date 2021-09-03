@@ -23,14 +23,20 @@ export const Container = styled.div`
       width: 100%;
       height: 100%;
 
+      @media (orientation: landscape) {
+        flex-direction: row;
+      }
+
       > .title-container {
         display: flex;
-        max-width: 70%;
-        margin: 0 auto;
         justify-content: center;
         align-items: end;
         line-height: 27px;
         word-break: keep-all;
+
+        @media (orientation: landscape) {
+          margin-right: 2em;
+        }
 
         > .meditation-img {
           width: 5.5em;

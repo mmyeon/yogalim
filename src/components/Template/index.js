@@ -17,9 +17,11 @@ const Template = ({ title, body, button }) => {
             />
             <h1>{title}</h1>
           </div>
-
-          {body}
-          {button}
+          {/* TODO: 클래스명 수정하기 */}
+          <div className="contents-container">
+            {body}
+            {button}
+          </div>
         </div>
       </div>
     </Styled.Container>
