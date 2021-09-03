@@ -9,6 +9,7 @@ const StyledHeader = styled.header`
   width: 100%;
   height: 2em;
   text-align: center;
+  z-index: 10;
 
   > .backButton {
     position: absolute;
