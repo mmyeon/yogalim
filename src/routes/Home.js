@@ -15,6 +15,10 @@ const MainContainer = styled.div`
   text-align: center;
   position: relative;
 
+  @media (orientation: landscape) {
+    padding: 1em 0;
+  }
+
   > .notice {
     position: absolute;
     bottom: 0;
@@ -46,6 +50,14 @@ const MainContainer = styled.div`
 
   .text-container {
     padding-top: 4.5em;
+
+    @media (orientation: landscape) {
+      padding-top: 0;
+    }
+
+    @media ${device.tabletL} and (orientation: landscape) {
+      padding-top: 4.5em;
+    }
 
     > .desc {
       font-family: ${FONT_FAMILY.point};
