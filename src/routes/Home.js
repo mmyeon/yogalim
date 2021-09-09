@@ -99,12 +99,6 @@ const Home = () => {
   return (
     <Layout>
       <MainContainer>
-        <div className="notice">
-          <p>
-            🧘🏽 이 서비스는 <b>모바일</b>에 최적화되어 있습니다.
-          </p>
-        </div>
-
         <div className="text-container">
           <p className="desc">내 몸이 편안한 요가 수련소</p>
           <h1>YOGA FOREST</h1>
@@ -112,6 +106,12 @@ const Home = () => {
 
         <div className="background">
           <LongRoundLink to="/practice" title="수련하기" />
+        </div>
+
+        <div className="notice">
+          <p>
+            🧘🏽 이 서비스는 <b>모바일</b>에 최적화되어 있습니다.
+          </p>
         </div>
       </MainContainer>
     </Layout>
