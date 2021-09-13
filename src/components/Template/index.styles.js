@@ -56,10 +56,11 @@ export const Container = styled.div`
         }
       }
 
-      > .button-container {
-        > a:first-child {
-          margin-right: 0.7em;
-        }
+      .contents-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
