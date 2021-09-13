@@ -9,6 +9,12 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
 
+  /* TODO: 매직넘버 개선하기 */
+  @media (max-height: 812px) and (orientation: landscape) {
+    overflow: scroll;
+    height: 80vw;
+  }
+
   > .background {
     width: 100%;
     height: 100%;
@@ -37,6 +43,10 @@ export const Container = styled.div`
       flex-direction: column;
       height: 100%;
       justify-content: space-evenly;
+
+      @media (orientation: landscape) {
+        justify-content: center;
+      }
 
       > .title {
         font-weight: 300;
