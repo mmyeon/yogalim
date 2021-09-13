@@ -30,6 +30,10 @@ export const Container = styled.div`
     justify-content: center;
   }
 
+  @media (max-width: 812px) and (orientation: landscape) {
+    height: 100vw;
+  }
+
   .invisible {
     opacity: 0;
     position: absolute;
@@ -41,6 +45,7 @@ export const Container = styled.div`
       border-radius: 50px 0;
       overflow: hidden;
       z-index: 10;
+      max-width: 92%;
     }
 
     > .background-video {
