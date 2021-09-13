@@ -19,11 +19,22 @@ const MainContainer = styled.div`
   .text-container {
     padding-top: 4.5em;
 
+    @media ${device.tabletL} {
+      padding-top: 7em;
+    }
+
+    @media (orientation: landscape) {
+      padding-top: 1em;
+    }
+
+    @media ${device.desktop} and (orientation: landscape) {
+      padding-top: 7em;
+    }
+
     > .desc {
       font-family: ${FONT_FAMILY.point};
       font-size: 0.9em;
       letter-spacing: 0.1em;
-      margin-bottom: 0.2em;
     }
 
     > h1 {
@@ -46,6 +57,11 @@ const MainContainer = styled.div`
 
     @media ${device.mobileL} {
       background-size: contain;
+    }
+
+    /* TODO: 매직넘버 리팩토링 필요 */
+    @media (max-width: 667px) and (orientation: landscape) {
+      top: 0;
     }
 
     > a {
