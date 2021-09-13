@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../styles/constant";
 import { device } from "../device";
 import Layout from "../components/Layout";
 import LongRoundLink from "../components/buttons/LongRoundLink";
 import { slideUp, alignMiddle } from "../styles/animation";
+import { useEffect } from "react/cjs/react.development";
 
 const MainContainer = styled.div`
   width: 100%;
@@ -65,11 +66,6 @@ const MainContainer = styled.div`
     color: ${COLORS.white};
     letter-spacing: 1px;
     animation: ${slideUp} 2s linear forwards;
-    visibility: hidden;
-
-    @media ${device.tabletM} {
-      visibility: visible;
-    }
 
     > p {
       position: relative;
@@ -84,6 +80,22 @@ const MainContainer = styled.div`
 `;
 
 const Home = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  // TODO: device 리팩토링 필요
+  const MOBILE_ORIENTATION_HEIGHT = 375;
+  const TABLET_WIDTH = 768;
+
+  useEffect(() => {
+    if (
+      window.innerWidth >= TABLET_WIDTH &&
+      window.innerHeight > MOBILE_ORIENTATION_HEIGHT
+    ) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  }, []);
+
   return (
     <Layout>
       <MainContainer>
@@ -96,11 +108,13 @@ const Home = () => {
           <LongRoundLink to="/practice" title="수련하기" />
         </div>
 
-        <div className="notice">
-          <p>
-            🧘🏽 이 서비스는 <b>모바일</b>에 최적화되어 있습니다.
-          </p>
-        </div>
+        {isVisible && (
+          <div className="notice">
+            <p>
+              🧘🏽 이 서비스는 <b>모바일</b>에 최적화되어 있습니다.
+            </p>
+          </div>
+        )}
       </MainContainer>
     </Layout>
   );
