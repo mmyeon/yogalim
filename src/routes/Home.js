@@ -15,49 +15,8 @@ const MainContainer = styled.div`
   text-align: center;
   position: relative;
 
-  @media (orientation: landscape) {
-    padding: 1em 0;
-  }
-
-  > .notice {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0px;
-    max-height: 40px;
-    z-index: 20;
-    background: ${COLORS.iris};
-    color: ${COLORS.white};
-    letter-spacing: 1px;
-    animation: ${slideUp} 2s linear forwards;
-    visibility: hidden;
-
-    @media ${device.tabletM} {
-      visibility: visible;
-    }
-
-    > p {
-      position: relative;
-      animation: ${alignMiddle} 0.5s linear forwards;
-
-      > b {
-        border-bottom: 1px solid ${COLORS.white};
-        letter-spacing: 2px;
-      }
-    }
-  }
-
   .text-container {
     padding-top: 4.5em;
-
-    @media (orientation: landscape) {
-      padding-top: 0;
-    }
-
-    @media ${device.tabletL} and (orientation: landscape) {
-      padding-top: 4.5em;
-    }
 
     > .desc {
       font-family: ${FONT_FAMILY.point};
@@ -91,6 +50,35 @@ const MainContainer = styled.div`
     > a {
       position: relative;
       top: 55%;
+    }
+  }
+
+  > .notice {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    max-height: 40px;
+    z-index: 20;
+    background: ${COLORS.iris};
+    color: ${COLORS.white};
+    letter-spacing: 1px;
+    animation: ${slideUp} 2s linear forwards;
+    visibility: hidden;
+
+    @media ${device.tabletM} {
+      visibility: visible;
+    }
+
+    > p {
+      position: relative;
+      animation: ${alignMiddle} 0.5s linear forwards;
+
+      > b {
+        border-bottom: 1px solid ${COLORS.white};
+        letter-spacing: 2px;
+      }
     }
   }
 `;
