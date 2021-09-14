@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../styles/constant";
 import { device } from "../device";
 import Layout from "../components/Layout";
 import LongRoundLink from "../components/buttons/LongRoundLink";
 import { slideUp, alignMiddle } from "../styles/animation";
-import { useEffect } from "react/cjs/react.development";
 
 const MainContainer = styled.div`
   width: 100%;
