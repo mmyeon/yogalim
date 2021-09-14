@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { COLORS, FONT_FAMILY } from "../styles/constant";
 
 const StyledCard = styled.section`
-  margin-bottom: 1.5em;
+  margin-bottom: 1.2em;
   background: ${COLORS.white};
   border-radius: 10px;
   padding: 1em 0.5em;

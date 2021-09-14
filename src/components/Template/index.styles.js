@@ -10,7 +10,7 @@ export const Container = styled.div`
   /* TODO: 매직넘버 개선하기 */
   @media (max-width: 568px) and (orientation: landscape) {
     overflow: scroll;
-    height: 80vw;
+    height: 68vw;
   }
 
   > .background {
@@ -68,6 +68,12 @@ export const Container = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        > .button-container {
+          > .button + .button {
+            margin-left: 1em;
+          }
+        }
       }
     }
   }

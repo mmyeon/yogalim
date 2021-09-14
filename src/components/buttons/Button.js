@@ -9,13 +9,15 @@ const StyledButton = styled(Link)`
   font-size: 1em;
   font-weight: ${FONT_WEIGHT.semiBold};
   letter-spacing: 2px;
-  padding: 0.75em 1.75em;
+  padding: 0.75em 1.5em;
   font-family: ${FONT_FAMILY.korean};
+  display: inline-block;
 `;
 
 const Button = ({ to, text, backgroundColor, color, onClick }) => {
   return (
     <StyledButton
+      className="button"
       to={to}
       onClick={onClick}
       style={{
