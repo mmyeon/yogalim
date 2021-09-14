@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { COLORS, FONT_FAMILY } from "../styles/constant";
 
 const StyledCard = styled.section`
-  margin-top: 1em;
   margin-bottom: 1.5em;
   background: ${COLORS.white};
   border-radius: 10px;

@@ -7,6 +7,12 @@ export const Container = styled.div`
   background: ${COLORS.lightYellow};
   overflow: hidden;
 
+  /* TODO: 매직넘버 개선하기 */
+  @media (max-width: 568px) and (orientation: landscape) {
+    overflow: scroll;
+    height: 80vw;
+  }
+
   > .background {
     width: 101%;
     height: 102%;
@@ -28,6 +34,7 @@ export const Container = styled.div`
       }
 
       > .title-container {
+        margin-bottom: 1em;
         display: flex;
         justify-content: center;
         align-items: end;
