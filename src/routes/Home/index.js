@@ -5,14 +5,13 @@ import * as Styled from "./index.styles";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
-  // TODO: device 리팩토링 필요
-  const MOBILE_ORIENTATION_HEIGHT = 375;
+  const MOBILE_LANDSCAPE_HEIGHT = 375;
   const TABLET_WIDTH = 768;
 
   useEffect(() => {
     if (
       window.innerWidth >= TABLET_WIDTH &&
-      window.innerHeight > MOBILE_ORIENTATION_HEIGHT
+      window.innerHeight > MOBILE_LANDSCAPE_HEIGHT
     ) {
       setIsVisible(true);
     } else {
