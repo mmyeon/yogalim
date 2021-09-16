@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../../styles/constant";
-import { device } from "../../device";
+import {
+  WIDTH_DESKTOP,
+  WIDTH_MOBILE_L,
+  WIDTH_TABLET_L,
+  WIDTH_TABLET_M,
+} from "../../device";
 import { slideUp, alignMiddle } from "../../styles/animation";
 
 export const MainContainer = styled.div`
@@ -15,7 +20,7 @@ export const MainContainer = styled.div`
   .text-container {
     padding-top: 4.5em;
 
-    @media ${device.tabletL} {
+    @media (min-width: ${WIDTH_TABLET_L}) {
       padding-top: 7em;
     }
 
@@ -23,7 +28,7 @@ export const MainContainer = styled.div`
       padding-top: 1em;
     }
 
-    @media ${device.desktop} and (orientation: landscape) {
+    @media (min-width: ${WIDTH_DESKTOP}) and (orientation: landscape) {
       padding-top: 7em;
     }
 
@@ -51,12 +56,11 @@ export const MainContainer = styled.div`
     background-position: center;
     position: relative;
 
-    @media ${device.mobileL} {
+    @media (min-width: ${WIDTH_MOBILE_L}) {
       background-size: contain;
     }
 
-    /* TODO: 매직넘버 리팩토링 필요 */
-    @media (max-width: 667px) and (orientation: landscape) {
+    @media (max-width: ${WIDTH_TABLET_M}) and (orientation: landscape) {
       top: 0;
     }
 
