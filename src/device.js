@@ -9,3 +9,11 @@ export const device = {
   tabletL: `(min-width: ${DEVICE_WIDTH_TABLET_L}px)`,
   desktop: `(min-width: ${DEVICE_WIDTH_DESKTOP}px)`,
 };
+
+export const WIDTH_MOBILE_L = "480px";
+export const WIDTH_TABLET_XS = "568px";
+export const WIDTH_TABLET_S = "630px";
+export const WIDTH_TABLET_M = "667px";
+export const WIDTH_TABLET_L = "768px";
+export const WIDTH_LAPTOP = "812px";
+export const WIDTH_DESKTOP = "1024px";
