@@ -21,7 +21,7 @@ export const Container = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
 
-    > .contents {
+    > .contents-container {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -63,7 +63,7 @@ export const Container = styled.div`
         }
       }
 
-      .contents-container {
+      > .body-container {
         display: flex;
         flex-direction: column;
         justify-content: center;

@@ -8,7 +8,7 @@ const Template = ({ title, body, button }) => {
       <div className="background">
         <Header />
 
-        <div className="contents">
+        <div className="contents-container">
           <div className="title-container">
             <img
               className="meditation-img"
@@ -17,8 +17,8 @@ const Template = ({ title, body, button }) => {
             />
             <h1>{title}</h1>
           </div>
-          {/* TODO: 클래스명 수정하기 */}
-          <div className="contents-container">
+
+          <div className="body-container">
             {body}
             {button}
           </div>
