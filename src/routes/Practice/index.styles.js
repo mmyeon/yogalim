@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { COLORS } from "../../styles/constant";
-import { device } from "../../device";
+import { WIDTH_TABLET_L } from "../../device";
 
 export const Practice = styled.div`
   width: 100%;
@@ -16,7 +16,7 @@ export const Practice = styled.div`
     background-position: 63.5%;
     background-size: cover;
 
-    @media ${device.tabletL} {
+    @media (min-width: ${WIDTH_TABLET_L}) {
       background-position: bottom;
     }
 
