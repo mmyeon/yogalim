@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { WIDTH_TABLET_XS } from "../../device";
 import { COLORS, FONT_WEIGHT } from "../../styles/constant";
 
 export const Container = styled.div`
@@ -7,8 +8,7 @@ export const Container = styled.div`
   background: ${COLORS.lightYellow};
   overflow: hidden;
 
-  /* TODO: 매직넘버 개선하기 */
-  @media (max-width: 568px) and (orientation: landscape) {
+  @media (max-width: ${WIDTH_TABLET_XS}) and (orientation: landscape) {
     overflow: scroll;
     height: 68vw;
   }
