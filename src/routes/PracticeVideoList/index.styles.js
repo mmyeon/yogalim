@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../device";
+import { WIDTH_DESKTOP, WIDTH_LAPTOP, WIDTH_TABLET_L } from "../../device";
 import { COLORS, FONT_WEIGHT } from "../../styles/constant";
 
 export const Container = styled.div`
@@ -9,8 +9,7 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
 
-  /* TODO: 매직넘버 개선하기 */
-  @media (max-height: 812px) and (orientation: landscape) {
+  @media (max-height: ${WIDTH_LAPTOP}) and (orientation: landscape) {
     overflow: scroll;
     height: 80vw;
   }
@@ -24,12 +23,12 @@ export const Container = styled.div`
     background-size: cover;
     position: relative;
 
-    @media ${device.tabletL} {
+    @media (min-width: ${WIDTH_TABLET_L}) {
       background-image: url("/assets/images/practiceVideoList/bg-tablet.svg");
       background-position: center -19%;
     }
 
-    @media ${device.desktop} {
+    @media (min-width: ${WIDTH_DESKTOP}) {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -51,7 +50,7 @@ export const Container = styled.div`
       > .title {
         font-weight: 300;
 
-        @media ${device.tabletL} {
+        @media (min-width: ${WIDTH_TABLET_L}) {
           font-size: 2em;
         }
 
@@ -70,7 +69,7 @@ export const Container = styled.div`
         padding-left: 1.3em;
         margin-top: 5em;
 
-        @media ${device.tabletL} {
+        @media (min-width: ${WIDTH_TABLET_L}) {
           position: relative;
           margin-top: 8em;
         }
