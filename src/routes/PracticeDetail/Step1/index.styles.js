@@ -1,5 +1,10 @@
 import styled from "styled-components";
-import { device } from "../../../device";
+import {
+  WIDTH_MOBILE_L,
+  WIDTH_LAPTOP,
+  WIDTH_TABLET_L,
+  WIDTH_TABLET_S,
+} from "../../../device";
 import { COLORS, FONT_FAMILY } from "../../../styles/constant";
 
 export const Thumbnail = styled.div`
@@ -10,7 +15,7 @@ export const Thumbnail = styled.div`
   left: 50%;
   transform: translateX(-50%);
 
-  @media ${device.tabletM} {
+  @media (min-width: ${WIDTH_TABLET_S}) {
     left: 0;
     transform: none;
   }
@@ -22,7 +27,7 @@ export const Container = styled.div`
   overflow: hidden;
   position: relative;
 
-  @media ${device.tabletM} {
+  @media (min-width: ${WIDTH_TABLET_S}) {
     background: ${COLORS.primaryTeal};
     display: flex;
     flex-direction: column;
@@ -30,7 +35,7 @@ export const Container = styled.div`
     justify-content: center;
   }
 
-  @media (max-width: 812px) and (orientation: landscape) {
+  @media (max-width: ${WIDTH_LAPTOP}) and (orientation: landscape) {
     height: 100vw;
   }
 
@@ -40,7 +45,7 @@ export const Container = styled.div`
   }
 
   > .video-wrapper {
-    @media ${device.tabletM} {
+    @media (min-width: ${WIDTH_TABLET_S}) {
       border: 5px solid ${COLORS.white};
       border-radius: 50px 0;
       overflow: hidden;
@@ -54,11 +59,11 @@ export const Container = styled.div`
       z-index: -2;
       top: -3em;
 
-      @media ${device.mobileL} {
+      @media (min-width: ${WIDTH_MOBILE_L}) {
         margin: 0 auto;
       }
 
-      @media ${device.tabletM} {
+      @media (min-width: ${WIDTH_TABLET_S}) {
         z-index: 0;
         margin: 0;
         top: 0;
@@ -80,7 +85,7 @@ export const Container = styled.div`
     right: 0;
     position: relative;
 
-    @media ${device.tabletM} {
+    @media (min-width: ${WIDTH_TABLET_S}) {
       top: 0;
       height: auto;
     }
@@ -97,7 +102,7 @@ export const Container = styled.div`
         font-size: 1.3em;
         color: ${COLORS.white};
 
-        @media ${device.tabletL} {
+        @media (min-width: ${WIDTH_TABLET_L}) {
           font-size: 2em;
         }
       }
