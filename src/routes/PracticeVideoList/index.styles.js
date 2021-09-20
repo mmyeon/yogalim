@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { WIDTH_DESKTOP, WIDTH_LAPTOP, WIDTH_TABLET_L } from "../../device";
-import { COLORS, FONT_WEIGHT } from "../../styles/constant";
+import { BREAK_POINT, COLORS, FONT_WEIGHT } from "../../styles/constant";
 
 export const Container = styled.div`
   background: ${COLORS.lightYellow};
@@ -9,7 +8,7 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
 
-  @media (max-height: ${WIDTH_LAPTOP}) and (orientation: landscape) {
+  @media (max-height: ${BREAK_POINT.laptop}) and (orientation: landscape) {
     overflow: scroll;
     height: 80vw;
   }
@@ -23,12 +22,12 @@ export const Container = styled.div`
     background-size: cover;
     position: relative;
 
-    @media (min-width: ${WIDTH_TABLET_L}) {
+    @media (min-width: ${BREAK_POINT.tabletL}) {
       background-image: url("/assets/images/practiceVideoList/bg-tablet.svg");
       background-position: center -19%;
     }
 
-    @media (min-width: ${WIDTH_DESKTOP}) {
+    @media (min-width: ${BREAK_POINT.desktop}) {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -50,7 +49,7 @@ export const Container = styled.div`
       > .title {
         font-weight: 300;
 
-        @media (min-width: ${WIDTH_TABLET_L}) {
+        @media (min-width: ${BREAK_POINT.tabletL}) {
           font-size: 2em;
         }
 
@@ -69,7 +68,7 @@ export const Container = styled.div`
         padding-left: 1.3em;
         margin-top: 5em;
 
-        @media (min-width: ${WIDTH_TABLET_L}) {
+        @media (min-width: ${BREAK_POINT.tabletL}) {
           position: relative;
           margin-top: 8em;
         }

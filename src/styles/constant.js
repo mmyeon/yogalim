@@ -26,3 +26,13 @@ export const FONT_FAMILY = {
   korean: "'Noto Sans KR', sans-serif",
   point: "'KOMACON',sans-serif",
 };
+
+export const BREAK_POINT = {
+  mobileL: "480px",
+  tabletXS: "568px",
+  tabletS: "630px",
+  tabletM: "667px",
+  tabletL: "768px",
+  laptop: "812px",
+  desktop: "1024px",
+};

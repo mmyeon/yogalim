@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import { COLORS, FONT_FAMILY, FONT_WEIGHT } from "../../styles/constant";
 import {
-  WIDTH_DESKTOP,
-  WIDTH_MOBILE_L,
-  WIDTH_TABLET_L,
-  WIDTH_TABLET_M,
-} from "../../device";
+  BREAK_POINT,
+  COLORS,
+  FONT_FAMILY,
+  FONT_WEIGHT,
+} from "../../styles/constant";
 import { slideUp, alignMiddle } from "../../styles/animation";
 
 export const MainContainer = styled.div`
@@ -20,7 +19,7 @@ export const MainContainer = styled.div`
   .text-container {
     padding-top: 4.5em;
 
-    @media (min-width: ${WIDTH_TABLET_L}) {
+    @media (min-width: ${BREAK_POINT.tabletL}) {
       padding-top: 7em;
     }
 
@@ -28,7 +27,7 @@ export const MainContainer = styled.div`
       padding-top: 1em;
     }
 
-    @media (min-width: ${WIDTH_DESKTOP}) and (orientation: landscape) {
+    @media (min-width: ${BREAK_POINT.desktop}) and (orientation: landscape) {
       padding-top: 7em;
     }
 
@@ -56,11 +55,11 @@ export const MainContainer = styled.div`
     background-position: center;
     position: relative;
 
-    @media (min-width: ${WIDTH_MOBILE_L}) {
+    @media (min-width: ${BREAK_POINT.mobileL}) {
       background-size: contain;
     }
 
-    @media (max-width: ${WIDTH_TABLET_M}) and (orientation: landscape) {
+    @media (max-width: ${BREAK_POINT.tabletM}) and (orientation: landscape) {
       top: 0;
     }
 

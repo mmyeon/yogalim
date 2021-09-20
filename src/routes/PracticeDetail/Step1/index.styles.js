@@ -1,11 +1,5 @@
 import styled from "styled-components";
-import {
-  WIDTH_MOBILE_L,
-  WIDTH_LAPTOP,
-  WIDTH_TABLET_L,
-  WIDTH_TABLET_S,
-} from "../../../device";
-import { COLORS, FONT_FAMILY } from "../../../styles/constant";
+import { BREAK_POINT, COLORS, FONT_FAMILY } from "../../../styles/constant";
 
 export const Thumbnail = styled.div`
   width: 640px;
@@ -15,7 +9,7 @@ export const Thumbnail = styled.div`
   left: 50%;
   transform: translateX(-50%);
 
-  @media (min-width: ${WIDTH_TABLET_S}) {
+  @media (min-width: ${BREAK_POINT.tabletS}) {
     left: 0;
     transform: none;
   }
@@ -27,7 +21,7 @@ export const Container = styled.div`
   overflow: hidden;
   position: relative;
 
-  @media (min-width: ${WIDTH_TABLET_S}) {
+  @media (min-width: ${BREAK_POINT.tabletS}) {
     background: ${COLORS.primaryTeal};
     display: flex;
     flex-direction: column;
@@ -35,7 +29,7 @@ export const Container = styled.div`
     justify-content: center;
   }
 
-  @media (max-width: ${WIDTH_LAPTOP}) and (orientation: landscape) {
+  @media (max-width: ${BREAK_POINT.laptop}) and (orientation: landscape) {
     height: 100vw;
   }
 
@@ -45,7 +39,7 @@ export const Container = styled.div`
   }
 
   > .video-wrapper {
-    @media (min-width: ${WIDTH_TABLET_S}) {
+    @media (min-width: ${BREAK_POINT.tabletS}) {
       border: 5px solid ${COLORS.white};
       border-radius: 50px 0;
       overflow: hidden;
@@ -59,11 +53,11 @@ export const Container = styled.div`
       z-index: -2;
       top: -3em;
 
-      @media (min-width: ${WIDTH_MOBILE_L}) {
+      @media (min-width: ${BREAK_POINT.mobileL}) {
         margin: 0 auto;
       }
 
-      @media (min-width: ${WIDTH_TABLET_S}) {
+      @media (min-width: ${BREAK_POINT.tabletS}) {
         z-index: 0;
         margin: 0;
         top: 0;
@@ -85,7 +79,7 @@ export const Container = styled.div`
     right: 0;
     position: relative;
 
-    @media (min-width: ${WIDTH_TABLET_S}) {
+    @media (min-width: ${BREAK_POINT.tabletS}) {
       top: 0;
       height: auto;
     }
@@ -102,7 +96,7 @@ export const Container = styled.div`
         font-size: 1.3em;
         color: ${COLORS.white};
 
-        @media (min-width: ${WIDTH_TABLET_L}) {
+        @media (min-width: ${BREAK_POINT.tabletL}) {
           font-size: 2em;
         }
       }
