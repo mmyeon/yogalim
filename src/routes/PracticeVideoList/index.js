@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Header from "../../components/Header";
 import * as Styled from "./index.styles";
 import data from "../../data";
 import Layout from "../../components/Layout";
+import { useSetPainScoreAfter, useSetPainScoreBefore } from "../../record";
 
 const PracticeVideoList = () => {
   const { body } = useParams();
@@ -12,6 +13,13 @@ const PracticeVideoList = () => {
     (bodyPart) => bodyPart.title.eng === currentBodyPart
   );
   const titleInKorean = selectedBodyPartInfo.title.kor;
+  const setPainScoreBefore = useSetPainScoreBefore();
+  const setPainScoreAfter = useSetPainScoreAfter();
+
+  useEffect(() => {
+    setPainScoreBefore(0);
+    setPainScoreAfter(0);
+  }, []);
 
   return (
     <Layout>
