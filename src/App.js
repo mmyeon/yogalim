@@ -1,14 +1,14 @@
-import { RecordProvider } from "./record";
 import Router from "./Router";
 import GlobalStyles from "./styles/GlobalStyles";
-import data from "./data";
+import { Provider } from "react-redux";
+import store from "./store";
 
 function App() {
   return (
-    <RecordProvider data={data}>
+    <Provider store={store}>
       <Router />
       <GlobalStyles />
-    </RecordProvider>
+    </Provider>
   );
 }
 
