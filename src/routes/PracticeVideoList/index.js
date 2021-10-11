@@ -4,21 +4,21 @@ import Header from "../../components/Header";
 import * as Styled from "./index.styles";
 import data from "../../data";
 import Layout from "../../components/Layout";
-import { useSetPainScoreAfter, useSetPainScoreBefore } from "../../record";
+import { useDispatch } from "react-redux";
+import { updateAfterScore, updateBeforeScore } from "../../store";
 
 const PracticeVideoList = () => {
   const { body } = useParams();
+  const dispatch = useDispatch();
   const currentBodyPart = body;
   const selectedBodyPartInfo = data.find(
     (bodyPart) => bodyPart.title.eng === currentBodyPart
   );
   const titleInKorean = selectedBodyPartInfo.title.kor;
-  const setPainScoreBefore = useSetPainScoreBefore();
-  const setPainScoreAfter = useSetPainScoreAfter();
 
   useEffect(() => {
-    setPainScoreBefore(0);
-    setPainScoreAfter(0);
+    dispatch(updateBeforeScore(0));
+    dispatch(updateAfterScore(0));
   }, []);
 
   return (
