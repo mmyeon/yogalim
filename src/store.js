@@ -6,8 +6,18 @@ const painScore = createSlice({
     before: 0,
     after: 0,
   },
-  reducers: {},
+  reducers: {
+    updateBeforeScore: (state, action) => {
+      state.before = action.payload;
+    },
+
+    updateAfterScore: (state, action) => {
+      state.after = action.payload;
+    },
+  },
 });
 
+export const { updateBeforeScore, updateAfterScore } = painScore.actions;
 const store = configureStore({ reducer: painScore.reducer });
+
 export default store;
