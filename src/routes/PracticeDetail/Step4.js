@@ -7,8 +7,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { updateAfterScore } from "../../store";
 
 const Step4 = ({ currentVideoId, currentBodyPartInEng }) => {
-  const { afterScore } = useSelector((state) => {
-    return { afterScore: state.afterScore };
+  const { score } = useSelector((state) => {
+    return { score: state.afterScore };
   });
 
   const dispatch = useDispatch();
@@ -33,7 +33,7 @@ const Step4 = ({ currentVideoId, currentBodyPartInEng }) => {
           body={
             <PainScale
               updatePainScore={(score) => dispatch(updateAfterScore(score))}
-              painScore={afterScore}
+              painScore={score}
             />
           }
         />

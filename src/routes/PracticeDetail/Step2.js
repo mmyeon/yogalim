@@ -8,8 +8,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { updateBeforeScore } from "../../store";
 
 const Step2 = ({ currentBodyPartInKorean }) => {
-  const { beforeScore } = useSelector((state) => {
-    return { beforeScore: state.beforeScore };
+  const { score } = useSelector((state) => {
+    return { score: state.beforeScore };
   });
   const dispatch = useDispatch();
   const history = useHistory();
@@ -36,7 +36,7 @@ const Step2 = ({ currentBodyPartInKorean }) => {
           body={
             <PainScale
               updatePainScore={(score) => dispatch(updateBeforeScore(score))}
-              painScore={beforeScore}
+              painScore={score}
             />
           }
         />
@@ -46,7 +46,7 @@ const Step2 = ({ currentBodyPartInKorean }) => {
   );
 
   function checkUserInput() {
-    if (beforeScore === 0) {
+    if (score === 0) {
       confirmPainScore();
     } else {
       goNextStep();
