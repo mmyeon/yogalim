@@ -3,24 +3,18 @@ import { useParams } from "react-router-dom";
 import Card from "../../components/Card";
 import Button from "../../components/buttons/Button";
 import Template from "../../components/Template";
-import {
-  usePainScoreAfter,
-  usePainScoreBefore,
-  useSetPainScoreAfter,
-  useSetPainScoreBefore,
-} from "../../record";
 import Layout from "../../components/Layout";
 import * as Styled from "./index.styles";
 import { COLORS } from "../../styles/constant";
+import { useDispatch, useSelector } from "react-redux";
+import { updateAfterScore, updateBeforeScore } from "../../store";
 
 const MIN_HEIGHT = 13;
 
 const Review = () => {
   const { body } = useParams();
-  const painScoreBefore = usePainScoreBefore();
-  const painScoreAfter = usePainScoreAfter();
-  const setPainScoreBefore = useSetPainScoreBefore();
-  const setPainScoreAfter = useSetPainScoreAfter();
+  const dispatch = useDispatch();
+  const { beforeScore, afterScore } = useSelector((state) => state);
 
   return (
     <Layout>
@@ -45,9 +39,9 @@ const Review = () => {
                 <div className="score">
                   <Styled.Bar
                     className="before"
-                    height={`${MIN_HEIGHT + painScoreBefore * MIN_HEIGHT}px`}
+                    height={`${MIN_HEIGHT + beforeScore * MIN_HEIGHT}px`}
                   >
-                    {painScoreBefore}
+                    {beforeScore}
                   </Styled.Bar>
                   <span className="bar-name">Before</span>
                 </div>
@@ -62,9 +56,9 @@ const Review = () => {
                 <div className="score">
                   <Styled.Bar
                     className="after"
-                    height={`${MIN_HEIGHT + painScoreAfter * MIN_HEIGHT}px`}
+                    height={`${MIN_HEIGHT + afterScore * MIN_HEIGHT}px`}
                   >
-                    {painScoreAfter}
+                    {afterScore}
                   </Styled.Bar>
                   <span className="bar-name">After</span>
                 </div>
@@ -96,8 +90,8 @@ const Review = () => {
   );
 
   function resetPainScore() {
-    setPainScoreAfter(0);
-    setPainScoreBefore(0);
+    dispatch(updateBeforeScore(0));
+    dispatch(updateAfterScore(0));
   }
 };
 

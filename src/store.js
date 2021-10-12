@@ -3,16 +3,16 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 const painScore = createSlice({
   name: "painScoreReducer",
   initialState: {
-    before: 0,
-    after: 0,
+    beforeScore: 0,
+    afterScore: 0,
   },
   reducers: {
     updateBeforeScore: (state, action) => {
-      state.before = action.payload;
+      state.beforeScore = action.payload;
     },
 
     updateAfterScore: (state, action) => {
-      state.after = action.payload;
+      state.afterScore = action.payload;
     },
   },
 });

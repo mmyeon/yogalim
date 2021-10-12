@@ -4,11 +4,12 @@ import LongRoundButton from "../../components/buttons/LongRoundButton";
 import PainScale from "../../components/PainScale";
 import Card from "../../components/Card";
 import Template from "../../components/Template";
-import { usePainScoreBefore, useSetPainScoreBefore } from "../../record";
+import { useSelector, useDispatch } from "react-redux";
+import { updateBeforeScore } from "../../store";
 
 const Step2 = ({ currentBodyPartInKorean }) => {
-  const painScoreBefore = usePainScoreBefore();
-  const setPainScoreBefore = useSetPainScoreBefore();
+  const { beforeScore } = useSelector((state) => state);
+  const dispatch = useDispatch();
   const history = useHistory();
   const {
     location: { pathname, search },
@@ -32,8 +33,8 @@ const Step2 = ({ currentBodyPartInKorean }) => {
           }
           body={
             <PainScale
-              updatePainScore={(score) => setPainScoreBefore(score)}
-              painScore={painScoreBefore}
+              updatePainScore={(score) => dispatch(updateBeforeScore(score))}
+              painScore={beforeScore}
             />
           }
         />
@@ -43,7 +44,7 @@ const Step2 = ({ currentBodyPartInKorean }) => {
   );
 
   function checkUserInput() {
-    if (painScoreBefore === 0) {
+    if (beforeScore === 0) {
       confirmPainScore();
     } else {
       goNextStep();

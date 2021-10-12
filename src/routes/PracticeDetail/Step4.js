@@ -2,12 +2,13 @@ import React from "react";
 import Template from "../../components/Template";
 import Card from "../../components/Card";
 import PainScale from "../../components/PainScale";
-import { usePainScoreAfter, useSetPainScoreAfter } from "../../record";
 import LongRoundLink from "../../components/buttons/LongRoundLink";
+import { useSelector, useDispatch } from "react-redux";
+import { updateAfterScore } from "../../store";
 
 const Step4 = ({ currentVideoId, currentBodyPartInEng }) => {
-  const painScoreAfter = usePainScoreAfter();
-  const setPainScoreAfter = useSetPainScoreAfter();
+  const { afterScore } = useSelector((state) => state);
+  const dispatch = useDispatch();
 
   return (
     <Template
@@ -28,8 +29,8 @@ const Step4 = ({ currentVideoId, currentBodyPartInEng }) => {
           }
           body={
             <PainScale
-              updatePainScore={(score) => setPainScoreAfter(score)}
-              painScore={painScoreAfter}
+              updatePainScore={(score) => dispatch(updateAfterScore(score))}
+              painScore={afterScore}
             />
           }
         />
