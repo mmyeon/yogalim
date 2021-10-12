@@ -8,7 +8,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { updateBeforeScore } from "../../store";
 
 const Step2 = ({ currentBodyPartInKorean }) => {
-  const { beforeScore } = useSelector((state) => state);
+  const { beforeScore } = useSelector((state) => {
+    return { beforeScore: state.beforeScore };
+  });
   const dispatch = useDispatch();
   const history = useHistory();
   const {

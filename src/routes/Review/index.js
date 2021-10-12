@@ -14,7 +14,12 @@ const MIN_HEIGHT = 13;
 const Review = () => {
   const { body } = useParams();
   const dispatch = useDispatch();
-  const { beforeScore, afterScore } = useSelector((state) => state);
+  const { beforeScore, afterScore } = useSelector((state) => {
+    return {
+      beforeScore: state.beforeScore,
+      afterScore: state.afterScore,
+    };
+  });
 
   return (
     <Layout>

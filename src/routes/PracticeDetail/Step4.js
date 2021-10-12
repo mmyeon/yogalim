@@ -7,7 +7,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { updateAfterScore } from "../../store";
 
 const Step4 = ({ currentVideoId, currentBodyPartInEng }) => {
-  const { afterScore } = useSelector((state) => state);
+  const { afterScore } = useSelector((state) => {
+    return { afterScore: state.afterScore };
+  });
+
   const dispatch = useDispatch();
 
   return (
