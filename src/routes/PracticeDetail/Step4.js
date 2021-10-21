@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Template from "../../components/Template";
 import Card from "../../components/Card";
 import PainScale from "../../components/PainScale";
@@ -12,6 +12,12 @@ const Step4 = ({ currentVideoId, currentBodyPartInEng }) => {
   });
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    const audioElement = new Audio("/assets/audio/meditation-bell-sound.mp3");
+    audioElement.play();
+    audioElement.volume = 0.1;
+  }, []);
 
   return (
     <Template
