@@ -25,9 +25,9 @@ const Step4 = ({ currentVideoId, currentBodyPartInEng }) => {
         <Card
           title={
             <>
-              통증이 조금 나아졌나요?
+              통증이 좀 나아졌나요?
               <br />
-              아니면 그대로인가요?
+              다시 한번 관찰해 보세요.
             </>
           }
           body={
