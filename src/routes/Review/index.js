@@ -1,5 +1,4 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import Card from "../../components/Card";
 import Button from "../../components/buttons/Button";
 import Template from "../../components/Template";
@@ -12,7 +11,6 @@ import { updateAfterScore, updateBeforeScore } from "../../store";
 const MIN_HEIGHT = 13;
 
 const Review = () => {
-  const { body } = useParams();
   const dispatch = useDispatch();
   const { beforeScore, afterScore } = useSelector((state) => {
     return {
@@ -82,7 +80,7 @@ const Review = () => {
             />
 
             <Button
-              to={`/practice/${body}`}
+              to="/practice"
               backgroundColor={`${COLORS.iris}`}
               color={`${COLORS.white}`}
               onClick={resetPainScore}
