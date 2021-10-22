@@ -13,6 +13,7 @@ const Step4 = ({ currentVideoId, currentBodyPartInEng }) => {
 
   const dispatch = useDispatch();
 
+  // TODO: 자동재생 제한으로 모바일에서 소리 재생 안됨
   useEffect(() => {
     const audioElement = new Audio("/assets/audio/meditation-bell-sound.mp3");
     audioElement.play();
